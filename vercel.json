@@ -1,6 +1,10 @@
 {
-    "rewrites": [
-      { "source": "/", "destination": "/output/09_js_demo/index.html" }
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "/output/09_js_demo/index.html",
+        "permanent": false
+      }
     ]
   }
   
