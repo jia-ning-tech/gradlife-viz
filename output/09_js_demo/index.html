@@ -20,6 +20,8 @@
       height: 100vh;
       overflow: hidden;
     }
+
+    /* Sidebar */
     .sidebar {
       width: 260px;
       min-width: 220px;
@@ -28,7 +30,20 @@
       display: flex;
       flex-direction: column;
       padding: 12px 10px;
+      overflow-y: auto; /* 允许侧边栏内部滚动 */
+      flex-shrink: 0;
     }
+    .layout.sidebar-collapsed .sidebar {
+      width: 0;
+      min-width: 0;
+      padding: 0;
+      border: none;
+      overflow: hidden;
+    }
+    .layout.sidebar-collapsed .sidebar * {
+      display: none;
+    }
+
     .sidebar-header {
       padding: 8px 10px 12px;
       border-bottom: 1px solid rgba(249, 250, 251, 0.08);
@@ -103,6 +118,8 @@
     .nav-footer a:hover {
       text-decoration: underline;
     }
+
+    /* Main area */
     .main {
       flex: 1;
       display: flex;
@@ -131,10 +148,35 @@
       font-size: 11px;
       color: #6b7280;
     }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .header-buttons {
+      display: flex;
+      gap: 6px;
+    }
+    .header-btn {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      background: #f9fafb;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .header-btn:hover {
+      background: #e5e7eb;
+    }
+
     .frame-wrapper {
       flex: 1;
       padding: 10px;
-      overflow: hidden;
+      overflow: auto; /* 允许欢迎页在内容多时滚动 */
     }
     iframe {
       width: 100%;
@@ -144,6 +186,87 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
     }
+    iframe[hidden] {
+      display: none;
+    }
+
+    /* Welcome screen */
+    .welcome-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background: radial-gradient(circle at top left, #2563eb 0, #0f172a 40%, #020617 100%);
+      color: #f9fafb;
+      padding: 20px 20px 18px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+    }
+    .welcome-hero {
+      max-width: 520px;
+      margin-bottom: 16px;
+    }
+    .welcome-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(209, 213, 219, 0.5);
+      margin-bottom: 8px;
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .welcome-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .welcome-tagline {
+      font-size: 13px;
+      color: #d1d5db;
+    }
+    .welcome-grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+    }
+    .welcome-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 10px;
+      padding: 10px 11px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease,
+        border-color 0.15s ease, background 0.15s ease;
+    }
+    .welcome-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.6);
+      border-color: #60a5fa;
+      background: rgba(15, 23, 42, 1);
+    }
+    .welcome-card h3 {
+      font-size: 13px;
+      margin: 0 0 4px;
+      color: #e5e7eb;
+    }
+    .welcome-card p {
+      font-size: 11px;
+      margin: 0;
+      color: #9ca3af;
+    }
+    .welcome-chip {
+      display: inline-block;
+      font-size: 10px;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.3);
+      color: #bfdbfe;
+      margin-bottom: 4px;
+    }
+
     @media (max-width: 900px) {
       .layout {
         flex-direction: column;
@@ -169,6 +292,16 @@
       }
       .nav-link {
         white-space: nowrap;
+      }
+
+      .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .header-right {
+        width: 100%;
+        justify-content: space-between;
       }
     }
   </style>
@@ -300,19 +433,90 @@
       <div class="main-header">
         <div>
           <div class="main-title" id="mainTitle">
-            High-stress prevalence by degree
+            Graduate survey dashboard
           </div>
           <div class="main-subtitle" id="mainSubtitle">
-            Compare the share of students in the high-stress group (≥ 41 hours
-            per week &amp; work–life balance ≤ 3/7) across degree types.
+            Explore stress, support and satisfaction among graduate respondents.
+            Choose a view from the left menu or the cards below to begin.
           </div>
         </div>
-        <div class="main-meta" id="mainMeta">
-          Source: Nature Careers Graduate Survey 2022
+        <div class="header-right">
+          <div class="main-meta" id="mainMeta">
+            Source: Nature Careers Graduate Survey 2022
+          </div>
+          <div class="header-buttons">
+            <button id="homeButton" class="header-btn" type="button">Home</button>
+            <button id="sidebarToggle" class="header-btn" type="button">
+              Toggle menu
+            </button>
+          </div>
         </div>
       </div>
+
       <div class="frame-wrapper">
-        <iframe id="contentFrame" src="degree_high_stress.html"></iframe>
+        <!-- 欢迎页：默认显示 -->
+        <div id="welcomeScreen" class="welcome-screen">
+          <div class="welcome-hero">
+            <div class="welcome-badge">
+              Graduate life · Stress, support &amp; satisfaction
+            </div>
+            <div class="welcome-title">
+              Welcome, explore the high‑stress landscape
+            </div>
+            <div class="welcome-tagline">
+              This dashboard visualises the Nature Careers Graduate Survey 2022
+              for the high‑stress group (long hours &amp; poor work–life balance)
+              compared with their peers. Start with a question: where does stress
+              concentrate – by degree, region, finance, or support?
+            </div>
+          </div>
+
+          <div class="welcome-grid">
+            <div class="welcome-card" data-page="degree_high_stress.html">
+              <div class="welcome-chip">Prevalence</div>
+              <h3>By degree type</h3>
+              <p>See which degree programmes have the highest share of high‑stress students.</p>
+            </div>
+            <div class="welcome-card" data-page="region_high_stress.html">
+              <div class="welcome-chip">Prevalence</div>
+              <h3>By world region</h3>
+              <p>Compare high‑stress prevalence across continents and macro‑regions.</p>
+            </div>
+            <div class="welcome-card" data-page="country_rose_map_high_stress.html">
+              <div class="welcome-chip">Geography</div>
+              <h3>Country map &amp; rose</h3>
+              <p>Explore the geography of stress with a combined map and rose chart.</p>
+            </div>
+            <div class="welcome-card" data-page="debt_high_stress.html">
+              <div class="welcome-chip">Finance</div>
+              <h3>Debt &amp; finance</h3>
+              <p>How expected debt at graduation links to stress levels.</p>
+            </div>
+            <div class="welcome-card" data-page="satisfaction_high_stress.html">
+              <div class="welcome-chip">Satisfaction</div>
+              <h3>Overall satisfaction</h3>
+              <p>Key satisfaction dimensions contrasted for high‑stress and other students.</p>
+            </div>
+            <div class="welcome-card" data-page="bullying_high_stress.html">
+              <div class="welcome-chip">Risk</div>
+              <h3>Bullying &amp; harassment</h3>
+              <p>Incidence of bullying and mistreatment by stress group.</p>
+            </div>
+            <div class="welcome-card" data-page="support_quadrant_high_stress.html">
+              <div class="welcome-chip">Support</div>
+              <h3>Support quadrants</h3>
+              <p>Supervisor vs institutional support plotted as a quadrant map.</p>
+            </div>
+            <div class="welcome-card" data-page="support_high_stress_multi.html">
+              <div class="welcome-chip">Filters</div>
+              <h3>Support items with filters</h3>
+              <p>Slice support items by degree, region and minimum sample size.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 具体图表 iframe：用户点击后才显示 -->
+        <iframe id="contentFrame" src="" hidden></iframe>
       </div>
     </main>
   </div>
@@ -391,43 +595,103 @@
       }
     };
 
-    function initNav() {
+    function initDashboard() {
+      const layout = document.querySelector(".layout");
       const links = document.querySelectorAll(".nav-link");
       const frame = document.getElementById("contentFrame");
       const mainTitle = document.getElementById("mainTitle");
       const mainSubtitle = document.getElementById("mainSubtitle");
+      const mainMeta = document.getElementById("mainMeta");
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const homeButton = document.getElementById("homeButton");
+      const welcomeScreen = document.getElementById("welcomeScreen");
+      const cards = document.querySelectorAll(".welcome-card");
 
       function setActive(link) {
         links.forEach((l) => l.classList.remove("active"));
         if (link) link.classList.add("active");
       }
 
+      function loadPage(page, link) {
+        if (!page) return;
+        frame.src = page;
+        frame.removeAttribute("hidden");
+        if (welcomeScreen) {
+          welcomeScreen.style.display = "none";
+        }
+
+        if (link) {
+          setActive(link);
+        } else {
+          const navMatch = document.querySelector(
+            '.nav-link[data-page="' + page + '"]'
+          );
+          if (navMatch) setActive(navMatch);
+        }
+
+        const meta = pageMeta[page];
+        if (meta) {
+          mainTitle.textContent = meta.title;
+          mainSubtitle.textContent = meta.subtitle;
+          mainMeta.textContent = "Source: Nature Careers Graduate Survey 2022";
+        } else {
+          mainTitle.textContent = page;
+          mainSubtitle.textContent = "";
+          mainMeta.textContent = "Source: Nature Careers Graduate Survey 2022";
+        }
+      }
+
+      function showHome() {
+        links.forEach((l) => l.classList.remove("active"));
+        if (welcomeScreen) {
+          welcomeScreen.style.display = "flex";
+        }
+        frame.setAttribute("hidden", "hidden");
+        frame.src = "about:blank";
+
+        mainTitle.textContent = "Graduate survey dashboard";
+        mainSubtitle.textContent =
+          "Explore stress, support and satisfaction among graduate respondents. Choose a view from the left menu or the cards below to begin.";
+        mainMeta.textContent = "Source: Nature Careers Graduate Survey 2022";
+      }
+
+      // 左侧导航点击
       links.forEach((link) => {
         link.addEventListener("click", (e) => {
           e.preventDefault();
           const page = link.getAttribute("data-page");
-          if (!page) return;
-          frame.src = page;
-          setActive(link);
-
-          const meta = pageMeta[page];
-          if (meta) {
-            mainTitle.textContent = meta.title;
-            mainSubtitle.textContent = meta.subtitle;
-          } else {
-            mainTitle.textContent = page;
-            mainSubtitle.textContent = "";
-          }
+          loadPage(page, link);
         });
       });
 
-      // 默认激活第一个
-      if (links.length > 0) {
-        setActive(links[0]);
+      // 欢迎页卡片点击
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const page = card.getAttribute("data-page");
+          loadPage(page);
+        });
+      });
+
+      // 折叠侧边栏
+      if (sidebarToggle && layout) {
+        sidebarToggle.addEventListener("click", () => {
+          layout.classList.toggle("sidebar-collapsed");
+        });
       }
+
+      // 回到首页
+      if (homeButton) {
+        homeButton.addEventListener("click", (e) => {
+          e.preventDefault();
+          showHome();
+        });
+      }
+
+      // 默认显示欢迎页
+      showHome();
     }
 
-    document.addEventListener("DOMContentLoaded", initNav);
+    document.addEventListener("DOMContentLoaded", initDashboard);
   </script>
 </body>
 </html>
