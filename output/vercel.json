@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/09_js_demo/index.html",
-      "permanent": false
-    }
-  ]
-}
