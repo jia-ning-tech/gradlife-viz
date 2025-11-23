@@ -1,0 +1,3253 @@
+degree_label,region_continent,country_name,hours_level,hours_order,high_stress_group,high_stress_label
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Africa,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Africa,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Dual degree,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Africa,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Africa,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,very_high,3,1,High-stress
+Master's,South America,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Australasia,,very_high,3,1,High-stress
+Dual degree,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Dual degree,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Australasia,,low,0,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Australasia,,low,0,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Dual degree,North/Central America,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Dual degree,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Dual degree,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Africa,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Dual degree,North/Central America,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Dual degree,Europe,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Dual degree,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,very_high,3,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Master's,South America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Master's,Africa,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Dual degree,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Master's,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Africa,,very_high,3,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Master's,Africa,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Dual degree,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Dual degree,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,South America,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Australasia,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Dual degree,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Australasia,,low,0,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Master's,Australasia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Australasia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Master's,Africa,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Dual degree,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,South America,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Australasia,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,South America,,very_high,3,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Australasia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Dual degree,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Dual degree,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Africa,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Dual degree,Asia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,low,0,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,very_high,3,1,High-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Dual degree,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Australasia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,South America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Dual degree,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Dual degree,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,South America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Africa,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,high,2,0,Non-high-stress
+Doctorate,Australasia,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Australasia,,low,0,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Australasia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Dual degree,Asia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Africa,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Africa,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Africa,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Africa,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Africa,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,South America,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Africa,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Dual degree,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Australasia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Africa,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Dual degree,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Australasia,,low,0,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Master's,North/Central America,,very_high,3,1,High-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,North/Central America,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Dual degree,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Dual degree,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Dual degree,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Australasia,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Dual degree,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Master's,South America,,high,2,1,High-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Dual degree,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Master's,South America,,high,2,0,Non-high-stress
+Master's,South America,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Dual degree,South America,,low,0,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Africa,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Africa,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Doctorate,Africa,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Dual degree,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Australasia,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,South America,,high,2,1,High-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Doctorate,South America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Africa,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Australasia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Africa,,high,2,1,High-stress
+Dual degree,South America,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Master's,Africa,,very_high,3,1,High-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Africa,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Africa,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Africa,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Master's,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Dual degree,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Master's,Australasia,,low,0,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Africa,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Dual degree,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Africa,,high,2,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Dual degree,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Europe,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,South America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,South America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,South America,,very_high,3,1,High-stress
+Doctorate,South America,,very_high,3,1,High-stress
+Master's,North/Central America,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Dual degree,North/Central America,,high,2,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Dual degree,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Dual degree,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,low,0,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Africa,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Africa,,high,2,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Australasia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Dual degree,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Dual degree,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Africa,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Africa,,low,0,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Africa,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Master's,Europe,,low,0,0,Non-high-stress
+Master's,Africa,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,Africa,,high,2,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,South America,,low,0,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,South America,,very_high,3,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,South America,,high,2,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Master's,North/Central America,,high,2,1,High-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,South America,,high,2,1,High-stress
+Doctorate,Australasia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Africa,,high,2,1,High-stress
+Doctorate,Europe,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Dual degree,North/Central America,,high,2,0,Non-high-stress
+Master's,South America,,low,0,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,South America,,low,0,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,South America,,medium,1,0,Non-high-stress
+Master's,North/Central America,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Africa,,medium,1,0,Non-high-stress
+Master's,South America,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,South America,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Australasia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,high,2,1,High-stress
+Doctorate,Africa,,very_high,3,0,Non-high-stress
+Master's,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Doctorate,Europe,,medium,1,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,0,Non-high-stress
+Doctorate,Europe,,very_high,3,0,Non-high-stress
+Doctorate,Europe,,high,2,0,Non-high-stress
+Doctorate,Africa,,low,0,0,Non-high-stress
+Doctorate,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Doctorate,Asia,,medium,1,0,Non-high-stress
+Doctorate,South America,,medium,1,0,Non-high-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,high,2,1,High-stress
+Doctorate,Asia,,low,0,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,0,Non-high-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Doctorate,Asia,,very_high,3,1,High-stress
+Master's,South America,,low,0,0,Non-high-stress
+Dual degree,Europe,,very_high,3,1,High-stress
+Doctorate,Asia,,high,2,0,Non-high-stress
+Master's,Asia,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,very_high,3,1,High-stress
+Master's,Europe,,medium,1,0,Non-high-stress
+Doctorate,North/Central America,,medium,1,0,Non-high-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,1,High-stress
+Master's,Asia,,very_high,3,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Doctorate,North/Central America,,high,2,0,Non-high-stress
+Master's,Asia,,high,2,1,High-stress
+Doctorate,North/Central America,,high,2,1,High-stress

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Satisfaction vs High Stress</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f7;
+      color: #222;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+    p {
+      margin-top: 0;
+      color: #555;
+      font-size: 13px;
+    }
+    .panel {
+      width: 1000px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      padding: 16px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    .panel-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .panel-subtitle {
+      font-size: 12px;
+      color: #777;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    #chart_pie {
+      width: 100%;
+      height: 380px;
+    }
+    #chart_bar {
+      width: 100%;
+      height: 420px;
+    }
+    #rose_container {
+      display: flex;
+      gap: 16px;
+    }
+    #chart_rose_high,
+    #chart_rose_low {
+      flex: 1;
+      height: 360px;
+    }
+    .question-switcher {
+      margin: 6px 0 10px 0;
+      font-size: 12px;
+      color: #444;
+    }
+    .question-switcher select {
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      font-size: 12px;
+    }
+  </style>
+  <!-- ECharts + PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <h1>Satisfaction with graduate studies vs high-stress status</h1>
+  <p>
+    Questions:<br/>
+    Q23.a – <em>How satisfied are you with your decision to pursue a graduate degree?</em><br/>
+    Q25.a – <em>How satisfied are you with your graduate degree experience?</em><br/>
+    Data source: viz_satisfaction_high_stress.csv (Nature Graduate Survey 2022)
+  </p>
+
+  <div class="panel">
+    <div class="panel-title">Select question</div>
+    <div class="question-switcher">
+      Currently viewing:
+      <select id="questionSelect">
+        <option value="q23">Decision to pursue graduate degree (Q23.a)</option>
+        <option value="q25">Overall graduate degree experience (Q25.a)</option>
+      </select>
+    </div>
+    <p id="currentQuestionText" class="panel-subtitle">
+      Question Q23.a: How satisfied are you with your decision to pursue a graduate degree?
+    </p>
+  </div>
+
+  <!-- 上：嵌套环状图 -->
+  <div class="panel">
+    <div class="panel-title">Overall and within-category high-stress share (nested donut)</div>
+    <p class="panel-subtitle">
+      Inner ring: distribution of satisfaction levels (low, neutral, high).<br/>
+      Outer ring: within each satisfaction level, split into high-stress vs not high-stress (by count).<br/>
+      Clicking legend will hide or show a satisfaction level in <strong>both inner and outer rings</strong>.
+    </p>
+    <div id="chart_pie"></div>
+  </div>
+
+  <!-- 中：堆叠/分组柱状图 -->
+  <div class="panel">
+    <div class="panel-title">High-stress vs not high-stress by satisfaction level (stacked / grouped bar)</div>
+    <p class="panel-subtitle">
+      Use the toolbox buttons to switch between percentage vs count, and stacked vs grouped bars.
+    </p>
+    <div id="chart_bar"></div>
+  </div>
+
+  <!-- 下：两张玫瑰图 -->
+  <div class="panel">
+    <div class="panel-title">Distribution of satisfaction levels within high-stress vs not high-stress groups (rose charts)</div>
+    <p class="panel-subtitle">
+      Left: composition of the high-stress group by satisfaction level.<br/>
+      Right: composition of the not high-stress group by satisfaction level.<br/>
+      Use toolbox buttons to show/hide labels (frequency and percentage).
+    </p>
+    <div id="rose_container">
+      <div id="chart_rose_high"></div>
+      <div id="chart_rose_low"></div>
+    </div>
+  </div>
+
+  <script>
+    const csvPath = "../06_satisfaction/viz_satisfaction_high_stress.csv";
+
+    // 两个题目在 CSV 里的 question 文本
+    const QUESTION_KEYS = {
+      q23: "Decision to pursue graduate degree (Q23.a)",
+      q25: "Overall graduate degree experience (Q25.a)",
+    };
+
+    // 短标题 / 说明文案
+    const QUESTION_META = {
+      q23: {
+        label: "Decision to pursue graduate degree (Q23.a)",
+        desc: "How satisfied are you with your decision to pursue a graduate degree?",
+      },
+      q25: {
+        label: "Overall graduate degree experience (Q25.a)",
+        desc: "How satisfied are you with your graduate degree experience?",
+      },
+    };
+
+    // 满意度分档顺序
+    const LEVEL_ORDER = [
+      "Low satisfaction (1–3)",
+      "Neutral (4)",
+      "High satisfaction (5–7)",
+    ];
+
+    function shortLabel(level) {
+      if (level.startsWith("Low satisfaction")) return "Low";
+      if (level.startsWith("High satisfaction")) return "High";
+      if (level.startsWith("Neutral")) return "Neutral";
+      return level;
+    }
+
+    fetch(csvPath)
+      .then((resp) => resp.text())
+      .then((text) => {
+        const parsed = Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true,
+        });
+        const rows = parsed.data;
+
+        // 按 question 聚合
+        const dataByQuestion = {};
+        rows.forEach((r) => {
+          const q = r.question;
+          if (!dataByQuestion[q]) dataByQuestion[q] = [];
+          dataByQuestion[q].push(r);
+        });
+
+        // 把数据整理成更方便使用的结构
+        function prepareQuestionData(questionText) {
+          const rows = dataByQuestion[questionText] || [];
+          const levelStat = {}; // level -> { high, low }
+
+          rows.forEach((r) => {
+            const level = r.satisfaction_level;
+            const hs = parseInt(r.high_stress_group, 10);
+            const c = parseInt(r.count, 10);
+            if (!levelStat[level]) {
+              levelStat[level] = { high: 0, low: 0 };
+            }
+            if (hs === 1) {
+              levelStat[level].high += c;
+            } else {
+              levelStat[level].low += c;
+            }
+          });
+
+          const levels = Object.keys(levelStat).sort(
+            (a, b) => LEVEL_ORDER.indexOf(a) - LEVEL_ORDER.indexOf(b)
+          );
+
+          const highCounts = [];
+          const lowCounts = [];
+          const totalCounts = [];
+          const highWithin = [];
+          const lowWithin = [];
+
+          let totalSample = 0;
+          let totalHigh = 0;
+          let totalLow = 0;
+
+          levels.forEach((lvl) => {
+            const st = levelStat[lvl];
+            const high = st.high;
+            const low = st.low;
+            const tot = high + low;
+            const hp = tot > 0 ? (high / tot) * 100 : 0;
+            const lp = tot > 0 ? (low / tot) * 100 : 0;
+
+            highCounts.push(high);
+            lowCounts.push(low);
+            totalCounts.push(tot);
+            highWithin.push(hp);
+            lowWithin.push(lp);
+
+            totalSample += tot;
+            totalHigh += high;
+            totalLow += low;
+          });
+
+          return {
+            levels,
+            highCounts,
+            lowCounts,
+            totalCounts,
+            highWithin,
+            lowWithin,
+            totalSample,
+            totalHigh,
+            totalLow,
+          };
+        }
+
+        const baseColors = ["#f97373", "#fbbf24", "#34d399"]; // 低 / 中 / 高 三档
+
+        // ======================
+        //  初始化各个图表实例
+        // ======================
+        const pieDom = document.getElementById("chart_pie");
+        const pieChart = echarts.init(pieDom);
+
+        const barDom = document.getElementById("chart_bar");
+        const barChart = echarts.init(barDom);
+
+        const roseHighDom = document.getElementById("chart_rose_high");
+        const roseLowDom = document.getElementById("chart_rose_low");
+        const roseHighChart = echarts.init(roseHighDom);
+        const roseLowChart = echarts.init(roseLowDom);
+
+        let currentQuestionKey = "q23";
+        let barScale = "percent";   // 'percent' | 'count'
+        let barLayout = "stacked";  // 'stacked' | 'grouped'
+        let roseLabelMode = "show"; // 'show' | 'hide'
+
+        // ----------------------
+        // 嵌套环状图的 option 构造
+        // ----------------------
+        function makeDonutOption(qKey) {
+          const qText = QUESTION_KEYS[qKey];
+          const qMeta = QUESTION_META[qKey];
+          const data = prepareQuestionData(qText);
+
+          const innerData = data.levels.map((lvl, idx) => {
+            const tot = data.totalCounts[idx];
+            const share = data.totalSample > 0 ? (tot / data.totalSample) * 100 : 0;
+            return {
+              name: shortLabel(lvl), // 内环 name = 短标签
+              value: tot,
+              level: "inner",
+              fullLabel: lvl,
+              totalCount: tot,
+              totalShare: share,
+              itemStyle: {
+                color: baseColors[idx % baseColors.length],
+              },
+            };
+          });
+
+          const outerData = [];
+          data.levels.forEach((lvl, idx) => {
+            const tot = data.totalCounts[idx];
+            const hc = data.highCounts[idx];
+            const lc = data.lowCounts[idx];
+            const hp = data.highWithin[idx];
+            const lp = data.lowWithin[idx];
+            const base = baseColors[idx % baseColors.length];
+
+            const showHighLabel = hc > 100;
+            const showLowLabel = lc > 100;
+
+            // 关键：内环和外环同一类别的 name 都用短标签，这样点图例会一起隐藏
+            const nameShort = shortLabel(lvl);
+
+            outerData.push({
+              name: nameShort,
+              value: hc,
+              level: "outer",
+              status: "High-stress",
+              categoryShort: nameShort,
+              fullLabel: lvl,
+              count: hc,
+              withinPercent: hp,
+              totalCount: tot,
+              showLabel: showHighLabel,
+              itemStyle: { color: base },
+              labelLine: { show: showHighLabel },
+            });
+
+            outerData.push({
+              name: nameShort,
+              value: lc,
+              level: "outer",
+              status: "Not high-stress",
+              categoryShort: nameShort,
+              fullLabel: lvl,
+              count: lc,
+              withinPercent: lp,
+              totalCount: tot,
+              showLabel: showLowLabel,
+              itemStyle: { color: echarts.color.lift(base, 0.4) },
+              labelLine: { show: showLowLabel },
+            });
+          });
+
+          return {
+            title: {
+              text: qMeta.label,
+              left: "center",
+              top: 4,
+              textStyle: { fontSize: 14, fontWeight: 600 },
+            },
+            tooltip: {
+              trigger: "item",
+              formatter: (params) => {
+                const d = params.data;
+                if (d.level === "inner") {
+                  return [
+                    `<strong>${d.fullLabel}</strong>`,
+                    `Total respondents: ${d.totalCount}`,
+                    `Share of sample: ${d.totalShare.toFixed(1)}%`,
+                  ].join("<br/>");
+                } else if (d.level === "outer") {
+                  return [
+                    `<strong>${d.fullLabel}</strong>`,
+                    `Status: ${d.status}`,
+                    `Count: ${d.count}`,
+                    `Within this level: ${d.withinPercent.toFixed(1)}%`,
+                    `Total in this level: ${d.totalCount}`,
+                  ].join("<br/>");
+                }
+                return params.name;
+              },
+            },
+            legend: {
+              bottom: 0,
+              type: "scroll",
+              data: data.levels.map((lvl) => shortLabel(lvl)),
+            },
+            toolbox: {
+              right: 20,
+              feature: {
+                saveAsImage: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: { show: true },
+              },
+            },
+            series: [
+              {
+                name: qMeta.label + " – levels",
+                type: "pie",
+                selectedMode: "single",
+                radius: [0, "30%"],
+                center: ["50%", "48%"],
+                label: {
+                  position: "inner",
+                  fontSize: 13,
+                  formatter: (p) => {
+                    const d = p.data;
+                    return `${d.name}\n${d.totalShare.toFixed(1)}%`;
+                  },
+                },
+                labelLine: { show: false },
+                data: innerData,
+              },
+              {
+                name: qMeta.label + " – high vs not high",
+                type: "pie",
+                radius: ["45%", "65%"],
+                center: ["50%", "48%"],
+                labelLayout: {
+                  hideOverlap: false,
+                  moveOverlap: "shiftY",
+                },
+                labelLine: {
+                  length: 30,
+                  length2: 14,
+                },
+                label: {
+                  formatter: (params) => {
+                    const d = params.data;
+                    if (!d.showLabel) return "";
+                    return `{cat|${d.categoryShort} - ${d.status}}{abg|}\n{hr|}\n  {cnt|n=${d.count}}  {per|${d.withinPercent.toFixed(1)}%}`;
+                  },
+                  backgroundColor: "#F6F8FC",
+                  borderColor: "#8C8D8E",
+                  borderWidth: 1,
+                  borderRadius: 4,
+                  rich: {
+                    cat: {
+                      color: "#6E7079",
+                      lineHeight: 20,
+                      fontSize: 12,
+                      fontWeight: "bold",
+                    },
+                    abg: {
+                      backgroundColor: "#F6F8FC",
+                      height: 0,
+                      width: "100%",
+                      align: "center",
+                    },
+                    hr: {
+                      borderColor: "#8C8D8E",
+                      width: "100%",
+                      borderWidth: 0.5,
+                      height: 0,
+                    },
+                    cnt: {
+                      color: "#4C5058",
+                      fontSize: 12,
+                      lineHeight: 18,
+                    },
+                    per: {
+                      color: "#fff",
+                      backgroundColor: "#4C5058",
+                      padding: [2, 4],
+                      borderRadius: 4,
+                      fontSize: 11,
+                    },
+                  },
+                },
+                data: outerData,
+              },
+            ],
+          };
+        }
+
+        // ----------------------
+        // 柱状图 option
+        // ----------------------
+        function makeBarOption(qKey) {
+          const qText = QUESTION_KEYS[qKey];
+          const qMeta = QUESTION_META[qKey];
+          const data = prepareQuestionData(qText);
+
+          const showPercent = barScale === "percent";
+          const stacked = barLayout === "stacked";
+
+          const yName = showPercent ? "Share (%)" : "Count";
+          const yMax = showPercent
+            ? 100
+            : Math.ceil(Math.max(...data.totalCounts) / 50) * 50;
+
+          const seriesHighData = showPercent ? data.highWithin : data.highCounts;
+          const seriesLowData = showPercent ? data.lowWithin : data.lowCounts;
+
+          const stackName = stacked ? "total" : undefined;
+          const barWidth = stacked ? "45%" : "30%";
+          const barGap = stacked ? "-100%" : "20%";
+
+          const xLabels = data.levels.map((lvl) => shortLabel(lvl));
+
+          return {
+            title: {
+              text: qMeta.label,
+              left: "center",
+              top: 4,
+              textStyle: { fontSize: 14, fontWeight: 600 },
+            },
+            toolbox: {
+              right: 20,
+              feature: {
+                saveAsImage: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: {
+                  show: true,
+                  onclick: () => {
+                    barScale = "percent";
+                    barLayout = "stacked";
+                    barChart.setOption(makeBarOption(currentQuestionKey), true);
+                  },
+                },
+                myPercent: {
+                  show: true,
+                  title: "Show percentage",
+                  icon: "path://M512 64L64 960h896L512 64z",
+                  onclick: () => {
+                    barScale = "percent";
+                    barChart.setOption(makeBarOption(currentQuestionKey), true);
+                  },
+                },
+                myCount: {
+                  show: true,
+                  title: "Show count",
+                  icon: "path://M128 832h768v-128H128v128zM128 576h768V448H128v128zM128 320h768V192H128v128z",
+                  onclick: () => {
+                    barScale = "count";
+                    barChart.setOption(makeBarOption(currentQuestionKey), true);
+                  },
+                },
+                myStack: {
+                  show: true,
+                  title: "Stacked bars",
+                  icon: "path://M128 832h256v-256H128v256zM384 832h256v-256H384v256zM640 832h256v-256H640v256zM128 576h256V320H128v256zM384 576h256V320H384v256zM640 576h256V320H640v256z",
+                  onclick: () => {
+                    barLayout = "stacked";
+                    barChart.setOption(makeBarOption(currentQuestionKey), true);
+                  },
+                },
+                myGrouped: {
+                  show: true,
+                  title: "Grouped bars",
+                  icon: "path://M192 832h160V320H192v512zM432 832h160V448H432v384zM672 832h160V192H672v640z",
+                  onclick: () => {
+                    barLayout = "grouped";
+                    barChart.setOption(makeBarOption(currentQuestionKey), true);
+                  },
+                },
+                dataZoom: { show: true },
+              },
+            },
+            legend: {
+              top: 26,
+              data: ["High-stress", "Not high-stress"],
+            },
+            grid: { left: 80, right: 40, top: 60, bottom: 80 },
+            tooltip: {
+              trigger: "axis",
+              axisPointer: { type: "shadow" },
+              formatter: (params) => {
+                const idx = params[0].dataIndex;
+                const lvl = data.levels[idx];
+                const hp = data.highWithin[idx];
+                const lp = data.lowWithin[idx];
+                const hc = data.highCounts[idx];
+                const lc = data.lowCounts[idx];
+                const tot = data.totalCounts[idx];
+
+                return [
+                  `<strong>${lvl}</strong>`,
+                  `Total in this level: ${tot}`,
+                  `<span style="color:#f97373;">■</span> High-stress: ` +
+                    (showPercent ? `${hp.toFixed(1)}% (${hc})` : hc),
+                  `<span style="color:#34d399;">■</span> Not high-stress: ` +
+                    (showPercent ? `${lp.toFixed(1)}% (${lc})` : lc),
+                ].join("<br/>");
+              },
+            },
+            xAxis: {
+              type: "category",
+              data: xLabels,
+              axisLabel: {
+                interval: 0,
+                rotate: 0,
+                fontSize: 12,
+              },
+            },
+            yAxis: {
+              type: "value",
+              name: yName,
+              min: 0,
+              max: yMax,
+            },
+            dataZoom: [
+              { type: "slider", show: false, xAxisIndex: 0, bottom: 50 },
+              { type: "inside", xAxisIndex: 0 },
+            ],
+            series: [
+              {
+                name: "High-stress",
+                type: "bar",
+                stack: stackName,
+                data: seriesHighData,
+                barWidth: barWidth,
+                barGap: barGap,
+                itemStyle: {
+                  color: "#f97373",
+                  borderRadius: stacked ? [6, 6, 0, 0] : [4, 4, 4, 4],
+                },
+                label: {
+                  show: true,
+                  position: "inside",
+                  formatter: (p) => {
+                    const idx = p.dataIndex;
+                    if (showPercent) {
+                      const pct = data.highWithin[idx];
+                      if (!isFinite(pct) || pct < 5) return "";
+                      return `${pct.toFixed(1)}%\n(${data.highCounts[idx]})`;
+                    } else {
+                      const val = data.highCounts[idx];
+                      if (!isFinite(val) || val < data.totalCounts[idx] * 0.05)
+                        return "";
+                      return val.toString();
+                    }
+                  },
+                },
+              },
+              {
+                name: "Not high-stress",
+                type: "bar",
+                stack: stackName,
+                data: seriesLowData,
+                barWidth: barWidth,
+                barGap: barGap,
+                itemStyle: {
+                  color: "#34d399",
+                  borderRadius: stacked ? [0, 0, 6, 6] : [4, 4, 4, 4],
+                },
+                label: {
+                  show: true,
+                  position: "inside",
+                  formatter: (p) => {
+                    const idx = p.dataIndex;
+                    if (showPercent) {
+                      const pct = data.lowWithin[idx];
+                      if (!isFinite(pct) || pct < 5) return "";
+                      return `${pct.toFixed(1)}%\n(${data.lowCounts[idx]})`;
+                    } else {
+                      const val = data.lowCounts[idx];
+                      if (!isFinite(val) || val < data.totalCounts[idx] * 0.05)
+                        return "";
+                      return val.toString();
+                    }
+                  },
+                },
+              },
+            ],
+          };
+        }
+
+        // ----------------------
+        // 玫瑰图 option
+        // ----------------------
+        function makeRoseOption(qKey, isHigh) {
+          const qText = QUESTION_KEYS[qKey];
+          const qMeta = QUESTION_META[qKey];
+          const data = prepareQuestionData(qText);
+
+          const values = isHigh ? data.highCounts : data.lowCounts;
+          const total = isHigh ? data.totalHigh : data.totalLow;
+          const titleText = (isHigh ? "High-stress group – " : "Not high-stress group – ") + shortQuestionKey(qKey);
+          const seriesName = titleText;
+          const labels = data.levels.map((lvl) => shortLabel(lvl));
+
+          return {
+            title: {
+              text: titleText,
+              left: "center",
+              top: 6,
+              textStyle: { fontSize: 13 },
+            },
+            tooltip: {
+              trigger: "item",
+              formatter: (params) => {
+                const v = params.data.value;
+                const pct = total > 0 ? (v / total) * 100 : 0;
+                return [
+                  `<strong>${params.data.fullLabel}</strong>`,
+                  `${seriesName}`,
+                  `n = ${v}`,
+                  `Share in this group: ${pct.toFixed(1)}%`,
+                ].join("<br/>");
+              },
+            },
+            legend: {
+              type: "scroll",
+              bottom: 0,
+              data: labels,
+            },
+            toolbox: {
+              right: 10,
+              feature: {
+                saveAsImage: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: { show: true },
+                myShowLabels: {
+                  show: true,
+                  title: "Show labels (n & %)",
+                  icon: "path://M512 64L64 960h896L512 64z",
+                  onclick: () => {
+                    roseLabelMode = "show";
+                    updateRoseCharts();
+                  },
+                },
+                myHideLabels: {
+                  show: true,
+                  title: "Hide labels",
+                  icon: "path://M128 832h768v-128H128v128z",
+                  onclick: () => {
+                    roseLabelMode = "hide";
+                    updateRoseCharts();
+                  },
+                },
+              },
+            },
+            series: [
+              {
+                name: seriesName,
+                type: "pie",
+                roseType: "area",
+                radius: [20, 120],
+                center: ["50%", "50%"],
+                itemStyle: { borderRadius: 5 },
+                label: {
+                  show: roseLabelMode === "show",
+                  formatter: (p) => {
+                    const v = p.data.value;
+                    const pct = total > 0 ? (v / total) * 100 : 0;
+                    return `${p.data.name}\n n=${v} (${pct.toFixed(1)}%)`;
+                  },
+                },
+                emphasis: {
+                  label: { show: true },
+                },
+                data: data.levels.map((lvl, idx) => ({
+                  name: shortLabel(lvl),
+                  fullLabel: lvl,
+                  value: values[idx],
+                  itemStyle: {
+                    color: baseColors[idx % baseColors.length],
+                  },
+                })),
+              },
+            ],
+          };
+        }
+
+        function shortQuestionKey(qKey) {
+          return qKey === "q23" ? "Q23.a" : "Q25.a";
+        }
+
+        // ----------------------
+        // 更新函数：切换题目时一次性更新所有图
+        // ----------------------
+        function updateAllCharts() {
+          pieChart.setOption(makeDonutOption(currentQuestionKey), true);
+          barChart.setOption(makeBarOption(currentQuestionKey), true);
+          updateRoseCharts();
+
+          // 更新上方文字
+          const meta = QUESTION_META[currentQuestionKey];
+          const qTextDom = document.getElementById("currentQuestionText");
+          qTextDom.textContent =
+            (currentQuestionKey === "q23" ? "Question Q23.a: " : "Question Q25.a: ") +
+            meta.desc;
+        }
+
+        function updateRoseCharts() {
+          roseHighChart.setOption(makeRoseOption(currentQuestionKey, true), true);
+          roseLowChart.setOption(makeRoseOption(currentQuestionKey, false), true);
+        }
+
+        // 初始化为 Q23
+        updateAllCharts();
+
+        // 题目下拉切换
+        const selector = document.getElementById("questionSelect");
+        selector.addEventListener("change", () => {
+          currentQuestionKey = selector.value;
+          updateAllCharts();
+        });
+      })
+      .catch((err) => {
+        console.error("Error loading CSV:", err);
+        document.getElementById("chart_pie").innerHTML =
+          "<p>Failed to load CSV. Please check the csvPath setting in the script.</p>";
+      });
+  </script>
+</body>
+</html>

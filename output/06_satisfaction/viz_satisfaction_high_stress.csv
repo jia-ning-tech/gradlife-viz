@@ -1,0 +1,13 @@
+question,satisfaction_level,high_stress_group,count,percent
+Decision to pursue graduate degree (Q23.a),High satisfaction (5–7),0,1662,67.64346764346764
+Decision to pursue graduate degree (Q23.a),High satisfaction (5–7),1,795,32.356532356532355
+Decision to pursue graduate degree (Q23.a),Low satisfaction (1–3),0,187,46.17283950617284
+Decision to pursue graduate degree (Q23.a),Low satisfaction (1–3),1,218,53.827160493827165
+Decision to pursue graduate degree (Q23.a),Neutral (4),0,209,53.58974358974359
+Decision to pursue graduate degree (Q23.a),Neutral (4),1,181,46.41025641025641
+Overall graduate degree experience (Q25.a),High satisfaction (5–7),0,1425,70.68452380952381
+Overall graduate degree experience (Q25.a),High satisfaction (5–7),1,591,29.315476190476193
+Overall graduate degree experience (Q25.a),Low satisfaction (1–3),0,337,46.10123119015048
+Overall graduate degree experience (Q25.a),Low satisfaction (1–3),1,394,53.898768809849514
+Overall graduate degree experience (Q25.a),Neutral (4),0,296,58.61386138613861
+Overall graduate degree experience (Q25.a),Neutral (4),1,209,41.386138613861384

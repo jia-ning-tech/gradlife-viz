@@ -1,0 +1,89 @@
+question,factor,degree_code_int,degree_label,level,high_stress_group,count,percent
+Q27.f – Overall relationship with supervisor,v079_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),0,223,39.399293286219084
+Q27.f – Overall relationship with supervisor,v079_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),1,343,60.600706713780916
+Q27.f – Overall relationship with supervisor,v079_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),0,81,64.28571428571429
+Q27.f – Overall relationship with supervisor,v079_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),1,45,35.714285714285715
+Q27.f – Overall relationship with supervisor,v079_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),0,4,40.0
+Q27.f – Overall relationship with supervisor,v079_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),1,6,60.0
+Q27.f – Overall relationship with supervisor,v079_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),0,1086,67.79026217228464
+Q27.f – Overall relationship with supervisor,v079_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),1,516,32.20973782771536
+Q27.f – Overall relationship with supervisor,v079_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),0,379,79.78947368421052
+Q27.f – Overall relationship with supervisor,v079_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),1,96,20.210526315789473
+Q27.f – Overall relationship with supervisor,v079_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),0,25,71.42857142857143
+Q27.f – Overall relationship with supervisor,v079_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),1,10,28.57142857142857
+Q27.f – Overall relationship with supervisor,v079_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),0,144,53.73134328358209
+Q27.f – Overall relationship with supervisor,v079_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),1,124,46.26865671641791
+Q27.f – Overall relationship with supervisor,v079_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),0,59,56.730769230769226
+Q27.f – Overall relationship with supervisor,v079_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),1,45,43.269230769230774
+Q27.f – Overall relationship with supervisor,v079_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),0,3,100.0
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),0,264,65.18518518518519
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),1,141,34.81481481481482
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),0,158,79.39698492462311
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),1,41,20.603015075376884
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),0,5,50.0
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),1,5,50.0
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),0,1047,62.35854675402025
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),1,632,37.64145324597975
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),0,347,74.30406852248393
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),1,120,25.69593147751606
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),0,25,75.75757575757575
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),1,8,24.242424242424242
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),0,151,41.59779614325069
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),1,212,58.40220385674931
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),0,59,65.55555555555556
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),1,31,34.44444444444444
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),0,2,33.33333333333333
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),1,4,66.66666666666666
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),0,332,71.3978494623656
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),1,133,28.602150537634408
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),0,162,81.0
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),1,38,19.0
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),0,9,81.81818181818183
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),1,2,18.181818181818183
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),0,942,62.301587301587304
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),1,570,37.698412698412696
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),0,337,75.22321428571429
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),1,111,24.776785714285715
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),0,19,65.51724137931035
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),1,10,34.48275862068966
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),0,183,39.524838012958966
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),1,280,60.475161987041034
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),0,63,60.57692307692307
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),1,41,39.42307692307692
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),0,4,44.44444444444444
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),1,5,55.55555555555556
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),0,263,53.23886639676113
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),1,231,46.76113360323887
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),0,120,69.36416184971098
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),1,53,30.63583815028902
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),0,6,75.0
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),1,2,25.0
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),0,1000,63.85696040868455
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),1,566,36.14303959131545
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),0,373,78.36134453781513
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),1,103,21.638655462184875
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),0,20,60.60606060606061
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),1,13,39.39393939393939
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),0,193,51.05820105820106
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),1,185,48.94179894179894
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),0,68,67.32673267326733
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),1,33,32.67326732673268
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),0,6,75.0
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),1,2,25.0
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),0,285,86.36363636363636
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),1,45,13.636363636363635
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),0,130,90.27777777777779
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),1,14,9.722222222222223
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),0,8,100.0
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),0,1039,62.6658624849216
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),1,619,37.33413751507841
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),0,382,74.46393762183236
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),1,131,25.53606237816764
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),0,20,58.82352941176471
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),1,14,41.17647058823529
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),0,132,29.53020134228188
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),1,315,70.46979865771812
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),0,49,52.68817204301075
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),1,44,47.31182795698925
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),0,4,57.14285714285714
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),1,3,42.857142857142854

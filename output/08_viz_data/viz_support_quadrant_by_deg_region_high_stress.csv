@@ -1,0 +1,125 @@
+degree_label,region_continent,supervisor_cat,institution_cat,quadrant_label,total_count,high_stress_count,non_high_stress_count,high_stress_percent,non_high_stress_percent
+Doctorate,Africa,Low,Low,Low supervisor / Low institution,9,1,8,11.11111111111111,88.88888888888889
+Doctorate,Africa,Low,Medium,Low supervisor / Medium institution,6,2,4,33.33333333333333,66.66666666666667
+Doctorate,Africa,Low,High,Low supervisor / High institution,15,0,15,0.0,100.0
+Doctorate,Africa,Medium,Low,Medium supervisor / Low institution,3,2,1,66.66666666666666,33.33333333333334
+Doctorate,Africa,Medium,Medium,Medium supervisor / Medium institution,2,0,2,0.0,100.0
+Doctorate,Africa,Medium,High,Medium supervisor / High institution,3,1,2,33.33333333333333,66.66666666666667
+Doctorate,Africa,High,Low,High supervisor / Low institution,4,1,3,25.0,75.0
+Doctorate,Africa,High,Medium,High supervisor / Medium institution,3,2,1,66.66666666666666,33.33333333333334
+Doctorate,Africa,High,High,High supervisor / High institution,11,2,9,18.181818181818183,81.81818181818181
+Doctorate,Asia,Low,Low,Low supervisor / Low institution,80,18,62,22.5,77.5
+Doctorate,Asia,Low,Medium,Low supervisor / Medium institution,39,16,23,41.02564102564102,58.97435897435898
+Doctorate,Asia,Low,High,Low supervisor / High institution,60,19,41,31.666666666666664,68.33333333333334
+Doctorate,Asia,Medium,Low,Medium supervisor / Low institution,35,13,22,37.142857142857146,62.857142857142854
+Doctorate,Asia,Medium,Medium,Medium supervisor / Medium institution,20,13,7,65.0,35.0
+Doctorate,Asia,Medium,High,Medium supervisor / High institution,30,16,14,53.333333333333336,46.666666666666664
+Doctorate,Asia,High,Low,High supervisor / Low institution,76,39,37,51.31578947368421,48.68421052631579
+Doctorate,Asia,High,Medium,High supervisor / Medium institution,39,17,22,43.58974358974359,56.41025641025641
+Doctorate,Asia,High,High,High supervisor / High institution,98,66,32,67.3469387755102,32.653061224489804
+Doctorate,Australasia,Low,Low,Low supervisor / Low institution,34,9,25,26.47058823529412,73.52941176470588
+Doctorate,Australasia,Low,Medium,Low supervisor / Medium institution,13,2,11,15.384615384615385,84.61538461538461
+Doctorate,Australasia,Low,High,Low supervisor / High institution,13,3,10,23.076923076923077,76.92307692307692
+Doctorate,Australasia,Medium,Low,Medium supervisor / Low institution,10,4,6,40.0,60.0
+Doctorate,Australasia,Medium,Medium,Medium supervisor / Medium institution,6,2,4,33.33333333333333,66.66666666666667
+Doctorate,Australasia,Medium,High,Medium supervisor / High institution,5,1,4,20.0,80.0
+Doctorate,Australasia,High,Low,High supervisor / Low institution,15,8,7,53.333333333333336,46.666666666666664
+Doctorate,Australasia,High,Medium,High supervisor / Medium institution,3,1,2,33.33333333333333,66.66666666666667
+Doctorate,Australasia,High,High,High supervisor / High institution,12,6,6,50.0,50.0
+Doctorate,Europe,Low,Low,Low supervisor / Low institution,149,54,95,36.241610738255034,63.758389261744966
+Doctorate,Europe,Low,Medium,Low supervisor / Medium institution,86,29,57,33.72093023255814,66.27906976744185
+Doctorate,Europe,Low,High,Low supervisor / High institution,148,39,109,26.351351351351347,73.64864864864865
+Doctorate,Europe,Medium,Low,Medium supervisor / Low institution,56,13,43,23.214285714285715,76.78571428571428
+Doctorate,Europe,Medium,Medium,Medium supervisor / Medium institution,32,14,18,43.75,56.25
+Doctorate,Europe,Medium,High,Medium supervisor / High institution,51,24,27,47.05882352941176,52.94117647058824
+Doctorate,Europe,High,Low,High supervisor / Low institution,133,63,70,47.368421052631575,52.631578947368425
+Doctorate,Europe,High,Medium,High supervisor / Medium institution,87,50,37,57.47126436781609,42.52873563218391
+Doctorate,Europe,High,High,High supervisor / High institution,152,82,70,53.94736842105263,46.05263157894737
+Doctorate,North/Central America,Low,Low,Low supervisor / Low institution,189,63,126,33.33333333333333,66.66666666666667
+Doctorate,North/Central America,Low,Medium,Low supervisor / Medium institution,83,37,46,44.57831325301205,55.42168674698795
+Doctorate,North/Central America,Low,High,Low supervisor / High institution,108,39,69,36.11111111111111,63.88888888888889
+Doctorate,North/Central America,Medium,Low,Medium supervisor / Low institution,68,23,45,33.82352941176471,66.17647058823529
+Doctorate,North/Central America,Medium,Medium,Medium supervisor / Medium institution,30,13,17,43.333333333333336,56.666666666666664
+Doctorate,North/Central America,Medium,High,Medium supervisor / High institution,35,18,17,51.42857142857142,48.57142857142858
+Doctorate,North/Central America,High,Low,High supervisor / Low institution,123,53,70,43.08943089430895,56.91056910569105
+Doctorate,North/Central America,High,Medium,High supervisor / Medium institution,57,33,24,57.89473684210527,42.10526315789473
+Doctorate,North/Central America,High,High,High supervisor / High institution,94,44,50,46.808510638297875,53.191489361702125
+Doctorate,South America,Low,Low,Low supervisor / Low institution,21,6,15,28.57142857142857,71.42857142857143
+Doctorate,South America,Low,Medium,Low supervisor / Medium institution,12,3,9,25.0,75.0
+Doctorate,South America,Low,High,Low supervisor / High institution,31,7,24,22.58064516129032,77.41935483870968
+Doctorate,South America,Medium,Low,Medium supervisor / Low institution,10,1,9,10.0,90.0
+Doctorate,South America,Medium,Medium,Medium supervisor / Medium institution,4,0,4,0.0,100.0
+Doctorate,South America,Medium,High,Medium supervisor / High institution,8,1,7,12.5,87.5
+Doctorate,South America,High,Low,High supervisor / Low institution,9,3,6,33.33333333333333,66.66666666666667
+Doctorate,South America,High,Medium,High supervisor / Medium institution,4,1,3,25.0,75.0
+Doctorate,South America,High,High,High supervisor / High institution,19,7,12,36.84210526315789,63.15789473684211
+Dual degree,Asia,Low,Low,Low supervisor / Low institution,1,1,0,100.0,0.0
+Dual degree,Asia,Low,High,Low supervisor / High institution,1,0,1,0.0,100.0
+Dual degree,Asia,Medium,Low,Medium supervisor / Low institution,1,1,0,100.0,0.0
+Dual degree,Asia,High,High,High supervisor / High institution,2,0,2,0.0,100.0
+Dual degree,Europe,Low,Low,Low supervisor / Low institution,6,3,3,50.0,50.0
+Dual degree,Europe,Low,Medium,Low supervisor / Medium institution,3,0,3,0.0,100.0
+Dual degree,Europe,Low,High,Low supervisor / High institution,7,2,5,28.57142857142857,71.42857142857143
+Dual degree,Europe,Medium,Low,Medium supervisor / Low institution,1,0,1,0.0,100.0
+Dual degree,Europe,Medium,Medium,Medium supervisor / Medium institution,1,1,0,100.0,0.0
+Dual degree,Europe,High,High,High supervisor / High institution,4,1,3,25.0,75.0
+Dual degree,North/Central America,Low,Low,Low supervisor / Low institution,6,0,6,0.0,100.0
+Dual degree,North/Central America,Low,Medium,Low supervisor / Medium institution,1,0,1,0.0,100.0
+Dual degree,North/Central America,Low,High,Low supervisor / High institution,3,1,2,33.33333333333333,66.66666666666667
+Dual degree,North/Central America,Medium,Low,Medium supervisor / Low institution,2,1,1,50.0,50.0
+Dual degree,North/Central America,High,Low,High supervisor / Low institution,3,2,1,66.66666666666666,33.33333333333334
+Dual degree,North/Central America,High,Medium,High supervisor / Medium institution,1,1,0,100.0,0.0
+Dual degree,North/Central America,High,High,High supervisor / High institution,4,3,1,75.0,25.0
+Dual degree,South America,Medium,Medium,Medium supervisor / Medium institution,1,0,1,0.0,100.0
+Dual degree,South America,High,Low,High supervisor / Low institution,1,0,1,0.0,100.0
+Master's,Africa,Low,Low,Low supervisor / Low institution,3,0,3,0.0,100.0
+Master's,Africa,Low,Medium,Low supervisor / Medium institution,6,1,5,16.666666666666664,83.33333333333334
+Master's,Africa,Low,High,Low supervisor / High institution,16,5,11,31.25,68.75
+Master's,Africa,Medium,Low,Medium supervisor / Low institution,1,0,1,0.0,100.0
+Master's,Africa,Medium,Medium,Medium supervisor / Medium institution,2,2,0,100.0,0.0
+Master's,Africa,Medium,High,Medium supervisor / High institution,2,0,2,0.0,100.0
+Master's,Africa,High,Low,High supervisor / Low institution,7,1,6,14.285714285714285,85.71428571428572
+Master's,Africa,High,Medium,High supervisor / Medium institution,4,0,4,0.0,100.0
+Master's,Africa,High,High,High supervisor / High institution,8,2,6,25.0,75.0
+Master's,Asia,Low,Low,Low supervisor / Low institution,51,8,43,15.686274509803921,84.31372549019608
+Master's,Asia,Low,Medium,Low supervisor / Medium institution,28,8,20,28.57142857142857,71.42857142857143
+Master's,Asia,Low,High,Low supervisor / High institution,39,5,34,12.82051282051282,87.17948717948718
+Master's,Asia,Medium,Low,Medium supervisor / Low institution,17,5,12,29.411764705882355,70.58823529411765
+Master's,Asia,Medium,Medium,Medium supervisor / Medium institution,17,8,9,47.05882352941176,52.94117647058824
+Master's,Asia,Medium,High,Medium supervisor / High institution,20,7,13,35.0,65.0
+Master's,Asia,High,Low,High supervisor / Low institution,63,18,45,28.57142857142857,71.42857142857143
+Master's,Asia,High,Medium,High supervisor / Medium institution,20,7,13,35.0,65.0
+Master's,Asia,High,High,High supervisor / High institution,51,24,27,47.05882352941176,52.94117647058824
+Master's,Australasia,Low,Low,Low supervisor / Low institution,2,0,2,0.0,100.0
+Master's,Australasia,Low,Medium,Low supervisor / Medium institution,1,1,0,100.0,0.0
+Master's,Australasia,Low,High,Low supervisor / High institution,1,0,1,0.0,100.0
+Master's,Australasia,Medium,Low,Medium supervisor / Low institution,1,0,1,0.0,100.0
+Master's,Australasia,Medium,Medium,Medium supervisor / Medium institution,1,0,1,0.0,100.0
+Master's,Australasia,High,Low,High supervisor / Low institution,2,0,2,0.0,100.0
+Master's,Australasia,High,Medium,High supervisor / Medium institution,1,1,0,100.0,0.0
+Master's,Australasia,High,High,High supervisor / High institution,1,0,1,0.0,100.0
+Master's,Europe,Low,Low,Low supervisor / Low institution,35,9,26,25.71428571428571,74.28571428571429
+Master's,Europe,Low,Medium,Low supervisor / Medium institution,18,5,13,27.77777777777778,72.22222222222223
+Master's,Europe,Low,High,Low supervisor / High institution,35,8,27,22.857142857142858,77.14285714285714
+Master's,Europe,Medium,Low,Medium supervisor / Low institution,9,2,7,22.22222222222222,77.77777777777777
+Master's,Europe,Medium,Medium,Medium supervisor / Medium institution,6,4,2,66.66666666666666,33.33333333333334
+Master's,Europe,Medium,High,Medium supervisor / High institution,15,3,12,20.0,80.0
+Master's,Europe,High,Low,High supervisor / Low institution,37,7,30,18.91891891891892,81.08108108108108
+Master's,Europe,High,Medium,High supervisor / Medium institution,21,6,15,28.57142857142857,71.42857142857143
+Master's,Europe,High,High,High supervisor / High institution,52,14,38,26.923076923076923,73.07692307692308
+Master's,North/Central America,Low,Low,Low supervisor / Low institution,23,7,16,30.434782608695656,69.56521739130434
+Master's,North/Central America,Low,Medium,Low supervisor / Medium institution,9,0,9,0.0,100.0
+Master's,North/Central America,Low,High,Low supervisor / High institution,17,2,15,11.76470588235294,88.23529411764706
+Master's,North/Central America,Medium,Low,Medium supervisor / Low institution,12,1,11,8.333333333333332,91.66666666666667
+Master's,North/Central America,Medium,Medium,Medium supervisor / Medium institution,5,0,5,0.0,100.0
+Master's,North/Central America,Medium,High,Medium supervisor / High institution,6,1,5,16.666666666666664,83.33333333333334
+Master's,North/Central America,High,Low,High supervisor / Low institution,16,3,13,18.75,81.25
+Master's,North/Central America,High,Medium,High supervisor / Medium institution,4,1,3,25.0,75.0
+Master's,North/Central America,High,High,High supervisor / High institution,16,5,11,31.25,68.75
+Master's,South America,Low,Low,Low supervisor / Low institution,5,2,3,40.0,60.0
+Master's,South America,Low,Medium,Low supervisor / Medium institution,7,2,5,28.57142857142857,71.42857142857143
+Master's,South America,Low,High,Low supervisor / High institution,20,3,17,15.0,85.0
+Master's,South America,Medium,High,Medium supervisor / High institution,8,1,7,12.5,87.5
+Master's,South America,High,Low,High supervisor / Low institution,5,0,5,0.0,100.0
+Master's,South America,High,Medium,High supervisor / Medium institution,2,0,2,0.0,100.0
+Master's,South America,High,High,High supervisor / High institution,5,1,4,20.0,80.0

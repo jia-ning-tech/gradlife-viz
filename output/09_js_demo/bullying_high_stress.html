@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bullying vs High Stress</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f7;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+    p {
+      margin-top: 0;
+      color: #555;
+      font-size: 13px;
+    }
+    .panel {
+      width: 1000px;
+      max-width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      padding: 16px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    .panel-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .panel-subtitle {
+      font-size: 12px;
+      color: #777;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    #chart_pie {
+      width: 100%;
+      height: 380px;
+    }
+    #chart_bar {
+      width: 100%;
+      height: 420px;
+    }
+    #rose_container {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    #chart_rose_high,
+    #chart_rose_low {
+      flex: 1;
+      min-width: 260px;
+      height: 360px;
+    }
+    .bar-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      align-items: center;
+      font-size: 12px;
+      margin-bottom: 8px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      background: #f7f7fa;
+    }
+    .bar-controls label {
+      font-weight: 500;
+      margin-right: 4px;
+    }
+    .bar-controls select {
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+  </style>
+  <!-- ECharts + PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <h1>High work hours + low work–life balance by bullying experience</h1>
+  <p>
+    Question (Q36): <em>Do you feel that you have experienced bullying during your graduate degree?</em><br/>
+    Data source: viz_bullying_high_stress.csv (Nature Graduate Survey 2022)
+  </p>
+
+  <!-- 上：嵌套环状图 -->
+  <div class="panel">
+    <div class="panel-title">Overall and within-category high-stress share (nested donut)</div>
+    <p class="panel-subtitle">
+      Inner ring: distribution of responses to Q36 (bullying experience).<br/>
+      Outer ring: within each category, split into high-stress vs not high-stress (by count).
+      For outer segments with n ≤ 100, labels and guide lines are hidden on the chart and only shown on hover (tooltip) to avoid clutter.
+    </p>
+    <div id="chart_pie"></div>
+  </div>
+
+  <!-- 中：堆叠/分组柱状图 -->
+  <div class="panel">
+    <div class="panel-title">High-stress vs not high-stress by bullying experience (stacked / grouped bar)</div>
+    <p class="panel-subtitle">
+      Question (Q36): <em>Do you feel that you have experienced bullying during your graduate degree?</em><br/>
+      Use the controls below to switch between percentage vs count, and stacked vs grouped bars.
+    </p>
+    <div class="bar-controls">
+      <div>
+        <label for="barScaleSelect">Y axis:</label>
+        <select id="barScaleSelect">
+          <option value="percent" selected>Share within category (%)</option>
+          <option value="count">Count (n)</option>
+        </select>
+      </div>
+      <div>
+        <label for="barLayoutSelect">Bar layout:</label>
+        <select id="barLayoutSelect">
+          <option value="stacked" selected>Stacked</option>
+          <option value="grouped">Grouped</option>
+        </select>
+      </div>
+    </div>
+    <div id="chart_bar"></div>
+  </div>
+
+  <!-- 下：两张玫瑰图 -->
+  <div class="panel">
+    <div class="panel-title">Distribution of bullying experience within high-stress vs not high-stress groups (rose charts)</div>
+    <p class="panel-subtitle">
+      Left: composition of the high-stress group by Q36 response.<br/>
+      Right: composition of the not high-stress group by Q36 response.
+      Use toolbox buttons on each chart to show/hide labels (frequency and percentage).
+    </p>
+    <div id="rose_container">
+      <div id="chart_rose_high"></div>
+      <div id="chart_rose_low"></div>
+    </div>
+  </div>
+
+  <script>
+    const csvPath = "../08_viz_data/viz_bullying_high_stress.csv";
+
+    fetch(csvPath)
+      .then(resp => resp.text())
+      .then(text => {
+        const parsed = Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true,
+        });
+        const data = parsed.data;
+
+        // ---------- 通用数据整理 ----------
+        const fullLabels = data.map(d => d.bully_label || "");
+
+        const shortLabels = fullLabels.map(full => {
+          if (full === "Prefer not to say") return "Prefer not to say";
+          if (full === "Yes") return "Yes";
+          if (full === "No") return "No";
+          return full;
+        });
+
+        const highPercent = data.map(d => parseFloat(d.high_stress_percent));
+        const highCount   = data.map(d => parseInt(d.high_stress_count, 10));
+        const totalCount  = data.map(d => parseInt(d.total_count, 10));
+        const lowPercent  = highPercent.map(p => 100 - p);
+        const lowCount    = highCount.map((c, i) => totalCount[i] - c);
+
+        const totalSample = totalCount.reduce((a, b) => a + b, 0);
+        const totalHigh   = highCount.reduce((a, b) => a + b, 0);
+        const totalLow    = lowCount.reduce((a, b) => a + b, 0);
+
+        const baseColors = ["#5470c6", "#91cc75", "#fac858"];
+
+        // ======================
+        //  1) 嵌套环状图
+        // ======================
+        const pieDom = document.getElementById("chart_pie");
+        const pieChart = echarts.init(pieDom);
+
+        const innerData = data.map((d, i) => {
+          const tot = totalCount[i];
+          const share = totalSample > 0 ? (tot / totalSample) * 100 : 0;
+          return {
+            name: shortLabels[i],
+            value: tot,
+            level: "inner",
+            fullLabel: fullLabels[i],
+            totalCount: tot,
+            totalShare: share,
+            itemStyle: {
+              color: baseColors[i % baseColors.length]
+            }
+          };
+        });
+
+        const outerData = [];
+        data.forEach((d, i) => {
+          const tot = totalCount[i];
+          const hc = highCount[i];
+          const lc = lowCount[i];
+          const hp = highPercent[i];
+          const lp = 100 - hp;
+          const base = baseColors[i % baseColors.length];
+
+          const showHighLabel = hc > 100;
+          const showLowLabel  = lc > 100;
+
+          outerData.push({
+            name: shortLabels[i] + " - High",
+            value: hc,
+            level: "outer",
+            status: "High-stress",
+            categoryShort: shortLabels[i],
+            fullLabel: fullLabels[i],
+            count: hc,
+            withinPercent: hp,
+            totalCount: tot,
+            showLabel: showHighLabel,
+            itemStyle: { color: base },
+            labelLine: { show: showHighLabel }
+          });
+
+          outerData.push({
+            name: shortLabels[i] + " - Not high",
+            value: lc,
+            level: "outer",
+            status: "Not high-stress",
+            categoryShort: shortLabels[i],
+            fullLabel: fullLabels[i],
+            count: lc,
+            withinPercent: lp,
+            totalCount: tot,
+            showLabel: showLowLabel,
+            itemStyle: { color: echarts.color.lift(base, 0.4) },
+            labelLine: { show: showLowLabel }
+          });
+        });
+
+        const donutOption = {
+          tooltip: {
+            trigger: "item",
+            formatter: params => {
+              const d = params.data;
+              if (d.level === "inner") {
+                return [
+                  `<strong>${d.fullLabel}</strong>`,
+                  `Total respondents: ${d.totalCount}`,
+                  `Share of sample: ${d.totalShare.toFixed(1)}%`
+                ].join("<br/>");
+              } else if (d.level === "outer") {
+                return [
+                  `<strong>${d.fullLabel}</strong>`,
+                  `Status: ${d.status}`,
+                  `Count: ${d.count}`,
+                  `Within this category: ${d.withinPercent.toFixed(1)}%`,
+                  `Total in this category: ${d.totalCount}`
+                ].join("<br/>");
+              }
+              return params.name;
+            }
+          },
+          legend: {
+            orient: "vertical",
+            right: 10,
+            top: 20,
+            type: "scroll",
+            data: shortLabels
+          },
+          toolbox: {
+            right: 10,
+            top: 10,
+            feature: {
+              saveAsImage: { show: true },
+              dataView: { show: true, readOnly: false },
+              restore: { show: true }
+            }
+          },
+          series: [
+            {
+              name: "Bullying experience (Q36)",
+              type: "pie",
+              selectedMode: "single",
+              radius: [0, "32%"],
+              center: ["35%", "50%"],
+              label: {
+                position: "inner",
+                fontSize: 12,
+                formatter: p => {
+                  const d = p.data;
+                  return `${d.name}\n${d.totalShare.toFixed(1)}%`;
+                }
+              },
+              labelLine: { show: false },
+              data: innerData
+            },
+            {
+              name: "High vs not high-stress",
+              type: "pie",
+              radius: ["42%", "62%"],
+              center: ["35%", "50%"],
+              labelLayout: {
+                hideOverlap: false,
+                moveOverlap: "shiftY"
+              },
+              labelLine: {
+                length: 18,
+                length2: 10
+              },
+              label: {
+                formatter: params => {
+                  const d = params.data;
+                  if (!d.showLabel) return "";
+                  return `{cat|${d.categoryShort} - ${d.status}}{abg|}\n{hr|}\n  {cnt|n=${d.count}}  {per|${d.withinPercent.toFixed(
+                    1
+                  )}%}`;
+                },
+                backgroundColor: "#F6F8FC",
+                borderColor: "#8C8D8E",
+                borderWidth: 1,
+                borderRadius: 4,
+                rich: {
+                  cat: {
+                    color: "#6E7079",
+                    lineHeight: 18,
+                    fontSize: 11,
+                    fontWeight: "bold"
+                  },
+                  abg: {
+                    backgroundColor: "#F6F8FC",
+                    height: 0,
+                    width: "100%",
+                    align: "center"
+                  },
+                  hr: {
+                    borderColor: "#8C8D8E",
+                    width: "100%",
+                    borderWidth: 0.5,
+                    height: 0
+                  },
+                  cnt: {
+                    color: "#4C5058",
+                    fontSize: 11,
+                    lineHeight: 16
+                  },
+                  per: {
+                    color: "#fff",
+                    backgroundColor: "#4C5058",
+                    padding: [2, 4],
+                    borderRadius: 4,
+                    fontSize: 11
+                  }
+                }
+              },
+              data: outerData
+            }
+          ]
+        };
+
+        pieChart.setOption(donutOption);
+
+        // ======================
+        //  2) 柱状图（百分比/频数 × 堆叠/分组）
+        // ======================
+        const barDom = document.getElementById("chart_bar");
+        const barChart = echarts.init(barDom);
+
+        const barScaleSelect  = document.getElementById("barScaleSelect");
+        const barLayoutSelect = document.getElementById("barLayoutSelect");
+
+        let barScale = barScaleSelect.value;    // 'percent' | 'count'
+        let barLayout = barLayoutSelect.value;  // 'stacked' | 'grouped'
+
+        function makeBarOption() {
+          const showPercent = barScale === "percent";
+          const stacked = barLayout === "stacked";
+
+          const yName = showPercent ? "Share within category (%)" : "Count (n)";
+          const yMax = showPercent
+            ? 100
+            : Math.ceil(Math.max(...totalCount) / 50) * 50;
+
+          const seriesHighData = showPercent ? highPercent : highCount;
+          const seriesLowData  = showPercent ? lowPercent  : lowCount;
+
+          const stackName = stacked ? "total" : undefined;
+          const barWidth  = stacked ? "45%" : "30%";
+          const barGap    = stacked ? "-100%" : "20%";
+
+          return {
+            toolbox: {
+              right: 10,
+              top: 10,
+              feature: {
+                saveAsImage: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: { show: true },
+                dataZoom: { show: true }
+              }
+            },
+            legend: {
+              top: 6,
+              data: ["High-stress", "Not high-stress"]
+            },
+            grid: { left: 80, right: 40, top: 60, bottom: 80 },
+            tooltip: {
+              trigger: "axis",
+              axisPointer: { type: "shadow" },
+              formatter: params => {
+                const idx = params[0].dataIndex;
+                const hp = highPercent[idx];
+                const lp = lowPercent[idx];
+                const hc = highCount[idx];
+                const lc = lowCount[idx];
+                const tot = totalCount[idx];
+
+                return [
+                  `<strong>${fullLabels[idx]}</strong>`,
+                  `Total: ${tot}`,
+                  `<span style="color:#5470c6;">■</span> High-stress: ` +
+                    (showPercent ? `${hp.toFixed(1)}% (${hc})` : hc),
+                  `<span style="color:#91cc75;">■</span> Not high-stress: ` +
+                    (showPercent ? `${lp.toFixed(1)}% (${lc})` : lc)
+                ].join("<br/>");
+              }
+            },
+            xAxis: {
+              type: "category",
+              data: shortLabels,
+              axisLabel: {
+                interval: 0,
+                rotate: 10,
+                fontSize: 12
+              }
+            },
+            yAxis: {
+              type: "value",
+              name: yName,
+              min: 0,
+              max: yMax
+            },
+            dataZoom: [
+              { type: "slider", show: true, xAxisIndex: 0, bottom: 40 },
+              { type: "inside", xAxisIndex: 0 }
+            ],
+            series: [
+              {
+                name: "High-stress",
+                type: "bar",
+                stack: stackName,
+                data: seriesHighData,
+                barWidth: barWidth,
+                barGap: barGap,
+                itemStyle: {
+                  borderRadius: stacked ? [6, 6, 0, 0] : [4, 4, 4, 4]
+                },
+                label: {
+                  show: true,
+                  position: "inside",
+                  formatter: p => {
+                    const idx = p.dataIndex;
+                    if (showPercent) {
+                      const pct = highPercent[idx];
+                      if (!isFinite(pct) || pct < 5) return "";
+                      return `${pct.toFixed(1)}%\n(${highCount[idx]})`;
+                    } else {
+                      const val = highCount[idx];
+                      if (!isFinite(val) || val < totalCount[idx] * 0.05) return "";
+                      return val.toString();
+                    }
+                  }
+                }
+              },
+              {
+                name: "Not high-stress",
+                type: "bar",
+                stack: stackName,
+                data: seriesLowData,
+                barWidth: barWidth,
+                barGap: barGap,
+                itemStyle: {
+                  borderRadius: stacked ? [0, 0, 6, 6] : [4, 4, 4, 4]
+                },
+                label: {
+                  show: true,
+                  position: "inside",
+                  formatter: p => {
+                    const idx = p.dataIndex;
+                    if (showPercent) {
+                      const pct = lowPercent[idx];
+                      if (!isFinite(pct) || pct < 5) return "";
+                      return `${pct.toFixed(1)}%\n(${lowCount[idx]})`;
+                    } else {
+                      const val = lowCount[idx];
+                      if (!isFinite(val) || val < totalCount[idx] * 0.05) return "";
+                      return val.toString();
+                    }
+                  }
+                }
+              }
+            ]
+          };
+        }
+
+        barChart.setOption(makeBarOption());
+
+        // 绑定下拉框事件
+        barScaleSelect.addEventListener("change", () => {
+          barScale = barScaleSelect.value;
+          barChart.setOption(makeBarOption(), true);
+        });
+        barLayoutSelect.addEventListener("change", () => {
+          barLayout = barLayoutSelect.value;
+          barChart.setOption(makeBarOption(), true);
+        });
+
+        // ======================
+        //  3) 高压 & 非高压 玫瑰图
+        // ======================
+        const roseHighDom = document.getElementById("chart_rose_high");
+        const roseLowDom  = document.getElementById("chart_rose_low");
+        const roseHighChart = echarts.init(roseHighDom);
+        const roseLowChart  = echarts.init(roseLowDom);
+
+        let roseLabelMode = "show"; // 'show' | 'hide'
+
+        function makeRoseOption(isHigh) {
+          const values = isHigh ? highCount : lowCount;
+          const total  = isHigh ? totalHigh : totalLow;
+          const titleText = isHigh ? "High-stress group" : "Not high-stress group";
+          const seriesName = titleText;
+
+          return {
+            title: {
+              text: titleText,
+              left: "center",
+              top: 6,
+              textStyle: { fontSize: 13 }
+            },
+            tooltip: {
+              trigger: "item",
+              formatter: params => {
+                const v = params.data.value;
+                const pct = total > 0 ? (v / total) * 100 : 0;
+                return [
+                  `<strong>${params.data.name}</strong>`,
+                  `${seriesName}`,
+                  `n = ${v}`,
+                  `Share in this group: ${pct.toFixed(1)}%`
+                ].join("<br/>");
+              }
+            },
+            legend: {
+              type: "scroll",
+              bottom: 0,
+              data: shortLabels
+            },
+            toolbox: {
+              right: 10,
+              top: 10,
+              feature: {
+                saveAsImage: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: { show: true },
+                myShowLabels: {
+                  show: true,
+                  title: "Show labels (n & %)",
+                  icon: "path://M512 64L64 960h896L512 64z",
+                  onclick: () => {
+                    roseLabelMode = "show";
+                    updateRoseCharts();
+                  }
+                },
+                myHideLabels: {
+                  show: true,
+                  title: "Hide labels",
+                  icon: "path://M128 832h768v-128H128v128z",
+                  onclick: () => {
+                    roseLabelMode = "hide";
+                    updateRoseCharts();
+                  }
+                }
+              }
+            },
+            series: [
+              {
+                name: seriesName,
+                type: "pie",
+                roseType: "area",
+                radius: [20, 120],
+                center: ["50%", "52%"],
+                itemStyle: { borderRadius: 5 },
+                label: {
+                  show: roseLabelMode === "show",
+                  formatter: p => {
+                    const v = p.data.value;
+                    const pct = total > 0 ? (v / total) * 100 : 0;
+                    return `${p.data.name}\n n=${v} (${pct.toFixed(1)}%)`;
+                  }
+                },
+                emphasis: {
+                  label: { show: true }
+                },
+                data: shortLabels.map((lab, i) => ({
+                  name: lab,
+                  value: values[i],
+                  itemStyle: {
+                    color: baseColors[i % baseColors.length]
+                  }
+                }))
+              }
+            ]
+          };
+        }
+
+        function updateRoseCharts() {
+          roseHighChart.setOption(makeRoseOption(true), true);
+          roseLowChart.setOption(makeRoseOption(false), true);
+        }
+
+        updateRoseCharts();
+
+        // 自适应窗口大小
+        window.addEventListener("resize", () => {
+          pieChart.resize();
+          barChart.resize();
+          roseHighChart.resize();
+          roseLowChart.resize();
+        });
+      })
+      .catch(err => {
+        console.error("Error loading CSV:", err);
+        document.getElementById("chart_pie").innerHTML =
+          "<p>Failed to load CSV. Please check the csvPath setting in the script.</p>";
+      });
+  </script>
+</body>
+</html>

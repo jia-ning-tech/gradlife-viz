@@ -1,0 +1,15 @@
+help_label,degree_code_int,degree_label,total_count,high_stress_count,non_high_stress_count,high_stress_percent
+I want help but have not yet sought it,1,Doctorate degree (PhD/DPhil/MD),394,215,179,54.568528
+I want help but have not yet sought it,2,Master's degree (MA/MS/MSc/PSM or other Master’s),144,49,95,34.027778
+I want help but have not yet sought it,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",4,4,0,100.000000
+I want help/have asked for help but have not yet received it,1,Doctorate degree (PhD/DPhil/MD),90,59,31,65.555556
+I want help/have asked for help but have not yet received it,2,Master's degree (MA/MS/MSc/PSM or other Master’s),28,14,14,50.000000
+I want help/have asked for help but have not yet received it,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",3,2,1,66.666667
+No,1,Doctorate degree (PhD/DPhil/MD),1003,300,703,29.910269
+No,2,Master's degree (MA/MS/MSc/PSM or other Master’s),377,73,304,19.363395
+No,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",23,5,18,21.739130
+Prefer not to say,1,Doctorate degree (PhD/DPhil/MD),69,21,48,30.434783
+Prefer not to say,2,Master's degree (MA/MS/MSc/PSM or other Master’s),22,6,16,27.272727
+Yes,1,Doctorate degree (PhD/DPhil/MD),883,386,497,43.714609
+Yes,2,Master's degree (MA/MS/MSc/PSM or other Master’s),179,49,130,27.374302
+Yes,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",19,6,13,31.578947

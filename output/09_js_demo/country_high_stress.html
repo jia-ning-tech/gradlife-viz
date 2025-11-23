@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Country × High-stress group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      margin: 0;
+      padding: 24px 32px 40px;
+      background-color: #f5f5f7;
+      color: #222;
+    }
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+      padding: 24px 28px 28px;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 22px;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    .subtitle span.label {
+      font-weight: 600;
+      color: #333;
+    }
+    .top-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+    .control-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    select {
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #ccd;
+      font-size: 13px;
+      background: #fff;
+    }
+    .card {
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 16px 18px 12px;
+      margin-top: 12px;
+      border: 1px solid #e5e7eb;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .card-desc {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    #chart {
+      width: 100%;
+      height: 440px;
+    }
+    .footnote {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #555;
+      line-height: 1.7;
+    }
+    .error {
+      color: #c00;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 12px;
+      }
+      .page {
+        padding: 14px 14px 18px;
+      }
+      #chart {
+        height: 360px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Country × High-stress group</h1>
+    <div class="subtitle">
+      <div><span class="label">研究问题：</span>在哪些国家/地区中，「高工时 + 工作生活平衡较差」这一高压组合的比例更高？</div>
+      <div><span class="label">Region 定义：</span>依据问卷 Q9–Q14（所在国家），合并为六大洲/地区层级。</div>
+      <div><span class="label">数据来源：</span>viz_country_high_stress.csv（基于清洗后的调查数据）。</div>
+    </div>
+
+    <div class="top-controls">
+      <div class="control-group">
+        <span>按大洲/地区筛选：</span>
+        <select id="regionFilter">
+          <option value="ALL">全部地区</option>
+          <option value="Europe">Europe</option>
+          <option value="North/Central America">North/Central America</option>
+          <option value="Asia">Asia</option>
+          <option value="South America">South America</option>
+          <option value="Australasia">Australasia</option>
+          <option value="Africa">Africa</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <span>Y 轴：</span>
+        <select id="yMode">
+          <option value="percent">显示百分比（组内高压占比）</option>
+          <option value="count">显示人数（高压 + 非高压人数）</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <span>柱状模式：</span>
+        <select id="barMode">
+          <option value="stack">堆叠（高压 + 非高压）</option>
+          <option value="group">并排（高压 vs 非高压）</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">High-stress vs non–high-stress by country</div>
+      <div class="card-desc">
+        请选择上方筛选器，可以按大洲/地区查看各国的高压 vs 非高压比例；支持在「百分比」和「人数」之间切换，以及在「堆叠」和「并排」柱状图之间切换。
+      </div>
+      <div id="chart"></div>
+      <div id="error" class="error" style="display:none;"></div>
+    </div>
+
+    <div class="footnote">
+      <div><strong>高压组定义：</strong>一方面每周在学业上的投入时长较长（41 小时以上），另一方面对「Work–life balance」的满意度较低（Likert 1–3）。</div>
+      <div><strong>Country 来源：</strong>Q9–Q14 关于所在国家/地区的问题，并合并到六大洲/地区。每个受访者只归类到一个国家。</div>
+      <div><strong>图形说明：</strong>当 Y 轴选择「百分比」时，显示的是：在该国家所有受访者中，高压组所占比例；当 Y 轴选择「人数」时，显示的是：该国家高压 / 非高压的样本数。堆叠模式便于看国家内部高压与非高压的构成，并排模式便于在国家之间对比高压 vs 非高压。</div>
+    </div>
+  </div>
+
+  <script>
+    const CSV_PATH = '../08_viz_data/viz_country_high_stress.csv';
+    const chartDom = document.getElementById('chart');
+    const chart = echarts.init(chartDom);
+
+    const regionFilterEl = document.getElementById('regionFilter');
+    const yModeEl = document.getElementById('yMode');
+    const barModeEl = document.getElementById('barMode');
+    const errorEl = document.getElementById('error');
+
+    let rawData = [];
+
+    function showError(msg) {
+      errorEl.style.display = 'block';
+      errorEl.textContent = msg;
+    }
+
+    function hideError() {
+      errorEl.style.display = 'none';
+      errorEl.textContent = '';
+    }
+
+    function parseCSV(text) {
+      const lines = text.trim().split(/\r?\n/);
+      const headers = lines[0].split(',').map(h => h.trim());
+      const rows = [];
+      for (let i = 1; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        const cols = line.split(',');
+        const obj = {};
+        headers.forEach((h, idx) => {
+          obj[h] = cols[idx];
+        });
+        rows.push(obj);
+      }
+      return rows;
+    }
+
+    function toNumber(v) {
+      const n = Number(v);
+      return Number.isFinite(n) ? n : 0;
+    }
+
+    function buildOption() {
+      if (!rawData.length) {
+        showError('没有可用数据。');
+        chart.clear();
+        return;
+      }
+      hideError();
+
+      const regionSel = regionFilterEl.value;
+      const yMode = yModeEl.value;   // 'percent' | 'count'
+      const barMode = barModeEl.value; // 'stack' | 'group'
+
+      let data = rawData;
+      if (regionSel !== 'ALL') {
+        data = data.filter(d => d.region_continent === regionSel);
+      }
+
+      if (!data.length) {
+        showError('当前筛选条件下没有数据。');
+        chart.clear();
+        return;
+      }
+
+      // 按高压百分比从高到低排序，方便比较
+      data = data.slice().sort((a, b) => {
+        const ah = toNumber(a.high_stress_percent);
+        const bh = toNumber(b.high_stress_percent);
+        return bh - ah;
+      });
+
+      const categories = data.map(d => d.country_name);
+      const highCounts = data.map(d => toNumber(d.high_stress_count));
+      const nonHighCounts = data.map(d => toNumber(d.non_high_stress_count));
+      const highPerc = data.map(d => toNumber(d.high_stress_percent));
+      const nonHighPerc = data.map(d => toNumber(d.non_high_stress_percent));
+      const totals = data.map(d => toNumber(d.total_count));
+
+      const yLabel = yMode === 'percent'
+        ? 'Share within country (%)'
+        : 'Number of respondents';
+
+      const highValues = yMode === 'percent' ? highPerc : highCounts;
+      const nonHighValues = yMode === 'percent' ? nonHighPerc : nonHighCounts;
+
+      const isStack = barMode === 'stack';
+
+      function makeLabelFormatter(isHigh) {
+        return function(params) {
+          const idx = params.dataIndex;
+          const n = isHigh ? highCounts[idx] : nonHighCounts[idx];
+          const p = isHigh ? highPerc[idx] : nonHighPerc[idx];
+          if (yMode === 'percent') {
+            return `${p.toFixed(1)}%\n(n=${n})`;
+          } else {
+            return `n=${n}\n(${p.toFixed(1)}%)`;
+          }
+        };
+      }
+
+      const option = {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { type: 'shadow' },
+          formatter: function(params) {
+            const idx = params[0].dataIndex;
+            const country = categories[idx];
+            const total = totals[idx];
+            const lines = [];
+            lines.push(country);
+            lines.push(`样本量: ${total}`);
+            params.forEach(serie => {
+              const name = serie.seriesName;
+              const val = serie.value;
+              const p = name === 'High-stress' ? highPerc[idx] : nonHighPerc[idx];
+              const n = name === 'High-stress' ? highCounts[idx] : nonHighCounts[idx];
+              const mainVal = yMode === 'percent' ? `${val.toFixed(1)}%` : val;
+              lines.push(`${name}: ${mainVal}  (n=${n}, ${p.toFixed(1)}%)`);
+            });
+            return lines.join('<br/>');
+          }
+        },
+        legend: {
+          top: 8,
+          data: ['High-stress', 'Not high-stress']
+        },
+        grid: {
+          left: 60,
+          right: 20,
+          top: 60,
+          bottom: 80
+        },
+        dataZoom: [
+          {
+            type: 'slider',
+            show: true,
+            height: 24,
+            bottom: 40,
+            start: 0,
+            end: Math.min(100, 100 * 15 / categories.length)
+          },
+          {
+            type: 'inside'
+          }
+        ],
+        xAxis: {
+          type: 'category',
+          data: categories,
+          axisLabel: {
+            interval: 0,
+            rotate: 40
+          }
+        },
+        yAxis: {
+          type: 'value',
+          name: yLabel,
+          min: 0,
+          max: yMode === 'percent' ? 100 : null
+        },
+        series: [
+          {
+            name: 'High-stress',
+            type: 'bar',
+            stack: isStack ? 'total' : undefined,
+            emphasis: { focus: 'series' },
+            label: {
+              show: true,
+              position: 'top',
+              formatter: makeLabelFormatter(true),
+              fontSize: 10
+            },
+            data: highValues
+          },
+          {
+            name: 'Not high-stress',
+            type: 'bar',
+            stack: isStack ? 'total' : undefined,
+            emphasis: { focus: 'series' },
+            label: {
+              show: true,
+              position: 'top',
+              formatter: makeLabelFormatter(false),
+              fontSize: 10
+            },
+            data: nonHighValues
+          }
+        ]
+      };
+
+      chart.setOption(option);
+    }
+
+    async function init() {
+      try {
+        const res = await fetch(CSV_PATH);
+        if (!res.ok) {
+          throw new Error('HTTP ' + res.status);
+        }
+        const text = await res.text();
+        rawData = parseCSV(text);
+        buildOption();
+      } catch (err) {
+        console.error(err);
+        showError('无法加载数据文件：' + CSV_PATH + '。详细错误已输出到浏览器控制台（F12）。');
+      }
+    }
+
+    regionFilterEl.addEventListener('change', buildOption);
+    yModeEl.addEventListener('change', buildOption);
+    barModeEl.addEventListener('change', buildOption);
+
+    window.addEventListener('resize', () => {
+      chart.resize();
+    });
+
+    init();
+  </script>
+</body>
+</html>

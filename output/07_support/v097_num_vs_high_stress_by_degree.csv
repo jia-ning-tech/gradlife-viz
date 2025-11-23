@@ -1,0 +1,19 @@
+question,factor,degree_code_int,degree_label,level,high_stress_group,count,percent
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),0,332,71.3978494623656
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),1,133,28.602150537634408
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),0,162,81.0
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),1,38,19.0
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),0,9,81.81818181818183
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),1,2,18.181818181818183
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),0,942,62.301587301587304
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),1,570,37.698412698412696
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),0,337,75.22321428571429
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),1,111,24.776785714285715
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),0,19,65.51724137931035
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),1,10,34.48275862068966
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),0,183,39.524838012958966
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),1,280,60.475161987041034
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),0,63,60.57692307692307
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),1,41,39.42307692307692
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),0,4,44.44444444444444
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),1,5,55.55555555555556

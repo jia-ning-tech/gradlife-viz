@@ -1,0 +1,7 @@
+v004_code,high_stress_group,count,percent,degree_code_int,degree_label
+1.0,0,1462,59.74662852472415,1,Doctorate degree (PhD/DPhil/MD)
+1.0,1,985,40.25337147527585,1,Doctorate degree (PhD/DPhil/MD)
+2.0,0,564,74.60317460317461,2,Master's degree (MA/MS/MSc/PSM or other Master’s)
+2.0,1,192,25.396825396825395,2,Master's degree (MA/MS/MSc/PSM or other Master’s)
+3.0,0,32,65.3061224489796,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)"
+3.0,1,17,34.69387755102041,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)"

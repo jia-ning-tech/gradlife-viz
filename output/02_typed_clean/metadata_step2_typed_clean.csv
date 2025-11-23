@@ -1,0 +1,418 @@
+col_name,question_text,orig_code_row1,q_no,q_type,multi_group,value_type,value_labels
+v001,The published format which was employed,ID.format,ID.format,single,,,
+v002,Case completed in Snap Interviewer,ID.completed,ID.completed,single,,,
+v003,Language ~ ? ~ Idioma ~ Langue ~ LÃ­ngua,ID.language,ID.language,single,,,
+v004,"Which, if any, of the following degrees are you currently studying for?",Q2,Q2,single,,,
+v005,What will be the total duration of your graduate degree?,Q3,Q3,single,,,
+v006,How far into your graduate degree are you?,Q4,Q4,single,,,
+v007,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:1,Q5,multiple,Q5,,
+v008,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:2,Q5,multiple,Q5,,
+v009,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:3,Q5,multiple,Q5,,
+v010,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:4,Q5,multiple,Q5,,
+v011,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:5,Q5,multiple,Q5,,
+v012,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:6,Q5,multiple,Q5,,
+v013,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:7,Q5,multiple,Q5,,
+v014,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:8,Q5,multiple,Q5,,
+v015,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree?,Q5:9,Q5,multiple,Q5,,
+v016,Are you studying in the country you grew up in? Â  ,Q6,Q6,single,,,
+v017,What prompted you to study outside your country of upbringing?,Q7:1,Q7,multiple,Q7,,
+v018,What prompted you to study outside your country of upbringing?,Q7:2,Q7,multiple,Q7,,
+v019,What prompted you to study outside your country of upbringing?,Q7:3,Q7,multiple,Q7,,
+v020,What prompted you to study outside your country of upbringing?,Q7:4,Q7,multiple,Q7,,
+v021,What prompted you to study outside your country of upbringing?,Q7:5,Q7,multiple,Q7,,
+v022,What prompted you to study outside your country of upbringing?,Q7:6,Q7,multiple,Q7,,
+v023,What prompted you to study outside your country of upbringing?,Q7:7,Q7,multiple,Q7,,
+v024,What prompted you to study outside your country of upbringing?,Q7:8,Q7,multiple,Q7,,
+v025,What prompted you to study outside your country of upbringing?,Q7:9,Q7,multiple,Q7,,
+v026,What prompted you to study outside your country of upbringing?,Q7:10,Q7,multiple,Q7,,
+v027,What prompted you to study outside your country of upbringing?,Q7:11,Q7,multiple,Q7,,
+v028,What prompted you to study outside your country of upbringing?,Q7:12,Q7,multiple,Q7,,
+v029,What prompted you to study outside your country of upbringing?,Q7:13,Q7,multiple,Q7,,
+v030,Where do you currently live?,Q8,Q8,single,,,
+v031,Which country/region in Asia?,Q9,Q9,single,,,
+v032,Which country in Australasia?,Q10,Q10,single,,,
+v033,Which country in Africa?,Q11,Q11,single,,,
+v034,Which country in Europe?,Q12,Q12,single,,,
+v035,Which country in North or Central America?,Q13,Q13,single,,,
+v036,Which country in South America?,Q14,Q14,single,,,
+v037,Do you have a job alongside your studies?,Q15,Q15,single,,,
+v038,What is your main reason for having a job?,Q16,Q16,single,,,
+v039,Do you expect to go into debt as a result of your graduate degree?,Q17,Q17,single,,,
+v040,How much debt do you expect to be in on completion of your graduate degree?,Q18,Q18,single,,,
+v041,To what extent do you agree with the following statements?: I am able to save money alongside my studies,Q19.a,Q19.a,likert,,,
+v042,To what extent do you agree with the following statements?: I am worried about the increasing cost of living,Q19.b,Q19.b,likert,,,
+v043,To what extent do you agree with the following statements?: Increased inflation will negatively impact my decision to further pursue my studies,Q19.c,Q19.c,likert,,,
+v044,To what extent do you agree with the following statements?: I regularly worry about my increasing student debt,Q19.d,Q19.d,likert,,,
+v045,What concerns have you had since you started your graduate degree? The difficulty of getting funding / low success rates for grant applications,Q20.a,Q20.a,likert,,,
+v046,What concerns have you had since you started your graduate degree? Inability to finish my studies in the time period I had set out to ,Q20.b,Q20.b,likert,,,
+v047,What concerns have you had since you started your graduate degree? Impact of a poor relationship with my supervisor,Q20.c,Q20.c,likert,,,
+v048,What concerns have you had since you started your graduate degree? The number of available faculty research jobs ,Q20.d,Q20.d,likert,,,
+v049,What concerns have you had since you started your graduate degree? The high numbers of early career researchers on continuing temporary contracts as postdocs,Q20.e,Q20.e,likert,,,
+v050,What concerns have you had since you started your graduate degree? The difficulty of maintaining a work/life balance,Q20.f,Q20.f,likert,,,
+v051,What concerns have you had since you started your graduate degree? Uncertainty about the value of a graduate degree,Q20.g,Q20.g,likert,,,
+v052,What concerns have you had since you started your graduate degree? Uncertainty about future employment/career prospects,Q20.h,Q20.h,likert,,,
+v053,What concerns have you had since you started your graduate degree? Student debt during my graduate degree,Q20.i,Q20.i,likert,,,
+v054,"What concerns have you had since you started your graduate degree? Financial worries after my graduate degree (cost of living, inability to save for a house, children, retirement)",Q20.j,Q20.j,likert,,,
+v055,What concerns have you had since you started your graduate degree? Political landscape ,Q20.k,Q20.k,likert,,,
+v056,What concerns have you had since you started your graduate degree? Impostor syndrome,Q20.l,Q20.l,likert,,,
+v057,What concerns have you had since you started your graduate degree? Concern about my mental health as a result of undertaking a graduate degree,Q20.m,Q20.m,likert,,,
+v058,What concerns have you had since you started your graduate degree? Poor support and acknowledgement of my parenting/elder care responsibilities ,Q20.n,Q20.n,likert,,,
+v059,What concerns have you had since you started your graduate degree? Access to teaching staff and supervisors being restricted under remote study formats,Q20.o,Q20.o,likert,,,
+v060,"Overall, what do you enjoy most about life as a graduate student? ",Q22:1,Q22,multiple,Q22,,
+v061,"Overall, what do you enjoy most about life as a graduate student? ",Q22:2,Q22,multiple,Q22,,
+v062,"Overall, what do you enjoy most about life as a graduate student? ",Q22:3,Q22,multiple,Q22,,
+v063,"Overall, what do you enjoy most about life as a graduate student? ",Q22:4,Q22,multiple,Q22,,
+v064,"Overall, what do you enjoy most about life as a graduate student? ",Q22:5,Q22,multiple,Q22,,
+v065,"Overall, what do you enjoy most about life as a graduate student? ",Q22:6,Q22,multiple,Q22,,
+v066,"Overall, what do you enjoy most about life as a graduate student? ",Q22:7,Q22,multiple,Q22,,
+v067,"Overall, what do you enjoy most about life as a graduate      student? ",Q22:8,Q22,multiple,Q22,,
+v068,"Overall, what do you enjoy most about life as a graduate student? ",Q22:9,Q22,multiple,Q22,,
+v069,"Overall, what do you enjoy most about life as a graduate student? ",Q22:10,Q22,multiple,Q22,,
+v070,How satisfied are you with your decision to pursue a graduate degree?,Q23.a,Q23.a,likert,,,
+v071,Are you planning on pursuing a PhD once youâve completed your Master's degree?,Q24,Q24,single,,,
+v072,How satisfied are you with your graduate degree experience?,Q25.a,Q25.a,likert,,,
+v073,"Since the very start of your graduate school experience, would you say your level of satisfaction has:",Q26,Q26,single,,,
+v074,How satisfied are you with each of the following attributes or aspects of your degree? Availability of funding        ,Q27.a,Q27.a,likert,,,
+v075,How satisfied are you with each of the following attributes or aspects of your degree? Hours worked,Q27.b,Q27.b,likert,,,
+v076,How satisfied are you with each of the following attributes or aspects of your degree? Social environment,Q27.c,Q27.c,likert,,,
+v077,How satisfied are you with each of the following attributes or aspects of your degree? Degree of independence,Q27.d,Q27.d,likert,,,
+v078,How satisfied are you with each of the following attributes or aspects of your degree? Recognition from supervisor,Q27.e,Q27.e,likert,,,
+v079,How satisfied are you with each of the following attributes or aspects of your degree? Overall relationship with supervisor,Q27.f,Q27.f,likert,,,
+v080,How satisfied are you with each of the following attributes or aspects of your degree? Overall compensation and benefits,Q27.g,Q27.g,likert,,,
+v081,How satisfied are you with each of the following attributes or aspects of your degree? Vacation time,Q27.h,Q27.h,likert,,,
+v082,How satisfied are you with each of the following attributes or aspects of your degree? Guidance received from adviser in lab/research ,Q27.i,Q27.i,likert,,,
+v083,How satisfied are you with each of the following attributes or aspects of your degree? Ability to attend meetings and conferences,Q27.j,Q27.j,likert,,,
+v084,How satisfied are you with each of the following attributes or aspects of your degree? Work-life balance,Q27.k,Q27.k,likert,,,
+v085,How satisfied are you with each of the following attributes or aspects of your degree? Career pathway guidance and advice,Q27.l,Q27.l,likert,,,
+v086,How satisfied are you with each of the following attributes or aspects of your degree? Quality of teaching,Q27.m,Q27.m,likert,,,
+v087,How satisfied are you with each of the following attributes or aspects of your degree? Balance of teaching and practical elements,Q27.n,Q27.n,likert,,,
+v088,To what extent does your graduate degree program compare to your initial expectations?,Q28,Q28,single,,,
+v089,"On average, how many hours a week do you typically spend on your graduate degree?",Q29,Q29,single,,,
+v090,"On average, how much one-on-one contact time do you spend with your supervisor each week?",Q30,Q30,single,,,
+v091,My supervisor â¦ Makes time for frank conversations about my career   ,Q32.a,Q32.a,likert,,,
+v092,My supervisor â¦ Is open to the idea of me pursuing a career outside academia,Q32.b,Q32.b,likert,,,
+v093,My supervisor â¦ Has useful advice for careers outside academia,Q32.c,Q32.c,likert,,,
+v094,My supervisor â¦ Has encouraged me to attend career training and events,Q32.d,Q32.d,likert,,,
+v095,Have you ever received help for anxiety or depression linked to/connected to your studies?,Q33,Q33,single,,,
+v096,Did you seek help for anxiety or depression within your institution? ,Q34,Q34,single,,,
+v097,Mental health and wellbeing services in my university are tailored and appropriate to the needs of graduate students,Q35.a,Q35.a,likert,,,
+v098,My supervisor has a good awareness of support services and was able to signpost me to them if needed,Q35.b,Q35.b,likert,,,
+v099,My university offers adequate one-to-one mental health support,Q35.c,Q35.c,likert,,,
+v100,"My university offers different types of support to promote mental health and wellbeing beyond one-to-one support (e.g. workshops, seminars, activities)",Q35.d,Q35.d,likert,,,
+v101,My university supports good work-life balance,Q35.e,Q35.e,likert,,,
+v102,"There is a long-hours culture at my university, including sometimes working through the night     ",Q35.f,Q35.f,likert,,,
+v103,Do you feel that you have experienced bullying during your graduate degree?,Q36,Q36,single,,,
+v104,Who was the perpetrator(s)? Please select all that apply.,Q37:1,Q37,multiple,Q37,,
+v105,Who was the perpetrator(s)? Please select all that apply.,Q37:2,Q37,multiple,Q37,,
+v106,Who was the perpetrator(s)? Please select all that apply.,Q37:3,Q37,multiple,Q37,,
+v107,Who was the perpetrator(s)? Please select all that apply.,Q37:4,Q37,multiple,Q37,,
+v108,Who was the perpetrator(s)? Please select all that apply.,Q37:5,Q37,multiple,Q37,,
+v109,Who was the perpetrator(s)? Please select all that apply.,Q37:6,Q37,multiple,Q37,,
+v110,Who was the perpetrator(s)? Please select all that apply.,Q37:7,Q37,multiple,Q37,,
+v111,Do you feel able to speak out about your experiences of bullying without personal repercussions?,Q38,Q38,single,,,
+v112,Do you feel that you have experienced discrimination or harassment during your graduate degree?,Q39,Q39,single,,,
+v113,Which of the following have you experienced? ,Q40:1,Q40,multiple,Q40,,
+v114,Which of the following have you experienced? ,Q40:2,Q40,multiple,Q40,,
+v115,Which of the following have you experienced? ,Q40:3,Q40,multiple,Q40,,
+v116,Which of the following have you experienced? ,Q40:4,Q40,multiple,Q40,,
+v117,Which of the following have you experienced? ,Q40:5,Q40,multiple,Q40,,
+v118,Which of the following have you experienced? ,Q40:6,Q40,multiple,Q40,,
+v119,Which of the following have you experienced? ,Q40:7,Q40,multiple,Q40,,
+v120,Which of the following have you experienced? ,Q40:8,Q40,multiple,Q40,,
+v121,Which of the following have you experienced? ,Q40:9,Q40,multiple,Q40,,
+v122,Which of the following have you experienced? ,Q40:10,Q40,multiple,Q40,,
+v123,How much do you expect your graduate degree to improve your job prospects?,Q41.a,Q41.a,likert,,,
+v124,Academia ,Q42.a:1,Q42.a,numeric,Q42.a,numeric,
+v125,Academia ,Q42.a:2,Q42.a,numeric,Q42.a,numeric,
+v126,Academia ,Q42.a:3,Q42.a,numeric,Q42.a,numeric,
+v127,Academia ,Q42.a:4,Q42.a,numeric,Q42.a,numeric,
+v128,Academia ,Q42.a:5,Q42.a,numeric,Q42.a,numeric,
+v129,Industry ,Q42.b:1,Q42.b,numeric,Q42.b,numeric,
+v130,Industry ,Q42.b:2,Q42.b,numeric,Q42.b,numeric,
+v131,Industry ,Q42.b:3,Q42.b,numeric,Q42.b,numeric,
+v132,Industry ,Q42.b:4,Q42.b,numeric,Q42.b,numeric,
+v133,Industry ,Q42.b:5,Q42.b,numeric,Q42.b,numeric,
+v134,Government ,Q42.c:1,Q42.c,numeric,Q42.c,numeric,
+v135,Government ,Q42.c:2,Q42.c,numeric,Q42.c,numeric,
+v136,Government ,Q42.c:3,Q42.c,numeric,Q42.c,numeric,
+v137,Government ,Q42.c:4,Q42.c,numeric,Q42.c,numeric,
+v138,Government ,Q42.c:5,Q42.c,numeric,Q42.c,numeric,
+v139,Non-profit ,Q42.d:1,Q42.d,numeric,Q42.d,numeric,
+v140,Non-profit ,Q42.d:2,Q42.d,numeric,Q42.d,numeric,
+v141,Non-profit ,Q42.d:3,Q42.d,numeric,Q42.d,numeric,
+v142,Non-profit ,Q42.d:4,Q42.d,numeric,Q42.d,numeric,
+v143,Non-profit ,Q42.d:5,Q42.d,numeric,Q42.d,numeric,
+v144,Medical,Q42.e:1,Q42.e,numeric,Q42.e,numeric,
+v145,Medical,Q42.e:2,Q42.e,numeric,Q42.e,numeric,
+v146,Medical,Q42.e:3,Q42.e,numeric,Q42.e,numeric,
+v147,Medical,Q42.e:4,Q42.e,numeric,Q42.e,numeric,
+v148,Medical,Q42.e:5,Q42.e,numeric,Q42.e,numeric,
+v149,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:1,Q43,multiple,Q43,,
+v150,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:2,Q43,multiple,Q43,,
+v151,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:3,Q43,multiple,Q43,,
+v152,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:4,Q43,multiple,Q43,,
+v153,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:5,Q43,multiple,Q43,,
+v154,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:6,Q43,multiple,Q43,,
+v155,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:7,Q43,multiple,Q43,,
+v156,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:8,Q43,multiple,Q43,,
+v157,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:9,Q43,multiple,Q43,,
+v158,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:10,Q43,multiple,Q43,,
+v159,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:11,Q43,multiple,Q43,,
+v160,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:12,Q43,multiple,Q43,,
+v161,"If youâre unlikely to pursue an academic research career, what are the main reasons? ",Q43:13,Q43,multiple,Q43,,
+v162,"In terms of the quality of your graduate degree program, do you think that the COVID-19 pandemic hasâ¦",Q44,Q44,single,,,
+v163,How long do you think it will take you to find a permanent (non-trainee) position after you graduate?,Q47,Q47,single,,,
+v164,How much more likely are you now to pursue a research career than when you launched your graduate degree?,Q48.a,Q48.a,likert,,,
+v165,How do you learn about available career opportunities that are beyond academia? ,Q49:1,Q49,multiple,Q49,,
+v166,How do you learn about available career opportunities that are beyond academia? ,Q49:2,Q49,multiple,Q49,,
+v167,How do you learn about available career opportunities that are beyond academia? ,Q49:3,Q49,multiple,Q49,,
+v168,How do you learn about available career opportunities that are beyond academia? ,Q49:4,Q49,multiple,Q49,,
+v169,How do you learn about available career opportunities that are beyond academia? ,Q49:5,Q49,multiple,Q49,,
+v170,How do you learn about available career opportunities that are beyond academia? ,Q49:6,Q49,multiple,Q49,,
+v171,How do you learn about available career opportunities that are beyond academia? ,Q49:7,Q49,multiple,Q49,,
+v172,How do you learn about available career opportunities that are beyond academia? ,Q49:8,Q49,multiple,Q49,,
+v173,How do you learn about available career opportunities that are beyond academia? ,Q49:9,Q49,multiple,Q49,,
+v174,How do you learn about available career opportunities that are beyond academia? ,Q49:10,Q49,multiple,Q49,,
+v175,How do you learn about available career opportunities that are beyond academia? ,Q49:11,Q49,multiple,Q49,,
+v176,How do you learn about available career opportunities that are beyond academia? ,Q49:12,Q49,multiple,Q49,,
+v177,How do you learn about available career opportunities that are beyond academia? ,Q49:13,Q49,multiple,Q49,,
+v178,How do you learn about available career opportunities that are beyond academia? ,Q49:14,Q49,multiple,Q49,,
+v179,How do you learn about available career opportunities that are beyond academia? ,Q49:15,Q49,multiple,Q49,,
+v180,Which of the following would you say are the most difficult for graduate students in the country where you are studying? ,Q50:1,Q50,multiple,Q50,,
+v181,Which of the following would you say are the most difficult for graduate students in the country where you are studying? ,Q50:2,Q50,multiple,Q50,,
+v182,Which of the following would you say are the most difficult for graduate students in the country where you are studying? ,Q50:3,Q50,multiple,Q50,,
+v183,Which of the following would you say are the most difficult for graduate students in the country where you are studying? ,Q50:4,Q50,multiple,Q50,,
+v184,Which of the following would you say are the most difficult for graduate students in the country where you are studying? ,Q50:5,Q50,multiple,Q50,,
+v185,Which of the following would you say are the most difficult for graduate students in the country where you are studying? ,Q50:6,Q50,multiple,Q50,,
+v186,Which of the following would you say are the most difficult for graduate students in the country where you are studying? ,Q50:7,Q50,multiple,Q50,,
+v187,Which of the following would you say are the most difficult for graduate students in the country where you are studying? ,Q50:8,Q50,multiple,Q50,,
+v188,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51:1,Q51,multiple,Q51,,
+v189,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51:2,Q51,multiple,Q51,,
+v190,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51:3,Q51,multiple,Q51,,
+v191,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51:4,Q51,multiple,Q51,,
+v192,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51:5,Q51,multiple,Q51,,
+v193,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51:6,Q51,multiple,Q51,,
+v194,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51:7,Q51,multiple,Q51,,
+v195,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51:8,Q51,multiple,Q51,,
+v196,Which of the following resources do you think graduate students need the most in order to establish a satisfying career? ,Q51.a,Q51.a,multiple,,,
+v197,How well is your current graduate degree preparing you to carry out each of the following activities? Collecting and analyzing data     ,Q52.a,Q52.a,likert,,,
+v198,How well is your current graduate degree preparing you to carry out each of the following activities? Designing robust reproducible experiments,Q52.b,Q52.b,likert,,,
+v199,How well is your current graduate degree preparing you to carry out each of the following activities? Writing a paper for publication in a peer-reviewed journal,Q52.c,Q52.c,likert,,,
+v200,How well is your current graduate degree preparing you to carry out each of the following activities? Applying for funding ,Q52.d,Q52.d,likert,,,
+v201,How well is your current graduate degree preparing you to carry out each of the following activities? Finding a satisfying career,Q52.e,Q52.e,likert,,,
+v202,How well is your current graduate degree preparing you to carry out each of the following activities? Managing complex projects,Q52.f,Q52.f,likert,,,
+v203,How well is your current graduate degree preparing you to carry out each of the following activities? Developing a business plan,Q52.g,Q52.g,likert,,,
+v204,How well is your current graduate degree preparing you to carry out each of the following activities? Managing people,Q52.h,Q52.h,likert,,,
+v205,How well is your current graduate degree preparing you to carry out each of the following activities? Managing a large operational budget,Q52.i,Q52.i,likert,,,
+v206,I feel that my graduate degree program is preparing me well for a research career,Q53.a,Q53.a,likert,,,
+v207,I feel that my graduate degree program is preparing me well for a non-research science-related career,Q53.b,Q53.b,likert,,,
+v208,"Which, if any, of the following activities have you done to advance your career? ",Q54:1,Q54,multiple,Q54,,
+v209,"Which, if any, of the following activities have you done to advance your career? ",Q54:2,Q54,multiple,Q54,,
+v210,"Which, if any, of the following activities have you done to advance your career? ",Q54:3,Q54,multiple,Q54,,
+v211,"Which, if any, of the following activities have you done to advance your career? ",Q54:4,Q54,multiple,Q54,,
+v212,"Which, if any, of the following activities have you done to advance your career? ",Q54:5,Q54,multiple,Q54,,
+v213,"Which, if any, of the following activities have you done to advance your career? ",Q54:6,Q54,multiple,Q54,,
+v214,"Which, if any, of the following activities have you done to advance your career? ",Q54:7,Q54,multiple,Q54,,
+v215,"Which, if any, of the following activities have you done to advance your career? ",Q54:8,Q54,multiple,Q54,,
+v216,What would you do differently right now if you were starting your graduate degree? ,Q55:1,Q55,multiple,Q55,,
+v217,What would you do differently right now if you were starting your graduate degree? ,Q55:2,Q55,multiple,Q55,,
+v218,What would you do differently right now if you were starting your graduate degree? ,Q55:3,Q55,multiple,Q55,,
+v219,What would you do differently right now if you were starting your graduate degree? ,Q55:4,Q55,multiple,Q55,,
+v220,What would you do differently right now if you were starting your graduate degree? ,Q55:5,Q55,multiple,Q55,,
+v221,What would you do differently right now if you were starting your graduate degree? ,Q55:6,Q55,multiple,Q55,,
+v222,Name:,Q67.a,Q67.a,numeric,,numeric,
+v001_code,The published format which was employed [coded],ID.format,ID.format,single_coded,,numeric,"{""1"": ""SNAP 2015 SHIFT"", ""2"": ""Smartphone"", ""3"": ""Tablet""}"
+v002_code,Case completed in Snap Interviewer [coded],ID.completed,ID.completed,single_coded,,numeric,"{""1"": ""completed""}"
+v003_code,Language ~ ? ~ Idioma ~ Langue ~ LÃ­ngua [coded],ID.language,ID.language,single_coded,,numeric,"{""1"": ""English"", ""2"": ""Chinese (Simplified, China)"", ""3"": ""French"", ""4"": ""Portuguese"", ""5"": ""Spanish""}"
+v004_code,"Which, if any, of the following degrees are you currently studying for? [coded]",Q2,Q2,single_coded,,numeric,"{""1"": ""Doctorate degree (PhD/DPhil/MD)"", ""2"": ""Master's degree (MA/MS/MSc/PSM or other Master’s)"", ""3"": ""Dual doctorate degree (MD-PhD, PhD-PhD or other combination)""}"
+v005_code,What will be the total duration of your graduate degree? [coded],Q3,Q3,single_coded,,numeric,"{""1"": ""4 years"", ""2"": ""5 years"", ""3"": ""3 years"", ""4"": ""6 years"", ""5"": ""2 years"", ""6"": ""More than 7 years"", ""7"": ""7 years"", ""8"": ""1 year"", ""9"": ""Other""}"
+v006_code,How far into your graduate degree are you? [coded],Q4,Q4,single_coded,,numeric,"{""1"": ""2 years"", ""2"": ""3 years"", ""3"": ""1 year"", ""4"": ""Less than a year"", ""5"": ""4 years"", ""6"": ""5 years"", ""7"": ""6 years"", ""8"": ""7 years"", ""9"": ""More than 7 years""}"
+v016_code,Are you studying in the country you grew up in? Â   [coded],Q6,Q6,single_coded,,numeric,"{""1"": ""Yes"", ""2"": ""No""}"
+v030_code,Where do you currently live? [coded],Q8,Q8,single_coded,,numeric,"{""1"": ""Europe"", ""2"": ""North or Central America"", ""3"": ""Asia (including Middle East)"", ""4"": ""South America"", ""5"": ""Australasia"", ""6"": ""Africa""}"
+v031_code,Which country/region in Asia? [coded],Q9,Q9,single_coded,,numeric,"{""1"": ""China"", ""2"": ""India"", ""3"": ""South Korea"", ""4"": ""Japan"", ""5"": ""Israel and the Palestinian territories"", ""6"": ""Singapore"", ""7"": ""Hong Kong"", ""8"": ""Pakistan"", ""9"": ""Taiwan"", ""10"": ""Iran"", ""11"": ""Malaysia"", ""12"": ""Turkey"", ""13"": ""Nepal"", ""14"": ""Philippines"", ""15"": ""Lebanon"", ""16"": ""Thailand"", ""17"": ""Bangladesh"", ""18"": ""Qatar"", ""19"": ""Jordan"", ""20"": ""Saudi Arabia"", ""21"": ""Indonesia"", ""22"": ""Other"", ""23"": ""Kuwait"", ""24"": ""Iraq""}"
+v032_code,Which country in Australasia? [coded],Q10,Q10,single_coded,,numeric,"{""1"": ""Australia"", ""2"": ""New Zealand""}"
+v033_code,Which country in Africa? [coded],Q11,Q11,single_coded,,numeric,"{""1"": ""South Africa"", ""2"": ""Nigeria"", ""3"": ""Ethiopia"", ""4"": ""Kenya"", ""5"": ""Morocco"", ""6"": ""Ghana"", ""7"": ""Algeria"", ""8"": ""Egypt"", ""9"": ""Uganda"", ""10"": ""Cameroon"", ""11"": ""Namibia"", ""12"": ""Botswana"", ""13"": ""Zimbabwe"", ""14"": ""Tunisia"", ""15"": ""Lesotho"", ""16"": ""Rwanda"", ""17"": ""Niger"", ""18"": ""Malawi"", ""19"": ""Senegal"", ""20"": ""Congo, Democratic Republic of""}"
+v034_code,Which country in Europe? [coded],Q12,Q12,single_coded,,numeric,"{""1"": ""France"", ""2"": ""Germany"", ""3"": ""United Kingdom"", ""4"": ""Spain"", ""5"": ""Italy"", ""6"": ""Sweden"", ""7"": ""Switzerland"", ""8"": ""Netherlands"", ""9"": ""Portugal"", ""10"": ""Poland"", ""11"": ""Austria"", ""12"": ""Belgium"", ""13"": ""Denmark"", ""14"": ""Norway"", ""15"": ""Ireland"", ""16"": ""Czech Republic"", ""17"": ""Finland"", ""18"": ""Greece"", ""19"": ""Hungary"", ""20"": ""Russia"", ""21"": ""Luxembourg"", ""22"": ""Slovenia"", ""23"": ""Malta"", ""24"": ""Slovakia (Slovak Republic)"", ""25"": ""Romania"", ""26"": ""Croatia"", ""27"": ""Turkey"", ""28"": ""Bosnia and Herzegovina"", ""29"": ""Lithuania"", ""30"": ""Ukraine"", ""31"": ""Cyprus""}"
+v035_code,Which country in North or Central America? [coded],Q13,Q13,single_coded,,numeric,"{""1"": ""United States"", ""2"": ""Canada"", ""3"": ""Mexico"", ""4"": ""Guatemala"", ""5"": ""Other"", ""6"": ""United States Virgin Islands"", ""7"": ""Panama""}"
+v036_code,Which country in South America? [coded],Q14,Q14,single_coded,,numeric,"{""1"": ""Brazil"", ""2"": ""Chile"", ""3"": ""Argentina"", ""4"": ""Colombia"", ""5"": ""Peru"", ""6"": ""Ecuador"", ""7"": ""Paraguay""}"
+v037_code,Do you have a job alongside your studies? [coded],Q15,Q15,single_coded,,numeric,"{""1"": ""No"", ""2"": ""Yes""}"
+v038_code,What is your main reason for having a job? [coded],Q16,Q16,single_coded,,numeric,"{""1"": ""To help pay living costs/provide extra income"", ""2"": ""To develop additional skills"", ""3"": ""To pay for study or study materials"", ""4"": ""Other"", ""5"": ""To make myself more attractive to future employers"", ""6"": ""To reduce debt"", ""7"": ""To broaden my contacts""}"
+v039_code,Do you expect to go into debt as a result of your graduate degree? [coded],Q17,Q17,single_coded,,numeric,"{""1"": ""No"", ""2"": ""Yes"", ""3"": ""Unsure"", ""4"": ""Prefer not to say"", ""5"": ""Other""}"
+v040_code,How much debt do you expect to be in on completion of your graduate degree? [coded],Q18,Q18,single_coded,,numeric,"{""1"": ""Less than $10,000"", ""2"": ""$10-19,999"", ""3"": ""Prefer not to say"", ""4"": ""$20-29,999"", ""5"": ""$40-69,999"", ""6"": ""$30-39,999"", ""7"": ""$70-100,000"", ""8"": ""More than $100,000""}"
+v071_code,Are you planning on pursuing a PhD once youâve completed your Master's degree? [coded],Q24,Q24,single_coded,,numeric,"{""1"": ""Yes"", ""2"": ""I’m not sure"", ""3"": ""No""}"
+v073_code,"Since the very start of your graduate school experience, would you say your level of satisfaction has: [coded]",Q26,Q26,single_coded,,numeric,"{""1"": ""Worsened a little"", ""2"": ""Improved slightly"", ""3"": ""Significantly worsened"", ""4"": ""Stayed the same"", ""5"": ""Improved greatly""}"
+v088_code,To what extent does your graduate degree program compare to your initial expectations? [coded],Q28,Q28,single_coded,,numeric,"{""1"": ""Meets original expectations"", ""2"": ""Does not meet original expectations"", ""3"": ""Exceeds original expectations""}"
+v089_code,"On average, how many hours a week do you typically spend on your graduate degree? [coded]",Q29,Q29,single_coded,,numeric,"{""1"": ""41-50 hours"", ""2"": ""51-60 hours"", ""3"": ""31-40 hours"", ""4"": ""61-70 hours"", ""5"": ""21-30 hours"", ""6"": ""71-80 hours"", ""7"": ""More than 80 hours"", ""8"": ""11-20 hours"", ""9"": ""Less than 11 hours""}"
+v090_code,"On average, how much one-on-one contact time do you spend with your supervisor each week? [coded]",Q30,Q30,single_coded,,numeric,"{""1"": ""Less than an hour"", ""2"": ""Between one and three hours"", ""3"": ""More than three hours"", ""4"": ""Other""}"
+v095_code,Have you ever received help for anxiety or depression linked to/connected to your studies? [coded],Q33,Q33,single_coded,,numeric,"{""1"": ""No"", ""2"": ""Yes"", ""3"": ""I want help but have not yet sought it"", ""4"": ""I want help/have asked for help but have not yet received it"", ""5"": ""Prefer not to say""}"
+v096_code,Did you seek help for anxiety or depression within your institution?  [coded],Q34,Q34,single_coded,,numeric,"{""1"": ""No, I sought help elsewhere"", ""2"": ""Yes, it was helpful"", ""3"": ""Yes, but I didn’t feel supported"", ""4"": ""I wanted to, but there was none available"", ""5"": ""Other"", ""6"": ""Prefer not to say""}"
+v103_code,Do you feel that you have experienced bullying during your graduate degree? [coded],Q36,Q36,single_coded,,numeric,"{""1"": ""No"", ""2"": ""Yes"", ""3"": ""Prefer not to say""}"
+v111_code,Do you feel able to speak out about your experiences of bullying without personal repercussions? [coded],Q38,Q38,single_coded,,numeric,"{""1"": ""No"", ""2"": ""Yes"", ""3"": ""Unsure""}"
+v112_code,Do you feel that you have experienced discrimination or harassment during your graduate degree? [coded],Q39,Q39,single_coded,,numeric,"{""1"": ""No"", ""2"": ""Yes"", ""3"": ""Prefer not to say""}"
+v162_code,"In terms of the quality of your graduate degree program, do you think that the COVID-19 pandemic hasâ¦ [coded]",Q44,Q44,single_coded,,numeric,"{""1"": ""Negatively impacted the quality"", ""2"": ""No difference"", ""3"": ""Positively impacted the quality""}"
+v163_code,How long do you think it will take you to find a permanent (non-trainee) position after you graduate? [coded],Q47,Q47,single_coded,,numeric,"{""1"": ""Less than a year"", ""2"": ""Unsure"", ""3"": ""1 to 2 years"", ""4"": ""3 to 6 years"", ""5"": ""2 to 3 years"", ""6"": ""More than 6 years"", ""7"": ""I have already secured one""}"
+v041_num,To what extent do you agree with the following statements?: I am able to save money alongside my studies [numeric],Q19.a,Q19.a,likert_numeric,,numeric,"{""1"": ""Somewhat agree"", ""2"": ""Strongly disagree"", ""3"": ""Somewhat disagree"", ""4"": ""Strongly agree"", ""5"": ""Neither agree nor disagree"", ""6"": ""Not applicable"", ""7"": ""Prefer not to say""}"
+v042_num,To what extent do you agree with the following statements?: I am worried about the increasing cost of living [numeric],Q19.b,Q19.b,likert_numeric,,numeric,"{""1"": ""Strongly agree"", ""2"": ""Somewhat agree"", ""3"": ""Neither agree nor disagree"", ""4"": ""Somewhat disagree"", ""5"": ""Strongly disagree"", ""6"": ""Not applicable"", ""7"": ""Prefer not to say""}"
+v043_num,To what extent do you agree with the following statements?: Increased inflation will negatively impact my decision to further pursue my studies [numeric],Q19.c,Q19.c,likert_numeric,,numeric,"{""1"": ""Strongly agree"", ""2"": ""Somewhat agree"", ""3"": ""Neither agree nor disagree"", ""4"": ""Somewhat disagree"", ""5"": ""Strongly disagree"", ""6"": ""Not applicable"", ""7"": ""Prefer not to say""}"
+v044_num,To what extent do you agree with the following statements?: I regularly worry about my increasing student debt [numeric],Q19.d,Q19.d,likert_numeric,,numeric,"{""1"": ""Not applicable"", ""2"": ""Strongly disagree"", ""3"": ""Strongly agree"", ""4"": ""Somewhat agree"", ""5"": ""Neither agree nor disagree"", ""6"": ""Somewhat disagree"", ""7"": ""Prefer not to say""}"
+v045_num,What concerns have you had since you started your graduate degree? The difficulty of getting funding / low success rates for grant applications [numeric],Q20.a,Q20.a,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""1 = Not at all concerned"", ""5"": ""2"", ""6"": ""Not applicable""}"
+v046_num,What concerns have you had since you started your graduate degree? Inability to finish my studies in the time period I had set out to  [numeric],Q20.b,Q20.b,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""2"", ""5"": ""1 = Not at all concerned"", ""6"": ""Not applicable""}"
+v047_num,What concerns have you had since you started your graduate degree? Impact of a poor relationship with my supervisor [numeric],Q20.c,Q20.c,likert_numeric,,numeric,"{""1"": ""1 = Not at all concerned"", ""2"": ""2"", ""3"": ""5 = Very concerned"", ""4"": ""3"", ""5"": ""4"", ""6"": ""Not applicable""}"
+v048_num,What concerns have you had since you started your graduate degree? The number of available faculty research jobs  [numeric],Q20.d,Q20.d,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""1 = Not at all concerned"", ""5"": ""2"", ""6"": ""Not applicable""}"
+v049_num,What concerns have you had since you started your graduate degree? The high numbers of early career researchers on continuing temporary contracts as postdocs [numeric],Q20.e,Q20.e,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""2"", ""5"": ""1 = Not at all concerned"", ""6"": ""Not applicable""}"
+v050_num,What concerns have you had since you started your graduate degree? The difficulty of maintaining a work/life balance [numeric],Q20.f,Q20.f,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""2"", ""5"": ""1 = Not at all concerned"", ""6"": ""Not applicable""}"
+v051_num,What concerns have you had since you started your graduate degree? Uncertainty about the value of a graduate degree [numeric],Q20.g,Q20.g,likert_numeric,,numeric,"{""1"": ""4"", ""2"": ""5 = Very concerned"", ""3"": ""3"", ""4"": ""2"", ""5"": ""1 = Not at all concerned"", ""6"": ""Not applicable""}"
+v052_num,What concerns have you had since you started your graduate degree? Uncertainty about future employment/career prospects [numeric],Q20.h,Q20.h,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""2"", ""5"": ""1 = Not at all concerned"", ""6"": ""Not applicable""}"
+v053_num,What concerns have you had since you started your graduate degree? Student debt during my graduate degree [numeric],Q20.i,Q20.i,likert_numeric,,numeric,"{""1"": ""1 = Not at all concerned"", ""2"": ""Not applicable"", ""3"": ""2"", ""4"": ""3"", ""5"": ""5 = Very concerned"", ""6"": ""4""}"
+v054_num,"What concerns have you had since you started your graduate degree? Financial worries after my graduate degree (cost of living, inability to save for a house, children, retirement) [numeric]",Q20.j,Q20.j,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""2"", ""5"": ""1 = Not at all concerned"", ""6"": ""Not applicable""}"
+v055_num,What concerns have you had since you started your graduate degree? Political landscape  [numeric],Q20.k,Q20.k,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""2"", ""5"": ""1 = Not at all concerned"", ""6"": ""Not applicable""}"
+v056_num,What concerns have you had since you started your graduate degree? Impostor syndrome [numeric],Q20.l,Q20.l,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""1 = Not at all concerned"", ""5"": ""2"", ""6"": ""Not applicable""}"
+v057_num,What concerns have you had since you started your graduate degree? Concern about my mental health as a result of undertaking a graduate degree [numeric],Q20.m,Q20.m,likert_numeric,,numeric,"{""1"": ""5 = Very concerned"", ""2"": ""4"", ""3"": ""3"", ""4"": ""2"", ""5"": ""1 = Not at all concerned"", ""6"": ""Not applicable""}"
+v058_num,What concerns have you had since you started your graduate degree? Poor support and acknowledgement of my parenting/elder care responsibilities  [numeric],Q20.n,Q20.n,likert_numeric,,numeric,"{""1"": ""Not applicable"", ""2"": ""1 = Not at all concerned"", ""3"": ""2"", ""4"": ""3"", ""5"": ""4"", ""6"": ""5 = Very concerned""}"
+v059_num,What concerns have you had since you started your graduate degree? Access to teaching staff and supervisors being restricted under remote study formats [numeric],Q20.o,Q20.o,likert_numeric,,numeric,"{""1"": ""1 = Not at all concerned"", ""2"": ""2"", ""3"": ""3"", ""4"": ""Not applicable"", ""5"": ""4"", ""6"": ""5 = Very concerned""}"
+v070_num,How satisfied are you with your decision to pursue a graduate degree? [numeric],Q23.a,Q23.a,likert_numeric,,numeric,"{""1"": ""6"", ""2"": ""5"", ""3"": ""7 = Extremely satisfied"", ""4"": ""4 = Neither satisfied nor dissatisfied"", ""5"": ""3"", ""6"": ""2"", ""7"": ""1 = Not at all satisfied""}"
+v072_num,How satisfied are you with your graduate degree experience? [numeric],Q25.a,Q25.a,likert_numeric,,numeric,"{""1"": ""5"", ""2"": ""6"", ""3"": ""4 = Neither satisfied nor dissatisfied"", ""4"": ""3"", ""5"": ""2"", ""6"": ""7 = Extremely satisfied"", ""7"": ""1 = Not at all satisfied""}"
+v074_num,How satisfied are you with each of the following attributes or aspects of your degree? Availability of funding         [numeric],Q27.a,Q27.a,likert_numeric,,numeric,"{""1"": ""4 = Neither satisfied not dissatisfied"", ""2"": ""5"", ""3"": ""6"", ""4"": ""3"", ""5"": ""1 = Not at all satisfied"", ""6"": ""7 = Extremely satisfied"", ""7"": ""2"", ""8"": ""Not applicable""}"
+v075_num,How satisfied are you with each of the following attributes or aspects of your degree? Hours worked [numeric],Q27.b,Q27.b,likert_numeric,,numeric,"{""1"": ""4 = Neither satisfied not dissatisfied"", ""2"": ""5"", ""3"": ""3"", ""4"": ""6"", ""5"": ""2"", ""6"": ""1 = Not at all satisfied"", ""7"": ""7 = Extremely satisfied"", ""8"": ""Not applicable""}"
+v076_num,How satisfied are you with each of the following attributes or aspects of your degree? Social environment [numeric],Q27.c,Q27.c,likert_numeric,,numeric,"{""1"": ""5"", ""2"": ""6"", ""3"": ""4 = Neither satisfied not dissatisfied"", ""4"": ""3"", ""5"": ""7 = Extremely satisfied"", ""6"": ""2"", ""7"": ""1 = Not at all satisfied"", ""8"": ""Not applicable""}"
+v077_num,How satisfied are you with each of the following attributes or aspects of your degree? Degree of independence [numeric],Q27.d,Q27.d,likert_numeric,,numeric,"{""1"": ""6"", ""2"": ""5"", ""3"": ""7 = Extremely satisfied"", ""4"": ""4 = Neither satisfied not dissatisfied"", ""5"": ""3"", ""6"": ""2"", ""7"": ""1 = Not at all satisfied"", ""8"": ""Not applicable""}"
+v078_num,How satisfied are you with each of the following attributes or aspects of your degree? Recognition from supervisor [numeric],Q27.e,Q27.e,likert_numeric,,numeric,"{""1"": ""6"", ""2"": ""7 = Extremely satisfied"", ""3"": ""5"", ""4"": ""4 = Neither satisfied not dissatisfied"", ""5"": ""3"", ""6"": ""1 = Not at all satisfied"", ""7"": ""2"", ""8"": ""Not applicable""}"
+v079_num,How satisfied are you with each of the following attributes or aspects of your degree? Overall relationship with supervisor [numeric],Q27.f,Q27.f,likert_numeric,,numeric,"{""1"": ""6"", ""2"": ""7 = Extremely satisfied"", ""3"": ""5"", ""4"": ""4 = Neither satisfied not dissatisfied"", ""5"": ""3"", ""6"": ""1 = Not at all satisfied"", ""7"": ""2"", ""8"": ""Not applicable""}"
+v080_num,How satisfied are you with each of the following attributes or aspects of your degree? Overall compensation and benefits [numeric],Q27.g,Q27.g,likert_numeric,,numeric,"{""1"": ""1 = Not at all satisfied"", ""2"": ""2"", ""3"": ""3"", ""4"": ""4 = Neither satisfied not dissatisfied"", ""5"": ""5"", ""6"": ""6"", ""7"": ""7 = Extremely satisfied"", ""8"": ""Not applicable""}"
+v081_num,How satisfied are you with each of the following attributes or aspects of your degree? Vacation time [numeric],Q27.h,Q27.h,likert_numeric,,numeric,"{""1"": ""4 = Neither satisfied not dissatisfied"", ""2"": ""5"", ""3"": ""1 = Not at all satisfied"", ""4"": ""6"", ""5"": ""3"", ""6"": ""7 = Extremely satisfied"", ""7"": ""2"", ""8"": ""Not applicable""}"
+v082_num,How satisfied are you with each of the following attributes or aspects of your degree? Guidance received from adviser in lab/research  [numeric],Q27.i,Q27.i,likert_numeric,,numeric,"{""1"": ""6"", ""2"": ""5"", ""3"": ""7 = Extremely satisfied"", ""4"": ""4 = Neither satisfied not dissatisfied"", ""5"": ""3"", ""6"": ""2"", ""7"": ""1 = Not at all satisfied"", ""8"": ""Not applicable""}"
+v083_num,How satisfied are you with each of the following attributes or aspects of your degree? Ability to attend meetings and conferences [numeric],Q27.j,Q27.j,likert_numeric,,numeric,"{""1"": ""6"", ""2"": ""5"", ""3"": ""4 = Neither satisfied not dissatisfied"", ""4"": ""7 = Extremely satisfied"", ""5"": ""3"", ""6"": ""2"", ""7"": ""1 = Not at all satisfied"", ""8"": ""Not applicable""}"
+v084_num,How satisfied are you with each of the following attributes or aspects of your degree? Work-life balance [numeric],Q27.k,Q27.k,likert_numeric,,numeric,"{""1"": ""3"", ""2"": ""5"", ""3"": ""4 = Neither satisfied not dissatisfied"", ""4"": ""2"", ""5"": ""1 = Not at all satisfied"", ""6"": ""6"", ""7"": ""7 = Extremely satisfied"", ""8"": ""Not applicable""}"
+v085_num,How satisfied are you with each of the following attributes or aspects of your degree? Career pathway guidance and advice [numeric],Q27.l,Q27.l,likert_numeric,,numeric,"{""1"": ""4 = Neither satisfied not dissatisfied"", ""2"": ""3"", ""3"": ""5"", ""4"": ""1 = Not at all satisfied"", ""5"": ""2"", ""6"": ""6"", ""7"": ""7 = Extremely satisfied"", ""8"": ""Not applicable""}"
+v086_num,How satisfied are you with each of the following attributes or aspects of your degree? Quality of teaching [numeric],Q27.m,Q27.m,likert_numeric,,numeric,"{""1"": ""5"", ""2"": ""4 = Neither satisfied not dissatisfied"", ""3"": ""6"", ""4"": ""3"", ""5"": ""Not applicable"", ""6"": ""2"", ""7"": ""7 = Extremely satisfied"", ""8"": ""1 = Not at all satisfied""}"
+v087_num,How satisfied are you with each of the following attributes or aspects of your degree? Balance of teaching and practical elements [numeric],Q27.n,Q27.n,likert_numeric,,numeric,"{""1"": ""4 = Neither satisfied not dissatisfied"", ""2"": ""5"", ""3"": ""6"", ""4"": ""Not applicable"", ""5"": ""3"", ""6"": ""2"", ""7"": ""7 = Extremely satisfied"", ""8"": ""1 = Not at all satisfied""}"
+v091_num,My supervisor â¦ Makes time for frank conversations about my career    [numeric],Q32.a,Q32.a,likert_numeric,,numeric,"{""1"": ""Somewhat agree"", ""2"": ""Strongly agree"", ""3"": ""Somewhat disagree"", ""4"": ""Strongly disagree"", ""5"": ""Neither agree nor disagree"", ""6"": ""Unsure/Not applicable""}"
+v092_num,My supervisor â¦ Is open to the idea of me pursuing a career outside academia [numeric],Q32.b,Q32.b,likert_numeric,,numeric,"{""1"": ""Strongly agree"", ""2"": ""Somewhat agree"", ""3"": ""Neither agree nor disagree"", ""4"": ""Unsure/Not applicable"", ""5"": ""Somewhat disagree"", ""6"": ""Strongly disagree""}"
+v093_num,My supervisor â¦ Has useful advice for careers outside academia [numeric],Q32.c,Q32.c,likert_numeric,,numeric,"{""1"": ""Neither agree nor disagree"", ""2"": ""Somewhat agree"", ""3"": ""Strongly disagree"", ""4"": ""Somewhat disagree"", ""5"": ""Unsure/Not applicable"", ""6"": ""Strongly agree""}"
+v094_num,My supervisor â¦ Has encouraged me to attend career training and events [numeric],Q32.d,Q32.d,likert_numeric,,numeric,"{""1"": ""Strongly agree"", ""2"": ""Somewhat agree"", ""3"": ""Neither agree nor disagree"", ""4"": ""Strongly disagree"", ""5"": ""Somewhat disagree"", ""6"": ""Unsure/Not applicable""}"
+v097_num,Mental health and wellbeing services in my university are tailored and appropriate to the needs of graduate students [numeric],Q35.a,Q35.a,likert_numeric,,numeric,"{""1"": ""Somewhat disagree"", ""2"": ""Somewhat agree"", ""3"": ""Neither agree nor disagree"", ""4"": ""Strongly disagree"", ""5"": ""Not applicable"", ""6"": ""Strongly agree"", ""7"": ""Prefer not to say""}"
+v098_num,My supervisor has a good awareness of support services and was able to signpost me to them if needed [numeric],Q35.b,Q35.b,likert_numeric,,numeric,"{""1"": ""Strongly disagree"", ""2"": ""Neither agree nor disagree"", ""3"": ""Somewhat disagree"", ""4"": ""Somewhat agree"", ""5"": ""Not applicable"", ""6"": ""Strongly agree"", ""7"": ""Prefer not to say""}"
+v099_num,My university offers adequate one-to-one mental health support [numeric],Q35.c,Q35.c,likert_numeric,,numeric,"{""1"": ""Somewhat agree"", ""2"": ""Neither agree nor disagree"", ""3"": ""Strongly disagree"", ""4"": ""Somewhat disagree"", ""5"": ""Strongly agree"", ""6"": ""Not applicable"", ""7"": ""Prefer not to say""}"
+v100_num,"My university offers different types of support to promote mental health and wellbeing beyond one-to-one support (e.g. workshops, seminars, activities) [numeric]",Q35.d,Q35.d,likert_numeric,,numeric,"{""1"": ""Somewhat agree"", ""2"": ""Neither agree nor disagree"", ""3"": ""Strongly agree"", ""4"": ""Somewhat disagree"", ""5"": ""Strongly disagree"", ""6"": ""Not applicable"", ""7"": ""Prefer not to say""}"
+v101_num,My university supports good work-life balance [numeric],Q35.e,Q35.e,likert_numeric,,numeric,"{""1"": ""Neither agree nor disagree"", ""2"": ""Somewhat agree"", ""3"": ""Somewhat disagree"", ""4"": ""Strongly disagree"", ""5"": ""Strongly agree"", ""6"": ""Not applicable"", ""7"": ""Prefer not to say""}"
+v102_num,"There is a long-hours culture at my university, including sometimes working through the night      [numeric]",Q35.f,Q35.f,likert_numeric,,numeric,"{""1"": ""Somewhat agree"", ""2"": ""Strongly agree"", ""3"": ""Somewhat disagree"", ""4"": ""Neither agree nor disagree"", ""5"": ""Strongly disagree"", ""6"": ""Not applicable"", ""7"": ""Prefer not to say""}"
+v123_num,How much do you expect your graduate degree to improve your job prospects? [numeric],Q41.a,Q41.a,likert_numeric,,numeric,"{""1"": ""Substantially"", ""2"": ""Somewhat"", ""3"": ""Dramatically"", ""4"": ""Barely"", ""5"": ""Unsure"", ""6"": ""Not at all""}"
+v164_num,How much more likely are you now to pursue a research career than when you launched your graduate degree? [numeric],Q48.a,Q48.a,likert_numeric,,numeric,"{""1"": ""Equally likely"", ""2"": ""Somewhat more likely"", ""3"": ""Somewhat less likely"", ""4"": ""Much more likely"", ""5"": ""Much less likely"", ""6"": ""Unsure""}"
+v197_num,How well is your current graduate degree preparing you to carry out each of the following activities? Collecting and analyzing data      [numeric],Q52.a,Q52.a,likert_numeric,,numeric,"{""1"": ""Very well"", ""2"": ""Well"", ""3"": ""Neither well nor badly"", ""4"": ""Badly"", ""5"": ""Very badly"", ""6"": ""Unsure/Not applicable""}"
+v198_num,How well is your current graduate degree preparing you to carry out each of the following activities? Designing robust reproducible experiments [numeric],Q52.b,Q52.b,likert_numeric,,numeric,"{""1"": ""Well"", ""2"": ""Very well"", ""3"": ""Neither well nor badly"", ""4"": ""Badly"", ""5"": ""Unsure/Not applicable"", ""6"": ""Very badly""}"
+v199_num,How well is your current graduate degree preparing you to carry out each of the following activities? Writing a paper for publication in a peer-reviewed journal [numeric],Q52.c,Q52.c,likert_numeric,,numeric,"{""1"": ""Well"", ""2"": ""Very well"", ""3"": ""Neither well nor badly"", ""4"": ""Badly"", ""5"": ""Unsure/Not applicable"", ""6"": ""Very badly""}"
+v200_num,How well is your current graduate degree preparing you to carry out each of the following activities? Applying for funding  [numeric],Q52.d,Q52.d,likert_numeric,,numeric,"{""1"": ""Neither well nor badly"", ""2"": ""Well"", ""3"": ""Badly"", ""4"": ""Very badly"", ""5"": ""Very well"", ""6"": ""Unsure/Not applicable""}"
+v201_num,How well is your current graduate degree preparing you to carry out each of the following activities? Finding a satisfying career [numeric],Q52.e,Q52.e,likert_numeric,,numeric,"{""1"": ""Neither well nor badly"", ""2"": ""Well"", ""3"": ""Badly"", ""4"": ""Very badly"", ""5"": ""Very well"", ""6"": ""Unsure/Not applicable""}"
+v202_num,How well is your current graduate degree preparing you to carry out each of the following activities? Managing complex projects [numeric],Q52.f,Q52.f,likert_numeric,,numeric,"{""1"": ""Well"", ""2"": ""Very well"", ""3"": ""Neither well nor badly"", ""4"": ""Badly"", ""5"": ""Very badly"", ""6"": ""Unsure/Not applicable""}"
+v203_num,How well is your current graduate degree preparing you to carry out each of the following activities? Developing a business plan [numeric],Q52.g,Q52.g,likert_numeric,,numeric,"{""1"": ""Very badly"", ""2"": ""Badly"", ""3"": ""Neither well nor badly"", ""4"": ""Unsure/Not applicable"", ""5"": ""Well"", ""6"": ""Very well""}"
+v204_num,How well is your current graduate degree preparing you to carry out each of the following activities? Managing people [numeric],Q52.h,Q52.h,likert_numeric,,numeric,"{""1"": ""Neither well nor badly"", ""2"": ""Well"", ""3"": ""Badly"", ""4"": ""Very badly"", ""5"": ""Very well"", ""6"": ""Unsure/Not applicable""}"
+v205_num,How well is your current graduate degree preparing you to carry out each of the following activities? Managing a large operational budget [numeric],Q52.i,Q52.i,likert_numeric,,numeric,"{""1"": ""Very badly"", ""2"": ""Badly"", ""3"": ""Neither well nor badly"", ""4"": ""Unsure/Not applicable"", ""5"": ""Well"", ""6"": ""Very well""}"
+v206_num,I feel that my graduate degree program is preparing me well for a research career [numeric],Q53.a,Q53.a,likert_numeric,,numeric,"{""1"": ""Somewhat agree"", ""2"": ""Strongly agree"", ""3"": ""Neither agree nor disagree"", ""4"": ""Somewhat disagree"", ""5"": ""Strongly disagree"", ""6"": ""Unsure""}"
+v207_num,I feel that my graduate degree program is preparing me well for a non-research science-related career [numeric],Q53.b,Q53.b,likert_numeric,,numeric,"{""1"": ""Somewhat agree"", ""2"": ""Somewhat disagree"", ""3"": ""Neither agree nor disagree"", ""4"": ""Strongly disagree"", ""5"": ""Strongly agree"", ""6"": ""Unsure""}"
+v060_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:1,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v061_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:2,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v062_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:3,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v063_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:4,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v064_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:5,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v065_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:6,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v066_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:7,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v067_bin,"Overall, what do you enjoy most about life as a graduate      student?  [binary]",Q22:8,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v068_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:9,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v069_bin,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22:10,Q22,multiple_binary,Q22,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v104_bin,Who was the perpetrator(s)? Please select all that apply. [binary],Q37:1,Q37,multiple_binary,Q37,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v105_bin,Who was the perpetrator(s)? Please select all that apply. [binary],Q37:2,Q37,multiple_binary,Q37,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v106_bin,Who was the perpetrator(s)? Please select all that apply. [binary],Q37:3,Q37,multiple_binary,Q37,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v107_bin,Who was the perpetrator(s)? Please select all that apply. [binary],Q37:4,Q37,multiple_binary,Q37,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v108_bin,Who was the perpetrator(s)? Please select all that apply. [binary],Q37:5,Q37,multiple_binary,Q37,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v109_bin,Who was the perpetrator(s)? Please select all that apply. [binary],Q37:6,Q37,multiple_binary,Q37,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v110_bin,Who was the perpetrator(s)? Please select all that apply. [binary],Q37:7,Q37,multiple_binary,Q37,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v113_bin,Which of the following have you experienced?  [binary],Q40:1,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v114_bin,Which of the following have you experienced?  [binary],Q40:2,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v115_bin,Which of the following have you experienced?  [binary],Q40:3,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v116_bin,Which of the following have you experienced?  [binary],Q40:4,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v117_bin,Which of the following have you experienced?  [binary],Q40:5,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v118_bin,Which of the following have you experienced?  [binary],Q40:6,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v119_bin,Which of the following have you experienced?  [binary],Q40:7,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v120_bin,Which of the following have you experienced?  [binary],Q40:8,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v121_bin,Which of the following have you experienced?  [binary],Q40:9,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v122_bin,Which of the following have you experienced?  [binary],Q40:10,Q40,multiple_binary,Q40,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v149_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:1,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v150_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:2,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v151_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:3,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v152_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:4,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v153_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:5,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v154_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:6,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v155_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:7,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v156_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:8,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v157_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:9,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v158_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:10,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v159_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:11,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v160_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:12,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v161_bin,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43:13,Q43,multiple_binary,Q43,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v165_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:1,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v166_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:2,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v167_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:3,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v168_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:4,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v169_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:5,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v170_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:6,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v171_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:7,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v172_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:8,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v173_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:9,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v174_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:10,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v175_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:11,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v176_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:12,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v177_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:13,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v178_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:14,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v179_bin,How do you learn about available career opportunities that are beyond academia?  [binary],Q49:15,Q49,multiple_binary,Q49,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v007_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:1,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v008_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:2,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v009_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:3,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v010_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:4,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v011_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:5,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v012_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:6,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v013_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:7,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v014_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:8,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v015_bin,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5:9,Q5,multiple_binary,Q5,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v180_bin,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50:1,Q50,multiple_binary,Q50,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v181_bin,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50:2,Q50,multiple_binary,Q50,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v182_bin,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50:3,Q50,multiple_binary,Q50,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v183_bin,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50:4,Q50,multiple_binary,Q50,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v184_bin,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50:5,Q50,multiple_binary,Q50,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v185_bin,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50:6,Q50,multiple_binary,Q50,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v186_bin,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50:7,Q50,multiple_binary,Q50,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v187_bin,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50:8,Q50,multiple_binary,Q50,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v188_bin,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51:1,Q51,multiple_binary,Q51,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v189_bin,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51:2,Q51,multiple_binary,Q51,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v190_bin,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51:3,Q51,multiple_binary,Q51,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v191_bin,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51:4,Q51,multiple_binary,Q51,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v192_bin,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51:5,Q51,multiple_binary,Q51,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v193_bin,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51:6,Q51,multiple_binary,Q51,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v194_bin,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51:7,Q51,multiple_binary,Q51,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v195_bin,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51:8,Q51,multiple_binary,Q51,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v208_bin,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54:1,Q54,multiple_binary,Q54,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v209_bin,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54:2,Q54,multiple_binary,Q54,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v210_bin,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54:3,Q54,multiple_binary,Q54,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v211_bin,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54:4,Q54,multiple_binary,Q54,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v212_bin,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54:5,Q54,multiple_binary,Q54,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v213_bin,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54:6,Q54,multiple_binary,Q54,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v214_bin,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54:7,Q54,multiple_binary,Q54,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v215_bin,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54:8,Q54,multiple_binary,Q54,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v216_bin,What would you do differently right now if you were starting your graduate degree?  [binary],Q55:1,Q55,multiple_binary,Q55,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v217_bin,What would you do differently right now if you were starting your graduate degree?  [binary],Q55:2,Q55,multiple_binary,Q55,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v218_bin,What would you do differently right now if you were starting your graduate degree?  [binary],Q55:3,Q55,multiple_binary,Q55,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v219_bin,What would you do differently right now if you were starting your graduate degree?  [binary],Q55:4,Q55,multiple_binary,Q55,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v220_bin,What would you do differently right now if you were starting your graduate degree?  [binary],Q55:5,Q55,multiple_binary,Q55,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v221_bin,What would you do differently right now if you were starting your graduate degree?  [binary],Q55:6,Q55,multiple_binary,Q55,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v017_bin,What prompted you to study outside your country of upbringing? [binary],Q7:1,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v018_bin,What prompted you to study outside your country of upbringing? [binary],Q7:2,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v019_bin,What prompted you to study outside your country of upbringing? [binary],Q7:3,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v020_bin,What prompted you to study outside your country of upbringing? [binary],Q7:4,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v021_bin,What prompted you to study outside your country of upbringing? [binary],Q7:5,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v022_bin,What prompted you to study outside your country of upbringing? [binary],Q7:6,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v023_bin,What prompted you to study outside your country of upbringing? [binary],Q7:7,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v024_bin,What prompted you to study outside your country of upbringing? [binary],Q7:8,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v025_bin,What prompted you to study outside your country of upbringing? [binary],Q7:9,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v026_bin,What prompted you to study outside your country of upbringing? [binary],Q7:10,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v027_bin,What prompted you to study outside your country of upbringing? [binary],Q7:11,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v028_bin,What prompted you to study outside your country of upbringing? [binary],Q7:12,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"
+v029_bin,What prompted you to study outside your country of upbringing? [binary],Q7:13,Q7,multiple_binary,Q7,numeric,"{""0"": ""not_selected"", ""1"": ""selected""}"

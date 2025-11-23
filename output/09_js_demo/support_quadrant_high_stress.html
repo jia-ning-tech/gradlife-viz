@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support quadrants × degree × region vs high-stress group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <style>
+    :root {
+      --bg-page: #f5f5f7;
+      --card-bg: #ffffff;
+      --border-subtle: #e5e7eb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --shadow-soft: 0 18px 38px rgba(15, 23, 42, 0.12);
+      --radius-lg: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #e5edff 0, #f5f5f7 45%, #f9fafb 100%);
+      color: var(--text-main);
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 20px auto 32px;
+      padding: 0 16px 32px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+
+    .meta span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: #9ca3af;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 18px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .filters-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .filters-row label {
+      font-weight: 500;
+      color: #4b5563;
+    }
+
+    .filters-row select {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #f9fafb;
+      color: #111827;
+      outline: none;
+    }
+
+    .filters-row select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
+    }
+
+    .filter-summary {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 4px;
+    }
+
+    .layout-main {
+      display: flex;
+      gap: 16px;
+      margin-top: 4px;
+    }
+
+    .panel {
+      flex: 1;
+      min-height: 420px;
+      border-radius: 14px;
+      background: radial-gradient(circle at top left, #eff6ff 0, #ffffff 55%);
+      padding: 10px 10px 8px;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel-header {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 4px;
+      padding: 0 6px;
+    }
+
+    .panel-subheader {
+      font-size: 11px;
+      color: #6b7280;
+      padding: 0 6px;
+      margin-bottom: 4px;
+    }
+
+    .chart {
+      flex: 1;
+      width: 100%;
+      min-height: 340px;
+    }
+
+    .panel-note {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-top: 2px;
+      padding: 0 6px 4px;
+    }
+
+    @media (max-width: 900px) {
+      .layout-main {
+        flex-direction: column;
+      }
+
+      .panel {
+        min-height: 360px;
+      }
+    }
+  </style>
+
+  <!-- ECharts & PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <h1>High work hours × low work–life balance<br/>by supervisor & institutional support</h1>
+    <p class="subtitle">
+      Composite support quadrants are based on:<br />
+      • Supervisor support index (Q27.f – overall supervisor relationship; Q32.a – career conversations)<br />
+      • Institutional support index (Q35.d/a/e – mental-health & work–life support)<br />
+      Each index is standardized and split into Low / Medium / High, forming 3×3 quadrants.
+    </p>
+    <div class="meta">
+      <span>Population: full sample of graduate students</span>
+      <span>High-stress group: ≥ 41 hours/week &amp; work–life balance ≤ 3 (Likert 1–7)</span>
+      <span>Data: viz_support_quadrant_by_deg_region_high_stress.csv</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Supervisor × institutional support quadrants vs high-stress group</div>
+      <p class="card-subtitle">
+        Left: 3×3 matrix – each cell shows high-stress share within that quadrant (colour &amp; label) and sample size.<br />
+        Right: quadrants ranked by high-stress percentage. Use controls to filter by degree and region; colour encodes
+        high-stress share using a warm (high) → cool (low) gradient based on common ECharts colours.
+      </p>
+
+      <div class="filters-row">
+        <div>
+          <label for="degree-select">Degree:</label>
+          <select id="degree-select">
+            <option value="ALL">All degrees</option>
+          </select>
+        </div>
+        <div>
+          <label for="region-select">Region:</label>
+          <select id="region-select">
+            <option value="ALL">All regions</option>
+          </select>
+        </div>
+      </div>
+      <div id="filter-summary" class="filter-summary"></div>
+
+      <div class="layout-main">
+        <div class="panel">
+          <div class="panel-header">3×3 quadrant matrix (high-stress % within cell)</div>
+          <div class="panel-subheader">
+            Y axis: Supervisor support (Low → High). X axis: Institutional support (Low → High).
+          </div>
+          <div id="heatmap" class="chart"></div>
+          <div class="panel-note">
+            Cells with very small n are shown with pale colours; hover for exact percentages and counts.
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">Quadrants ranked by high-stress share</div>
+          <div class="panel-subheader">
+            Bars are sorted from highest to lowest high-stress percentage. Use toolbox buttons to switch between viewing
+            high-stress percentage and total N.
+          </div>
+          <div id="rankbar" class="chart"></div>
+          <div class="panel-note">
+            Colours follow the same warm → cool scale as the heatmap (higher high-stress = warmer colour).
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CSV_PATH = "../08_viz_data/viz_support_quadrant_by_deg_region_high_stress.csv";
+
+    function toNumber(x) {
+      const v = Number(x);
+      return Number.isFinite(v) ? v : 0;
+    }
+
+    // 使用接近 ECharts 默认配色的鲜艳 cool → warm 渐变：
+    // 低值：#73c0de（蓝）→ 中值：#fac858（黄）→ 高值：#ee6666（红）
+    function colorForValue(value, min = 0, max = 100) {
+      const clamp = (v) => Math.max(0, Math.min(1, v));
+      const t = clamp((value - min) / (max - min || 1));
+
+      const stops = [
+        { t: 0.0, r: 115, g: 192, b: 222 }, // #73c0de
+        { t: 0.5, r: 250, g: 200, b: 88 },  // #fac858
+        { t: 1.0, r: 238, g: 102, b: 102 }  // #ee6666
+      ];
+
+      let c0 = stops[0], c1 = stops[stops.length - 1];
+      for (let i = 0; i < stops.length - 1; i++) {
+        if (t >= stops[i].t && t <= stops[i + 1].t) {
+          c0 = stops[i];
+          c1 = stops[i + 1];
+          break;
+        }
+      }
+      const localT = (t - c0.t) / (c1.t - c0.t || 1);
+      const r = Math.round(c0.r + (c1.r - c0.r) * localT);
+      const g = Math.round(c0.g + (c1.g - c0.g) * localT);
+      const b = Math.round(c0.b + (c1.b - c0.b) * localT);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch(CSV_PATH)
+        .then((resp) => resp.text())
+        .then((text) => {
+          const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+          const rows = parsed.data;
+
+          // 期望列：
+          // degree_label, region_continent,
+          // supervisor_cat, institution_cat, quadrant_label,
+          // total_count, high_stress_percent, non_high_stress_percent
+          const rawData = rows.map((d) => ({
+            degree: (d.degree_label || d.degree || "").trim() || "Unknown",
+            region: (d.region_continent || d.region || "").trim() || "Unknown",
+            supervisor: (d.supervisor_cat || "").trim(),
+            institution: (d.institution_cat || "").trim(),
+            quadrantLabel: (d.quadrant_label || "").trim(),
+            total: toNumber(d.total_count),
+            highPct: toNumber(d.high_stress_percent),
+            lowPct: toNumber(d.non_high_stress_percent)
+          }));
+
+          const degreeOrder = ["Doctorate", "Master's", "Dual degree"];
+          const regionOrder = [
+            "Africa",
+            "Asia",
+            "Australasia",
+            "Europe",
+            "North/Central America",
+            "South America"
+          ];
+          const supportOrder = ["Low", "Medium", "High"];
+
+          const degreeSelect = document.getElementById("degree-select");
+          const regionSelect = document.getElementById("region-select");
+          const summaryEl = document.getElementById("filter-summary");
+
+          // 填充下拉选项
+          const degreesInData = Array.from(new Set(rawData.map((d) => d.degree))).filter(
+            (x) => !!x && x !== "Unknown"
+          );
+          const regionsInData = Array.from(new Set(rawData.map((d) => d.region))).filter(
+            (x) => !!x && x !== "Unknown"
+          );
+
+          degreeOrder
+            .filter((deg) => degreesInData.includes(deg))
+            .forEach((deg) => {
+              const opt = document.createElement("option");
+              opt.value = deg;
+              opt.textContent = deg;
+              degreeSelect.appendChild(opt);
+            });
+
+          regionOrder
+            .filter((reg) => regionsInData.includes(reg))
+            .forEach((reg) => {
+              const opt = document.createElement("option");
+              opt.value = reg;
+              opt.textContent = reg;
+              regionSelect.appendChild(opt);
+            });
+
+          const heatChart = echarts.init(document.getElementById("heatmap"));
+          const barChart = echarts.init(document.getElementById("rankbar"));
+
+          let barMetric = "pct"; // 'pct' or 'n'
+
+          function getFilteredData() {
+            const deg = degreeSelect.value;
+            const reg = regionSelect.value;
+            return rawData.filter((d) => {
+              const okDeg = deg === "ALL" || d.degree === deg;
+              const okReg = reg === "ALL" || d.region === reg;
+              return okDeg && okReg;
+            });
+          }
+
+          function shortQuadrantLabel(sup, inst) {
+            return `${sup} sup / ${inst} inst`;
+          }
+
+          function buildCells(filtered) {
+            const cells = [];
+            supportOrder.forEach((sup) => {
+              supportOrder.forEach((inst) => {
+                const match = filtered.find(
+                  (d) => d.supervisor === sup && d.institution === inst
+                );
+                if (match) {
+                  cells.push({
+                    supervisor: sup,
+                    institution: inst,
+                    quadrantLabel:
+                      match.quadrantLabel ||
+                      `${sup} supervisor / ${inst} institution`,
+                    shortLabel: shortQuadrantLabel(sup, inst),
+                    highPct: match.highPct,
+                    lowPct: match.lowPct,
+                    total: match.total
+                  });
+                } else {
+                  cells.push({
+                    supervisor: sup,
+                    institution: inst,
+                    quadrantLabel: `${sup} supervisor / ${inst} institution`,
+                    shortLabel: shortQuadrantLabel(sup, inst),
+                    highPct: 0,
+                    lowPct: 100,
+                    total: 0
+                  });
+                }
+              });
+            });
+            return cells;
+          }
+
+          function updateSummary(filtered) {
+            const deg = degreeSelect.value;
+            const reg = regionSelect.value;
+            const totalN = filtered.reduce((acc, d) => acc + d.total, 0);
+            const highN = filtered.reduce(
+              (acc, d) => acc + d.total * (d.highPct / 100),
+              0
+            );
+            const highPctOverall = totalN > 0 ? (highN / totalN) * 100 : 0;
+
+            const degLabel = deg === "ALL" ? "All degrees" : deg;
+            const regLabel = reg === "ALL" ? "All regions" : reg;
+
+            summaryEl.textContent =
+              `${degLabel} • ${regLabel} — combined n ≈ ${Math.round(
+                totalN
+              )}, high-stress share ≈ ${highPctOverall.toFixed(1)}%`;
+          }
+
+          function buildHeatOption(cells) {
+            const xCats = supportOrder.slice(); // institution
+            const yCats = supportOrder.slice(); // supervisor
+
+            const heatmapData = [];
+            cells.forEach((d) => {
+              const xi = xCats.indexOf(d.institution);
+              const yi = yCats.indexOf(d.supervisor);
+              if (xi === -1 || yi === -1) return;
+              heatmapData.push({
+                value: [xi, yi, d.highPct],
+                highPct: d.highPct,
+                total: d.total,
+                supervisor: d.supervisor,
+                institution: d.institution,
+                quadrantLabel: d.quadrantLabel
+              });
+            });
+
+            return {
+              backgroundColor: "#ffffff",
+              grid: { left: 90, right: 20, top: 60, bottom: 90 },
+              toolbox: {
+                right: 10,
+                top: 8,
+                feature: {
+                  saveAsImage: { show: true },
+                  dataView: { show: true, readOnly: true },
+                  restore: { show: true }
+                }
+              },
+              tooltip: {
+                trigger: "item",
+                formatter: (params) => {
+                  const d = params.data;
+                  return [
+                    `<strong>${d.quadrantLabel}</strong>`,
+                    `Supervisor support: ${d.supervisor}`,
+                    `Institutional support: ${d.institution}`,
+                    `High-stress share: ${d.highPct.toFixed(1)}%`,
+                    `Sample size: n = ${d.total}`
+                  ].join("<br/>");
+                }
+              },
+              xAxis: {
+                type: "category",
+                data: xCats,
+                name: "Institutional support",
+                nameLocation: "middle",
+                nameGap: 45,
+                axisLine: { lineStyle: { color: "#9ca3af" } },
+                axisLabel: { fontSize: 12 }
+              },
+              yAxis: {
+                type: "category",
+                data: yCats,
+                name: "Supervisor support",
+                nameLocation: "middle",
+                nameGap: 60,
+                inverse: true,
+                axisLine: { lineStyle: { color: "#9ca3af" } },
+                axisLabel: { fontSize: 12 }
+              },
+              visualMap: {
+                type: "continuous",
+                min: 0,
+                max: 100,
+                calculable: false,
+                orient: "horizontal",
+                left: "center",
+                bottom: 18,
+                inRange: {
+                  // 明亮的 cool → warm 渐变
+                  color: ["#e0f4ff", "#73c0de", "#fac858", "#ee6666"]
+                },
+                text: ["Higher high-stress %", "Lower"],
+                textGap: 8,
+                textStyle: { fontSize: 10 }
+              },
+              series: [
+                {
+                  name: "High-stress %",
+                  type: "heatmap",
+                  data: heatmapData,
+                  label: {
+                    show: true,
+                    formatter: (params) => {
+                      const d = params.data;
+                      if (!d || d.total === 0) return "n=0";
+                      return `${d.highPct.toFixed(1)}%\n(n=${d.total})`;
+                    },
+                    fontSize: 10,
+                    color: "#111827"
+                  },
+                  itemStyle: {
+                    borderColor: "#e5e7eb",
+                    borderWidth: 1
+                  },
+                  emphasis: {
+                    itemStyle: {
+                      shadowBlur: 12,
+                      shadowColor: "rgba(15, 23, 42, 0.35)"
+                    }
+                  }
+                }
+              ]
+            };
+          }
+
+          function buildBarOption(cells) {
+            const showPct = barMetric === "pct";
+            const validCells = cells.filter((d) => d.total > 0);
+            const sorted = [...validCells].sort((a, b) => b.highPct - a.highPct);
+
+            const names = sorted.map((d) => d.shortLabel);
+            const values = showPct
+              ? sorted.map((d) => d.highPct)
+              : sorted.map((d) => d.total);
+
+            const xName = showPct ? "High-stress share (%)" : "Sample size (n)";
+            const maxVal = showPct
+              ? 100
+              : Math.ceil(Math.max(10, ...values) / 50) * 50;
+
+            return {
+              backgroundColor: "#ffffff",
+              grid: { left: 210, right: 40, top: 50, bottom: 40 },
+              toolbox: {
+                right: 10,
+                top: 8,
+                feature: {
+                  saveAsImage: { show: true },
+                  dataView: { show: true, readOnly: true },
+                  restore: { show: true },
+                  mySwitch: {
+                    show: true,
+                    title:
+                      barMetric === "pct"
+                        ? "Switch to sample size"
+                        : "Switch to %",
+                    icon:
+                      "path://M4 4h7v2H6v10h5v2H4V4zm10 0h2v14h-7v-2h5V6h-5V4h5z",
+                    onclick: () => {
+                      barMetric = barMetric === "pct" ? "n" : "pct";
+                      barChart.setOption(buildBarOption(cells), true);
+                    }
+                  }
+                }
+              },
+              tooltip: {
+                trigger: "item",
+                formatter: (params) => {
+                  const d = sorted[params.dataIndex];
+                  if (!d) return "";
+                  if (showPct) {
+                    return [
+                      `<strong>${d.quadrantLabel}</strong>`,
+                      `High-stress share: ${d.highPct.toFixed(1)}%`,
+                      `Sample size: n = ${d.total}`
+                    ].join("<br/>");
+                  }
+                  return [
+                    `<strong>${d.quadrantLabel}</strong>`,
+                    `Sample size: n = ${d.total}`,
+                    `High-stress share: ${d.highPct.toFixed(1)}%`
+                  ].join("<br/>");
+                }
+              },
+              xAxis: {
+                type: "value",
+                name: xName,
+                nameLocation: "middle",
+                nameGap: 30,
+                min: 0,
+                max: maxVal,
+                axisLine: { lineStyle: { color: "#9ca3af" } },
+                splitLine: { lineStyle: { color: "#e5e7eb" } },
+                axisLabel: { fontSize: 11 }
+              },
+              yAxis: {
+                type: "category",
+                data: names,
+                axisLine: { lineStyle: { color: "#9ca3af" } },
+                axisLabel: {
+                  fontSize: 11,
+                  formatter: (val) => {
+                    // 换行：把 "sup /" 后面的部分放到下一行
+                    return val.replace("sup / ", "sup /\n");
+                  }
+                }
+              },
+              series: [
+                {
+                  type: "bar",
+                  data: values.map((v, idx) => {
+                    const d = sorted[idx];
+                    return {
+                      value: v,
+                      itemStyle: {
+                        color: colorForValue(d.highPct)
+                      }
+                    };
+                  }),
+                  barWidth: 18,
+                  label: {
+                    show: true,
+                    position: "right",
+                    fontSize: 11,
+                    formatter: (params) => {
+                      const d = sorted[params.dataIndex];
+                      if (showPct) {
+                        return `${d.highPct.toFixed(1)}% (n=${d.total})`;
+                      }
+                      return `n=${d.total} (${d.highPct.toFixed(1)}%)`;
+                    }
+                  }
+                }
+              ]
+            };
+          }
+
+          function render() {
+            const filtered = getFilteredData();
+            const cells = buildCells(filtered);
+            updateSummary(filtered);
+
+            const heatOption = buildHeatOption(cells);
+            const barOption = buildBarOption(cells);
+
+            heatChart.setOption(heatOption, true);
+            barChart.setOption(barOption, true);
+          }
+
+          degreeSelect.addEventListener("change", render);
+          regionSelect.addEventListener("change", render);
+
+          window.addEventListener("resize", () => {
+            heatChart.resize();
+            barChart.resize();
+          });
+
+          render();
+        })
+        .catch((err) => {
+          console.error("Error loading CSV:", err);
+          document.body.insertAdjacentHTML(
+            "beforeend",
+            "<p style='color:red;margin-top:10px;'>Failed to load viz_support_quadrant_by_deg_region_high_stress.csv – please check the path.</p>"
+          );
+        });
+    });
+  </script>
+</body>
+</html>

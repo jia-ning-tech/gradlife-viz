@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Country × High-stress – Rose & Map view</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f8;
+      color: #222;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+    p {
+      margin: 0;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    .controls-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 12px 0 4px;
+      font-size: 14px;
+    }
+
+    label {
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    select,
+    input[type="range"] {
+      font-size: 14px;
+    }
+
+    .slider-wrapper {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+      padding: 16px;
+      position: relative;
+      min-height: 360px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .chart-container {
+      height: 320px;
+    }
+
+    .error-text {
+      color: #c53030;
+      font-size: 13px;
+      margin-top: 6px;
+      display: none;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #555;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .page-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .slider-wrapper {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Country × High-stress – Rose &amp; Map view</h1>
+  <p style="font-size:13px;margin:4px 0 2px;">
+    目标：在每个大洲/地区内部，比对各国高压组的比例，并在世界地图上展示地理分布。<br />
+    高压组定义：每周工作时长较长（41 小时以上）且对「Work–life balance」满意度较低（Likert 1–3）。<br />
+    数据来源：基于清洗后的行级数据聚合为 <code>viz_country_high_stress.csv</code>。
+  </p>
+
+  <div class="controls-row">
+    <label>
+      选择大洲/地区：
+      <select id="continentSelect">
+        <option value="ALL">全部地区</option>
+        <option value="Europe">Europe</option>
+        <option value="North/Central America">North/Central America</option>
+        <option value="Asia">Asia</option>
+        <option value="South America">South America</option>
+        <option value="Australasia">Australasia</option>
+        <option value="Africa">Africa</option>
+      </select>
+    </label>
+
+    <label>
+      玫瑰图指标：
+      <select id="roseMetricSelect">
+        <option value="high_percent">高压比例 (%)</option>
+        <option value="high_count">高压人数</option>
+      </select>
+    </label>
+
+    <label>
+      地图展示指标：
+      <select id="mapMetricSelect">
+        <option value="high_percent">高压比例 (%)</option>
+        <option value="high_count">高压人数</option>
+        <option value="total_count">样本总数</option>
+      </select>
+    </label>
+
+    <div class="slider-wrapper">
+      <span>样本量下限 (n ≥)</span>
+      <input id="sampleThreshold" type="range" min="1" max="10" step="1" value="1" />
+      <span id="sampleThresholdValue">1</span>
+    </div>
+  </div>
+
+  <div class="page-grid">
+    <section class="card">
+      <div class="card-title">Rose chart – 高压比例 / 人数（按国家）</div>
+      <p class="note" style="margin-top:2px;">
+        选择某个大洲/地区后，展示该区域内各国的「高压组相关指标」。半径越大，占比越高 / 人数越多；标签显示国家名称、样本数和高压比例。样本过滤同时作用于玫瑰图和地图。
+      </p>
+      <div id="roseChart" class="chart-container"></div>
+      <div id="roseError" class="error-text"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">World map – 高压及样本分布</div>
+      <p class="note" style="margin-top:2px;">
+        地图颜色表示当前筛选的指标（如高压比例 / 高压人数 / 总人数等）。大洲筛选仅限制参与着色的数据点，但地图仍展示完整世界轮廓。
+      </p>
+      <div id="mapChart" class="chart-container"></div>
+      <div id="mapError" class="error-text"></div>
+    </section>
+  </div>
+
+  <p class="note">
+    说明：当筛选为具体某个大洲时，玫瑰图只使用该大洲内的国家数据；当选择「全部地区」时，使用所有国家。<br />
+    地图国名匹配：目前使用 world-atlas 官方 world 地图（基于 TopoJSON），少数国家名称可能与数据集中略有差异，因此个别国家不会着色。
+  </p>
+
+  <!-- 图表与地图依赖 -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+
+  <script>
+    // === 路径配置 ===
+    // ★★ 重点：这里使用 output/ 开头，而不是 ../
+    const CSV_PATH = "../08_viz_data/viz_country_high_stress.csv";
+    const WORLD_TOPOJSON_URL =
+      "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+
+    // === DOM 引用 ===
+    const continentSelect = document.getElementById("continentSelect");
+    const roseMetricSelect = document.getElementById("roseMetricSelect");
+    const mapMetricSelect = document.getElementById("mapMetricSelect");
+    const sampleSlider = document.getElementById("sampleThreshold");
+    const sampleLabel = document.getElementById("sampleThresholdValue");
+    const roseErrorEl = document.getElementById("roseError");
+    const mapErrorEl = document.getElementById("mapError");
+
+    const roseChart = echarts.init(document.getElementById("roseChart"));
+
+    let rawData = [];
+    let worldGeo = null;
+    let mapSvg = null;
+    let mapPath = null;
+    let sampleThreshold = 1;
+
+    function showError(el, msg) {
+      el.textContent = msg;
+      el.style.display = "block";
+    }
+    function hideError(el) {
+      el.textContent = "";
+      el.style.display = "none";
+    }
+
+    function getFilteredData() {
+      const continent = continentSelect.value;
+      return rawData.filter(
+        (d) =>
+          (continent === "ALL" || d.region_continent === continent) &&
+          d.total_count >= sampleThreshold
+      );
+    }
+
+    // === 玫瑰图 ===
+    function buildRoseChart() {
+      hideError(roseErrorEl);
+      const data = getFilteredData();
+
+      if (!data.length) {
+        roseChart.clear();
+        showError(
+          roseErrorEl,
+          `当前筛选条件下没有满足 n ≥ ${sampleThreshold} 的国家。`
+        );
+        return;
+      }
+
+      const metric = roseMetricSelect.value; // 'high_percent' | 'high_count'
+      let metricField, metricLabel;
+
+      if (metric === "high_count") {
+        metricField = "high_stress_count";
+        metricLabel = "高压人数";
+      } else {
+        metricField = "high_stress_percent";
+        metricLabel = "高压比例 (%)";
+      }
+
+      const sorted = data
+        .map((d) => ({
+          name: d.country_name,
+          value: d[metricField],
+          total: d.total_count,
+          highCount: d.high_stress_count,
+          highPercent: d.high_stress_percent,
+        }))
+        .sort((a, b) => b.value - a.value);
+
+      const option = {
+        backgroundColor: "#ffffff",
+        tooltip: {
+          trigger: "item",
+          formatter: (params) => {
+            const d = params.data;
+            return [
+              `<strong>${d.name}</strong>`,
+              `高压比例: ${d.highPercent.toFixed(1)}%`,
+              `高压人数: ${d.highCount} 人`,
+              `样本数: n = ${d.total}`,
+            ].join("<br/>");
+          },
+        },
+        toolbox: {
+          show: true,
+          feature: {
+            saveAsImage: { show: true },
+            restore: { show: true },
+          },
+        },
+        legend: { show: false },
+        series: [
+          {
+            name: metricLabel,
+            type: "pie",
+            radius: [40, 140],
+            center: ["50%", "55%"],
+            roseType: "area",
+            itemStyle: {
+              borderRadius: 4,
+            },
+            label: {
+              formatter: (params) => {
+                const d = params.data;
+                return `${d.name}\n${d.highPercent.toFixed(1)}% (n=${d.total})`;
+              },
+              fontSize: 11,
+            },
+            data: sorted,
+          },
+        ],
+      };
+
+      roseChart.setOption(option);
+    }
+
+    // === 地图初始化 ===
+    function initMapSvg() {
+      const container = document.getElementById("mapChart");
+      const width = container.clientWidth || 600;
+      const height = container.clientHeight || 360;
+
+      d3.select("#mapSvg").remove();
+
+      mapSvg = d3
+        .select("#mapChart")
+        .append("svg")
+        .attr("id", "mapSvg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", `0 0 ${width} ${height}`);
+
+      const projection = d3
+        .geoNaturalEarth1()
+        .fitSize([width, height], worldGeo);
+
+      mapPath = d3.geoPath().projection(projection);
+
+      mapSvg
+        .append("g")
+        .attr("class", "countries")
+        .selectAll("path")
+        .data(worldGeo.features)
+        .enter()
+        .append("path")
+        .attr("class", "country")
+        .attr("d", mapPath)
+        .attr("fill", "#f4f4f4")
+        .attr("stroke", "#ccc")
+        .attr("stroke-width", 0.5);
+
+      mapSvg.append("g").attr("class", "legend");
+    }
+
+    // 世界地图中，部分国家名称需要做别名映射
+    const NAME_ALIAS = {
+      "United States of America": "United States",
+      "Russian Federation": "Russia",
+      Czechia: "Czech Republic",
+      Slovakia: "Slovakia (Slovak Republic)",
+      "Korea, Rep.": "South Korea",
+      "Korea, Dem. Rep.": "North Korea",
+      "Hong Kong SAR, China": "Hong Kong",
+      "Iran, Islamic Rep.": "Iran",
+      "Egypt, Arab Rep.": "Egypt",
+      "Venezuela, RB": "Venezuela",
+      "Gambia, The": "Gambia",
+      "Congo, Dem. Rep.": "Congo, Democratic Republic of",
+      "Congo, Rep.": "Congo, Republic of",
+    };
+
+    function findDataForCountry(name, dataMap) {
+      if (dataMap.has(name)) return dataMap.get(name);
+      const alt = NAME_ALIAS[name];
+      if (alt && dataMap.has(alt)) return dataMap.get(alt);
+      return null;
+    }
+
+    // === 地图着色 ===
+    function buildMapChart() {
+      hideError(mapErrorEl);
+      if (!worldGeo || !mapSvg) return;
+
+      const continent = continentSelect.value;
+      const metric = mapMetricSelect.value; // 'high_percent' | 'high_count' | 'total_count'
+      let metricField, metricLabel;
+
+      switch (metric) {
+        case "high_count":
+          metricField = "high_stress_count";
+          metricLabel = "高压人数";
+          break;
+        case "total_count":
+          metricField = "total_count";
+          metricLabel = "样本总数";
+          break;
+        default:
+          metricField = "high_stress_percent";
+          metricLabel = "高压比例 (%)";
+      }
+
+      const filtered = rawData.filter(
+        (d) =>
+          (continent === "ALL" || d.region_continent === continent) &&
+          d.total_count >= sampleThreshold
+      );
+
+      const dataMap = new Map(filtered.map((d) => [d.country_name, d]));
+      const values = filtered
+        .map((d) => d[metricField])
+        .filter((v) => Number.isFinite(v));
+
+      if (!values.length) {
+        mapSvg.selectAll("path.country").attr("fill", "#f4f4f4");
+        mapSvg.select(".legend").selectAll("*").remove();
+        showError(
+          mapErrorEl,
+          `当前筛选条件下，地图上没有满足 n ≥ ${sampleThreshold} 的国家。`
+        );
+        return;
+      } else {
+        hideError(mapErrorEl);
+      }
+
+      const maxVal = d3.max(values);
+      const colorScale = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, maxVal]);
+
+      mapSvg
+        .selectAll("path.country")
+        .attr("fill", (d) => {
+          const name = d.properties.name;
+          const row = findDataForCountry(name, dataMap);
+          if (!row) return "#f4f4f4";
+          const v = row[metricField];
+          return Number.isFinite(v) ? colorScale(v) : "#f4f4f4";
+        });
+
+      // 简单图例
+      const legend = mapSvg.select(".legend");
+      legend.selectAll("*").remove();
+
+      const legendWidth = 160;
+      const legendHeight = 10;
+      const legendX = 20;
+      const legendY = +mapSvg.attr("height") - 30;
+
+      const legendScale = d3
+        .scaleLinear()
+        .domain([0, maxVal])
+        .range([0, legendWidth]);
+
+      const legendGradientId = "legendGradient";
+      const defs = mapSvg.append("defs");
+      const gradient = defs
+        .append("linearGradient")
+        .attr("id", legendGradientId)
+        .attr("x1", "0%")
+        .attr("x2", "100%")
+        .attr("y1", "0%")
+        .attr("y2", "0%");
+
+      const stops = d3.range(0, 1.01, 0.1);
+      stops.forEach((t) => {
+        gradient
+          .append("stop")
+          .attr("offset", `${t * 100}%`)
+          .attr("stop-color", colorScale(t * maxVal));
+      });
+
+      legend
+        .append("rect")
+        .attr("x", legendX)
+        .attr("y", legendY)
+        .attr("width", legendWidth)
+        .attr("height", legendHeight)
+        .attr("fill", `url(#${legendGradientId})`);
+
+      legend
+        .append("text")
+        .attr("x", legendX)
+        .attr("y", legendY - 4)
+        .attr("font-size", 11)
+        .text(metricLabel);
+
+      const axis = d3
+        .axisBottom(legendScale)
+        .ticks(4)
+        .tickSize(3)
+        .tickFormat(
+          metric === "high_percent"
+            ? (d) => `${d.toFixed(0)}%`
+            : d3.format("~s")
+        );
+
+      legend
+        .append("g")
+        .attr("transform", `translate(${legendX}, ${legendY + legendHeight})`)
+        .call(axis)
+        .selectAll("text")
+        .attr("font-size", 10);
+    }
+
+    // === 初始化 ===
+    async function init() {
+      try {
+        // 1) 加载 CSV
+        rawData = await d3.csv(CSV_PATH, (d) => ({
+          region_continent: d.region_continent,
+          country_name: d.country_name,
+          high_stress_percent: +d.high_stress_percent,
+          high_stress_count: +d.high_stress_count,
+          non_high_stress_percent: +d.non_high_stress_percent,
+          non_high_stress_count: +d.non_high_stress_count,
+          total_count: +d.total_count,
+        }));
+
+        const maxN = d3.max(rawData, (d) => d.total_count) || 1;
+        sampleSlider.min = 1;
+        sampleSlider.max = maxN;
+        sampleSlider.value = 1;
+        sampleThreshold = 1;
+        sampleLabel.textContent = "1";
+
+        // 2) 加载世界地图 TopoJSON
+        const topo = await d3.json(WORLD_TOPOJSON_URL);
+        worldGeo = topojson.feature(topo, topo.objects.countries);
+
+        // 3) 初始化图表
+        initMapSvg();
+        buildRoseChart();
+        buildMapChart();
+
+        // 4) 绑定交互
+        continentSelect.addEventListener("change", () => {
+          buildRoseChart();
+          buildMapChart();
+        });
+        roseMetricSelect.addEventListener("change", buildRoseChart);
+        mapMetricSelect.addEventListener("change", buildMapChart);
+
+        sampleSlider.addEventListener("input", () => {
+          sampleThreshold = +sampleSlider.value;
+          sampleLabel.textContent = sampleThreshold;
+          buildRoseChart();
+          buildMapChart();
+        });
+
+        window.addEventListener("resize", () => {
+          roseChart.resize();
+          if (worldGeo) {
+            initMapSvg();
+            buildMapChart();
+          }
+        });
+      } catch (err) {
+        console.error(err);
+        showError(roseErrorEl, "无法初始化页面，请检查控制台错误信息。");
+        showError(mapErrorEl, "无法初始化页面，请检查控制台错误信息。");
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

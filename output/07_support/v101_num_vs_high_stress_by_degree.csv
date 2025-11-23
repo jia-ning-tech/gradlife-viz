@@ -1,0 +1,18 @@
+question,factor,degree_code_int,degree_label,level,high_stress_group,count,percent
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),0,285,86.36363636363636
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),1,45,13.636363636363635
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),0,130,90.27777777777779
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),1,14,9.722222222222223
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),0,8,100.0
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),0,1039,62.6658624849216
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),1,619,37.33413751507841
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),0,382,74.46393762183236
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),1,131,25.53606237816764
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),0,20,58.82352941176471
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),1,14,41.17647058823529
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),0,132,29.53020134228188
+Q35.e – University supports good work–life balance,v101_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),1,315,70.46979865771812
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),0,49,52.68817204301075
+Q35.e – University supports good work–life balance,v101_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),1,44,47.31182795698925
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),0,4,57.14285714285714
+Q35.e – University supports good work–life balance,v101_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),1,3,42.857142857142854

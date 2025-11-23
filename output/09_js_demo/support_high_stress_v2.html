@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support items × High-stress group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <!-- d3 for CSV loading -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background: #f5f5f7;
+      color: #222;
+    }
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 16px 32px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 8px 0;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .description {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      padding: 8px 12px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+    }
+    select {
+      font-size: 13px;
+      padding: 4px 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+    #sampleInfo {
+      font-size: 12px;
+      color: #777;
+    }
+    #chart {
+      width: 100%;
+      height: 540px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .note {
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+    @media (max-width: 768px) {
+      #chart {
+        height: 480px;
+      }
+      .controls {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+  <h1>Supervisor & institutional support × High-stress group</h1>
+  <div class="subtitle">
+    High-stress group is defined as students who both work ≥ 41 hours per week and rate their work–life balance at ≤ 3 on a 7-point scale.
+  </div>
+  <div class="description">
+    This chart compares average agreement with supervisor and institutional support items between the high-stress and non-high-stress groups.
+    Use the filter to switch between supervisor-focused items (Q32) and institutional / mental-health support (Q35), or view all items together.
+  </div>
+
+  <div class="controls">
+    <div class="control-group">
+      <label for="scaleSelect"><strong>Item set:</strong></label>
+      <select id="scaleSelect">
+        <option value="All">All support items (Q32 + Q35)</option>
+        <option value="Q32">Supervisor support (Q32)</option>
+        <option value="Q35">Institution & mental-health support (Q35)</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <span id="sampleInfo">Loading data...</span>
+    </div>
+  </div>
+
+  <div id="chart"></div>
+  <div class="note">
+    Note: Scores are on a Likert agreement scale (higher = stronger agreement).
+    N shown in tooltips refers to the number of respondents answering that specific item within each stress group.
+  </div>
+</div>
+
+<script>
+  // 相对于 /workspace/output/09_js_demo/
+  const CSV_PATH = "../08_viz_data/viz_support_by_stress.csv";
+
+  let rawData = [];
+  let chart;
+
+  function initChart() {
+    const chartDom = document.getElementById("chart");
+    chart = echarts.init(chartDom, null, { renderer: "canvas" });
+  }
+
+  // 对 X 轴长标签进行自动换行
+  function wrapLabel(value, maxLen) {
+    const v = String(value || "");
+    const words = v.split(" ");
+    const lines = [];
+    let current = "";
+
+    for (let i = 0; i < words.length; i++) {
+      const w = words[i];
+      const next = current ? current + " " + w : w;
+      if (next.length > maxLen) {
+        if (current) lines.push(current);
+        current = w;
+      } else {
+        current = next;
+      }
+    }
+    if (current) lines.push(current);
+    return lines.join("\n");
+  }
+
+  function initFilters() {
+    const scaleSelect = document.getElementById("scaleSelect");
+    scaleSelect.addEventListener("change", updateChart);
+  }
+
+  function updateChart() {
+    if (!chart || rawData.length === 0) return;
+
+    const scaleSelect = document.getElementById("scaleSelect");
+    const sampleInfo = document.getElementById("sampleInfo");
+    const scaleVal = scaleSelect.value;
+
+    // 过滤：按 scale_group（Q32 / Q35）
+    let filtered = rawData;
+    if (scaleVal === "Q32") {
+      filtered = filtered.filter(d => d.scale_group === "Q32");
+    } else if (scaleVal === "Q35") {
+      filtered = filtered.filter(d => d.scale_group === "Q35");
+    }
+
+    if (filtered.length === 0) {
+      sampleInfo.textContent = "No data for this selection.";
+      chart.clear();
+      return;
+    }
+
+    // 统计：共有多少条条目
+    const uniqueItems = new Set(filtered.map(d => d.item_code));
+    sampleInfo.textContent = `Items shown: ${uniqueItems.size} (hover bars for N per item & group)`;
+
+    // 按 (item_code, high_stress_group) 组织数据
+    const groupMap = new Map();
+    filtered.forEach(d => {
+      const key = d.item_code + "|" + d.high_stress_group;
+      if (!groupMap.has(key)) {
+        groupMap.set(key, {
+          item_code: d.item_code,
+          item_short: d.item_short || d.item_text,
+          item_order: d.item_order,
+          scale_group: d.scale_group,
+          high_stress_group: d.high_stress_group,
+          high_stress_label: d.high_stress_label,
+          mean_score: d.mean_score,
+          n: d.n
+        });
+      }
+    });
+
+    // 提取条目元数据，按 item_order 排序
+    const itemMeta = new Map();
+    groupMap.forEach(obj => {
+      const code = obj.item_code;
+      if (!itemMeta.has(code)) {
+        itemMeta.set(code, {
+          item_code: code,
+          item_order: obj.item_order,
+          label: obj.item_short || obj.item_code
+        });
+      }
+    });
+
+    const itemsSorted = Array.from(itemMeta.values())
+      .sort((a, b) => (a.item_order || 0) - (b.item_order || 0));
+
+    const xLabels = itemsSorted.map(a => a.label);
+
+    // 构造 series 数据：每个条目两根柱子（非高压 vs 高压）
+    const dataNonHigh = [];
+    const dataHigh = [];
+    const tooltipMap = {}; // key: itemCode|group -> {n, mean}
+
+    itemsSorted.forEach(a => {
+      const code = a.item_code;
+      const key0 = code + "|0";
+      const key1 = code + "|1";
+      let mean0 = null, mean1 = null, n0 = null, n1 = null;
+
+      if (groupMap.has(key0)) {
+        const o0 = groupMap.get(key0);
+        mean0 = o0.mean_score;
+        n0 = o0.n;
+        tooltipMap[key0] = { n: n0, mean: mean0 };
+      }
+      if (groupMap.has(key1)) {
+        const o1 = groupMap.get(key1);
+        mean1 = o1.mean_score;
+        n1 = o1.n;
+        tooltipMap[key1] = { n: n1, mean: mean1 };
+      }
+
+      dataNonHigh.push(mean0 != null ? mean0 : null);
+      dataHigh.push(mean1 != null ? mean1 : null);
+    });
+
+    const option = {
+      backgroundColor: "#ffffff",
+      animationDuration: 600,
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        formatter: function (params) {
+          // params 是当前 x 轴位置的两个系列
+          let lines = [];
+          if (params && params.length > 0) {
+            const name = params[0].axisValue;
+            lines.push(name.replace(/\n/g, " "));
+            params.forEach(p => {
+              const itemCode = itemsSorted[p.dataIndex].item_code;
+              const groupVal = (p.seriesName === "High-stress") ? 1 : 0;
+              const key = itemCode + "|" + groupVal;
+              const info = tooltipMap[key] || {};
+              const n = info.n != null ? info.n : "n/a";
+              const mean = info.mean != null ? info.mean.toFixed(2) : "n/a";
+              lines.push(
+                `${p.marker} ${p.seriesName}: ${mean} (n = ${n})`
+              );
+            });
+          }
+          return lines.join("<br/>");
+        }
+      },
+      legend: {
+        data: ["Non-high-stress", "High-stress"],
+        top: 6
+      },
+      grid: {
+        left: 70,
+        right: 20,
+        top: 60,
+        bottom: 140   // 留足空间给多行 X 轴标签
+      },
+      xAxis: {
+        type: "category",
+        data: xLabels,
+        axisLabel: {
+          interval: 0,
+          rotate: 0,
+          fontSize: 11,
+          margin: 18,
+          formatter: function (value) {
+            // 自动换行
+            return wrapLabel(value, 22);
+          }
+        }
+      },
+      yAxis: {
+        type: "value",
+        name: "Mean support score",
+        min: 1,
+        max: 5,
+        splitNumber: 4,
+        nameLocation: "middle",
+        nameGap: 45,
+        nameTextStyle: {
+          fontSize: 12
+        }
+      },
+      color: [
+        "#42a5f5", // Non-high-stress: 蓝
+        "#ff7043"  // High-stress: 橙
+      ],
+      series: [
+        {
+          name: "Non-high-stress",
+          type: "bar",
+          barGap: "0%",
+          data: dataNonHigh,
+          emphasis: { focus: "series" }
+        },
+        {
+          name: "High-stress",
+          type: "bar",
+          data: dataHigh,
+          emphasis: { focus: "series" }
+        }
+      ]
+    };
+
+    chart.setOption(option);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    initChart();
+
+    d3.csv(CSV_PATH).then(function (data) {
+      data.forEach(d => {
+        d.mean_score = +d.mean_score;
+        d.n = +d.n;
+        d.item_order = +d.item_order;
+        d.high_stress_group = +d.high_stress_group;
+      });
+      rawData = data;
+      initFilters();
+      updateChart();
+    }).catch(function (error) {
+      console.error("Error loading CSV:", error);
+      const sampleInfo = document.getElementById("sampleInfo");
+      if (sampleInfo) {
+        sampleInfo.textContent = "Failed to load data.";
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (chart) chart.resize();
+    });
+  });
+</script>
+</body>
+</html>

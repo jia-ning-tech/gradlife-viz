@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Region × High-stress group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", sans-serif;
+      margin: 0;
+      padding: 24px;
+      background-color: #f5f5f7;
+      color: #222;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .subtext {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 4px;
+    }
+    .muted {
+      color: #777;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      padding: 18px 20px 22px;
+      box-sizing: border-box;
+      margin-top: 16px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+    }
+    .controls label {
+      margin-right: 4px;
+    }
+    select {
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #d2d6dc;
+      font-size: 13px;
+      background-color: #fff;
+    }
+    #chartContainer {
+      height: 520px;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .slider-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 260px;
+    }
+    .slider-wrapper input[type="range"] {
+      flex: 1;
+    }
+    .slider-value {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      min-width: 56px;
+      text-align: right;
+    }
+    .footnote {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+    .error-text {
+      color: #d93025;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Region × High-stress group</h1>
+  <div class="subtext">
+    研究问题：在不同大洲/地区的研究生中，「高工时 + 工作生活平衡较差」这一高压组合的比例是否不同？
+  </div>
+  <div class="subtext">
+    Region 定义：依据问卷 Q9–Q14（所在国家），合并为 Asia / Europe / North–Central America / South America / Australasia / Africa。
+  </div>
+  <div class="subtext muted">
+    数据来源：viz_region_high_stress.csv（基于清洗后的调研数据）。
+  </div>
+
+  <div class="card">
+    <div class="controls">
+      <div>
+        <label for="yModeSelect">Y 轴：</label>
+        <select id="yModeSelect">
+          <option value="percent">显示百分比（组内高压占比）</option>
+          <option value="count">显示人数（高压 vs 非高压）</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="barModeSelect">柱状模式：</label>
+        <select id="barModeSelect">
+          <option value="stacked">堆叠（高压 + 非高压）</option>
+          <option value="grouped">并排（高压 vs 非高压）</option>
+        </select>
+      </div>
+
+      <div class="slider-wrapper">
+        <label for="minSampleSlider">最小样本量 n ≥</label>
+        <input id="minSampleSlider" type="range" min="0" max="1200" step="50" value="0" />
+        <span class="slider-value"><span id="minSampleValue">0</span></span>
+      </div>
+    </div>
+
+    <div id="chartContainer"></div>
+    <div id="errorBox" class="error-text" style="display:none;"></div>
+
+    <div class="footnote">
+      <strong>高压组定义：</strong>
+      一方面每周在学业上的投入时长较长（41 小时以上），另一方面对「Work–life balance」的满意度较低（Likert 1–3）。
+      <br />
+      <strong>图形说明：</strong>
+      当 Y 轴选「百分比」时：显示的是在该地区所有受访者中，高压组所占比例；当 Y 轴选「人数」时，显示的是该地区高压 / 非高压的样本数。
+      「最小样本量」滑块用于筛掉样本量过小的地区，例如将阈值调到 100，则只展示样本量 n ≥ 100 的地区。
+    </div>
+  </div>
+
+  <script>
+    // CSV 路径（已经通过 36_copy_viz_files_to_webroot.py 复制到 09_js_demo/output/08_viz_data/）
+    const CSV_PATH = '../08_viz_data/viz_region_high_stress.csv';
+
+    const yModeSelect = document.getElementById('yModeSelect');
+    const barModeSelect = document.getElementById('barModeSelect');
+    const minSampleSlider = document.getElementById('minSampleSlider');
+    const minSampleValue = document.getElementById('minSampleValue');
+    const errorBox = document.getElementById('errorBox');
+
+    let chart = echarts.init(document.getElementById('chartContainer'));
+    let rawData = [];
+
+    function showError(msg) {
+      errorBox.style.display = 'block';
+      errorBox.textContent = msg;
+    }
+
+    function hideError() {
+      errorBox.style.display = 'none';
+      errorBox.textContent = '';
+    }
+
+    function parseCSV(text) {
+      const lines = text.trim().split(/\r?\n/);
+      if (lines.length <= 1) return [];
+      const headers = lines[0].split(',').map(h => h.trim());
+      return lines.slice(1).map(line => {
+        const cols = line.split(',');
+        const obj = {};
+        headers.forEach((h, i) => {
+          obj[h] = (cols[i] ?? '').trim();
+        });
+        return obj;
+      });
+    }
+
+    function getFilteredData() {
+      const minN = Number(minSampleSlider.value) || 0;
+      return rawData.filter(d => d.total_count >= minN);
+    }
+
+    function buildChart() {
+      if (!rawData.length) return;
+
+      hideError();
+
+      const yMode = yModeSelect.value;      // 'percent' or 'count'
+      const barMode = barModeSelect.value;  // 'stacked' or 'grouped'
+      const data = getFilteredData();
+
+      if (!data.length) {
+        chart.clear();
+        chart.setOption({
+          title: {
+            text: '当前最小样本量阈值下，没有符合条件的地区',
+            left: 'center',
+            top: 'middle',
+            textStyle: { fontSize: 16, color: '#666' }
+          }
+        });
+        return;
+      }
+
+      const regions = data.map(d => d.region_continent);
+      const highPercent = data.map(d => d.high_stress_percent);
+      const nonHighPercent = data.map(d => d.non_high_stress_percent);
+      const highCount = data.map(d => d.high_stress_count);
+      const nonHighCount = data.map(d => d.non_high_stress_count);
+
+      let yAxisName;
+      let highSeriesData;
+      let nonHighSeriesData;
+      let yMax = null;
+
+      if (yMode === 'percent') {
+        yAxisName = 'Share within region (%)';
+        highSeriesData = highPercent;
+        nonHighSeriesData = nonHighPercent;
+        yMax = 100;
+      } else {
+        yAxisName = 'Number of respondents';
+        highSeriesData = highCount;
+        nonHighSeriesData = nonHighCount;
+        const maxVal = Math.max(
+          ...highCount,
+          ...nonHighCount
+        );
+        yMax = Math.ceil(maxVal / 50) * 50;
+      }
+
+      const isStacked = barMode === 'stacked';
+
+      const option = {
+        backgroundColor: '#fff',
+        grid: {
+          left: '6%',
+          right: '4%',
+          top: 60,
+          bottom: 80
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { type: 'shadow' },
+          formatter: function (params) {
+            const idx = params[0].dataIndex;
+            const d = data[idx];
+            const lines = [];
+            lines.push(d.region_continent);
+            lines.push(
+              '样本数: n = ' + d.total_count
+            );
+            params.forEach(p => {
+              if (p.seriesName === 'High-stress') {
+                lines.push(
+                  `${p.marker} 高压: n=${highCount[idx]} (${highPercent[idx].toFixed(1)}%)`
+                );
+              } else {
+                lines.push(
+                  `${p.marker} 非高压: n=${nonHighCount[idx]} (${nonHighPercent[idx].toFixed(1)}%)`
+                );
+              }
+            });
+            return lines.join('<br/>');
+          }
+        },
+        legend: {
+          top: 30,
+          data: ['High-stress', 'Not high-stress']
+        },
+        xAxis: {
+          type: 'category',
+          data: regions,
+          axisLabel: {
+            interval: 0,
+            rotate: 0
+          }
+        },
+        yAxis: {
+          type: 'value',
+          name: yAxisName,
+          max: yMax,
+          axisLabel: {
+            formatter: yMode === 'percent' ? '{value}%' : '{value}'
+          }
+        },
+        series: [
+          {
+            name: 'High-stress',
+            type: 'bar',
+            stack: isStacked ? 'total' : undefined,
+            data: highSeriesData,
+            itemStyle: { color: '#5470C6' },
+            label: {
+              show: true,
+              position: isStacked ? 'insideTop' : 'top',
+              formatter: function (p) {
+                const idx = p.dataIndex;
+                if (yMode === 'percent') {
+                  return (
+                    highPercent[idx].toFixed(1) +
+                    '%\n(n=' +
+                    highCount[idx] +
+                    ')'
+                  );
+                } else {
+                  return (
+                    'n=' +
+                    highCount[idx] +
+                    '\n(' +
+                    highPercent[idx].toFixed(1) +
+                    '%)'
+                  );
+                }
+              },
+              fontSize: 11
+            }
+          },
+          {
+            name: 'Not high-stress',
+            type: 'bar',
+            stack: isStacked ? 'total' : undefined,
+            data: nonHighSeriesData,
+            itemStyle: { color: '#91CC75' },
+            label: {
+              show: true,
+              position: isStacked ? 'insideTop' : 'top',
+              formatter: function (p) {
+                const idx = p.dataIndex;
+                if (yMode === 'percent') {
+                  return (
+                    nonHighPercent[idx].toFixed(1) +
+                    '%\n(n=' +
+                    nonHighCount[idx] +
+                    ')'
+                  );
+                } else {
+                  return (
+                    'n=' +
+                    nonHighCount[idx] +
+                    '\n(' +
+                    nonHighPercent[idx].toFixed(1) +
+                    '%)'
+                  );
+                }
+              },
+              fontSize: 11
+            }
+          }
+        ]
+      };
+
+      chart.clear();
+      chart.setOption(option);
+      chart.resize();
+    }
+
+    async function init() {
+      try {
+        const res = await fetch(CSV_PATH);
+        if (!res.ok) {
+          throw new Error('HTTP ' + res.status);
+        }
+        const text = await res.text();
+        const rows = parseCSV(text);
+        rawData = rows.map(r => ({
+          region_continent: r.region_continent,
+          high_stress_count: Number(r.high_stress_count),
+          high_stress_percent: Number(r.high_stress_percent),
+          non_high_stress_count: Number(r.non_high_stress_count),
+          non_high_stress_percent: Number(r.non_high_stress_percent),
+          total_count: Number(r.total_count)
+        }));
+
+        if (!rawData.length) {
+          showError('CSV 为空，无法绘制图表。');
+          return;
+        }
+
+        // 根据数据动态设置滑块范围
+        const maxN = rawData.reduce(
+          (m, d) => Math.max(m, d.total_count),
+          0
+        );
+        const roundedMax = Math.ceil(maxN / 50) * 50 || 50;
+        minSampleSlider.min = '0';
+        minSampleSlider.max = String(roundedMax);
+        minSampleSlider.step = '50';
+        minSampleSlider.value = '0';
+        minSampleValue.textContent = '0';
+
+        buildChart();
+      } catch (err) {
+        console.error(err);
+        showError(
+          '无法加载数据文件：' +
+            CSV_PATH +
+            '。请检查文件是否存在，以及相对路径是否正确。'
+        );
+      }
+    }
+
+    // 事件绑定
+    yModeSelect.addEventListener('change', buildChart);
+    barModeSelect.addEventListener('change', buildChart);
+    minSampleSlider.addEventListener('input', () => {
+      minSampleValue.textContent = minSampleSlider.value;
+      buildChart();
+    });
+    window.addEventListener('resize', () => {
+      chart && chart.resize();
+    });
+
+    init();
+  </script>
+</body>
+</html>

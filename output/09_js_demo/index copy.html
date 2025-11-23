@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>High work hours × Work–life balance – dashboard</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      :root {
+        --bg-page: #f5f5f7;
+        --bg-sidebar: #ffffff;
+        --bg-content: #ffffff;
+        --border-subtle: #e0e0e6;
+        --text-main: #222222;
+        --text-muted: #666666;
+        --accent: #2563eb;
+        --accent-soft: rgba(37, 99, 235, 0.08);
+        --accent-border: rgba(37, 99, 235, 0.6);
+        --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+        --radius-lg: 18px;
+        --radius-xl: 22px;
+        --nav-width: 310px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, system-ui, -apple-system,
+          Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        background: radial-gradient(circle at top, #f9fafb 0, #f3f4f6 45%, #e5e7eb 100%);
+        color: var(--text-main);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 24px;
+      }
+
+      .app-shell {
+        display: flex;
+        width: 100%;
+        max-width: 1400px;
+        min-height: 720px;
+        background: transparent;
+        gap: 22px;
+      }
+
+      aside.sidebar {
+        width: var(--nav-width);
+        background: linear-gradient(135deg, #ffffff 0%, #f9fafb 45%, #eef2ff 100%);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-soft);
+        padding: 22px 20px 18px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sidebar-header {
+        margin-bottom: 18px;
+      }
+
+      .sidebar-kicker {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #9ca3af;
+        margin-bottom: 4px;
+      }
+
+      .sidebar-title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #111827;
+      }
+
+      .sidebar-subtitle {
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #6b7280;
+      }
+
+      .tag-row {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .tag {
+        font-size: 10px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        background: rgba(255, 255, 255, 0.9);
+        color: #4b5563;
+      }
+
+      .tag-primary {
+        border-color: rgba(37, 99, 235, 0.55);
+        background: rgba(37, 99, 235, 0.07);
+        color: #1d4ed8;
+      }
+
+      .nav-section-title {
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #9ca3af;
+        margin: 4px 0 6px;
+      }
+
+      .nav-list {
+        list-style: none;
+        margin-top: 6px;
+        padding-right: 4px;
+        flex: 1;
+        overflow-y: auto;
+        scrollbar-width: thin;
+      }
+
+      .nav-list::-webkit-scrollbar {
+        width: 6px;
+      }
+      .nav-list::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .nav-list::-webkit-scrollbar-thumb {
+        background: #d1d5db;
+        border-radius: 999px;
+      }
+
+      .nav-item + .nav-item {
+        margin-top: 6px;
+      }
+
+      .nav-item button {
+        width: 100%;
+        text-align: left;
+        border: 1px solid transparent;
+        border-radius: 14px;
+        padding: 9px 10px 9px 11px;
+        background: rgba(255, 255, 255, 0.85);
+        cursor: pointer;
+        transition: all 0.18s ease-out;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .nav-item button .title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #111827;
+      }
+
+      .nav-item button .desc {
+        font-size: 11px;
+        color: #6b7280;
+        line-height: 1.4;
+      }
+
+      .nav-item button:hover {
+        background: #eff6ff;
+        border-color: rgba(37, 99, 235, 0.35);
+        transform: translateY(-1px);
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
+      }
+
+      .nav-item button.active {
+        background: radial-gradient(circle at top left, #dbeafe 0, #eef2ff 40%, #ffffff 100%);
+        border-color: var(--accent-border);
+        box-shadow: 0 16px 35px rgba(37, 99, 235, 0.25);
+      }
+
+      .nav-item button.active .title {
+        color: #1d4ed8;
+      }
+
+      .sidebar-footer {
+        margin-top: 10px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(209, 213, 219, 0.7);
+        font-size: 11px;
+        line-height: 1.5;
+        color: #6b7280;
+      }
+
+      main.content {
+        flex: 1;
+        background: var(--bg-content);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-soft);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .content-header {
+        padding: 16px 20px 10px;
+        border-bottom: 1px solid var(--border-subtle);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background: linear-gradient(
+          to right,
+          rgba(219, 234, 254, 0.8),
+          rgba(238, 242, 255, 0.6),
+          #ffffff
+        );
+      }
+
+      .content-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #111827;
+      }
+
+      .content-subtitle {
+        font-size: 12px;
+        color: #4b5563;
+      }
+
+      .content-meta {
+        margin-top: 4px;
+        font-size: 11px;
+        color: #6b7280;
+      }
+
+      .content-meta span + span::before {
+        content: "•";
+        margin: 0 6px;
+        color: #9ca3af;
+      }
+
+      .content-body {
+        flex: 1;
+        background: radial-gradient(circle at top left, #eff6ff 0, #f9fafb 40%, #f3f4f6 100%);
+        padding: 14px;
+      }
+
+      .chart-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 18px;
+        background: #ffffff;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+      }
+
+      @media (max-width: 1100px) {
+        body {
+          padding: 10px;
+        }
+        .app-shell {
+          flex-direction: column;
+        }
+        aside.sidebar {
+          width: 100%;
+          flex-direction: row;
+          align-items: flex-start;
+        }
+        .nav-list {
+          max-height: 220px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <!-- 左侧：导航 -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-kicker">Nature Graduate Survey 2022</div>
+          <div class="sidebar-title">High work hours × work–life balance</div>
+          <p class="sidebar-subtitle">
+            Explore how long hours and poor work–life balance relate to mental health, bullying,
+            debt, satisfaction, supervisor support, region, and more.
+          </p>
+          <div class="tag-row">
+            <span class="tag tag-primary">High-stress vs not high-stress</span>
+            <span class="tag">≥ 41 hours/week</span>
+            <span class="tag">Work–life balance ≤ 3 (Likert)</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="nav-section-title">Risk factor views</div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <button
+                data-target="degree_high_stress.html"
+                data-title="High work hours × low work–life balance by degree"
+                data-desc="Q2: Doctorate, master's and dual-degree students' high-stress rates."
+              >
+                <span class="title">Degree × high stress</span>
+                <span class="desc">Doctorate vs master's vs dual degree</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="debt_high_stress.html"
+                data-title="High work hours × low work–life balance by debt expectation"
+                data-desc="Q17: Expected debt at the end of graduate degree × high-stress group."
+              >
+                <span class="title">Debt expectation × high stress</span>
+                <span class="desc">Expected debt after graduate degree</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="mental_help_high_stress.html"
+                data-title="Mental-health help-seeking × high-stress group"
+                data-desc="Q33: Whether respondents sought help for anxiety or depression linked to their studies."
+              >
+                <span class="title">Mental-health help × high stress</span>
+                <span class="desc">Help-seeking patterns and high stress</span>
+              </button>
+            </li>
+
+            <!-- 新增：按学位的帮助 × 高压 页面 -->
+            <li class="nav-item">
+              <button
+                data-target="mental_help_by_degree_high_stress.html"
+                data-title="Mental-health help × high stress by degree"
+                data-desc="Q33: Help-seeking patterns by degree type (doctorate, master's, dual) and high-stress group."
+              >
+                <span class="title">Mental-health help × high stress (by degree)</span>
+                <span class="desc">Help-seeking split by degree type</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="bullying_high_stress.html"
+                data-title="Bullying & harassment × high-stress group"
+                data-desc="Q36/39: Experiences of bullying, discrimination or harassment × high-stress group."
+              >
+                <span class="title">Bullying / harassment × high stress</span>
+                <span class="desc">Exposure to bullying & harassment</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="satisfaction_high_stress.html"
+                data-title="Satisfaction × high-stress group"
+                data-desc="Q23, Q25: Satisfaction with decision to pursue degree and overall experience."
+              >
+                <span class="title">Satisfaction × high stress</span>
+                <span class="desc">Decision & experience satisfaction</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="satisfaction_change_high_stress.html"
+                data-title="Change in satisfaction × high-stress group"
+                data-desc="Q26: Whether satisfaction has worsened, stayed the same, or improved since the start of graduate school."
+              >
+                <span class="title">Satisfaction change × high stress</span>
+                <span class="desc">Satisfaction trajectory over time</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="support_high_stress.html"
+                data-title="High stress by supervisor & institutional support"
+                data-desc="Q27.f, Q32.a, Q35.a/d/e: Supervisor relationship and institutional mental-health & work–life support."
+              >
+                <span class="title">Supervisor & support × high stress</span>
+                <span class="desc">Supervisor relationship & institutional support</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="support_quadrant_high_stress.html"
+                data-title="High work hours × low work–life balance by support quadrants"
+                data-desc="Composite supervisor & institutional support quadrants (3×3) × high-stress group, with degree and region filters."
+              >
+                <span class="title">Support quadrants × high stress</span>
+                <span class="desc">Supervisor & institution × degree × region</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="region_high_stress.html"
+                data-title="High stress by world region"
+                data-desc="Continents/regions (Asia, Europe, North/Central America, etc.) × high-stress vs non-high-stress."
+              >
+                <span class="title">Region × high stress</span>
+                <span class="desc">Continents/regions comparison</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                data-target="country_rose_map_high_stress.html"
+                data-title="High stress by country – rose & map view"
+                data-desc="Country-level high-stress vs non-high-stress, with rose chart and world map."
+              >
+                <span class="title">Country × high stress (rose & map)</span>
+                <span class="desc">Country rose chart + world map</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-footer">
+          Use the menu to switch between risk factors<br />
+          (degree, debt, satisfaction, mental health, bullying,<br />
+          supervisor & institutional support, region & country)<br />
+          and explore their relationship with long hours and<br />
+          poor work–life balance.
+        </div>
+      </aside>
+
+      <!-- 右侧：主内容区（嵌入各个 HTML 图表页） -->
+      <main class="content">
+        <header class="content-header">
+          <h2 class="content-title" id="view-title">
+            High stress by degree type
+          </h2>
+          <p class="content-subtitle" id="view-subtitle">
+            Q2: Which, if any, of the following degrees are you currently studying
+          </p>
+          <div class="content-meta">
+            <span id="view-meta-source">Data source: cleaned survey extract</span>
+            <span id="view-meta-filter">High-stress group: ≥41 hrs/week &amp; work–life balance ≤ 3</span>
+          </div>
+        </header>
+
+        <section class="content-body">
+          <iframe
+            id="chart-frame"
+            class="chart-frame"
+            src="degree_high_stress.html"
+            title="High-stress dashboard view"
+          ></iframe>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const navButtons = document.querySelectorAll(".nav-item button");
+      const frame = document.getElementById("chart-frame");
+      const titleEl = document.getElementById("view-title");
+      const subtitleEl = document.getElementById("view-subtitle");
+      const metaSourceEl = document.getElementById("view-meta-source");
+
+      function setActive(button) {
+        navButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+      }
+
+      function loadView(button) {
+        const target = button.getAttribute("data-target");
+        const title = button.getAttribute("data-title");
+        const desc = button.getAttribute("data-desc");
+
+        frame.src = target;
+        titleEl.textContent = title || "High-stress dashboard view";
+        subtitleEl.textContent = desc || "";
+        metaSourceEl.textContent =
+          "Data source: cleaned survey extract (Nature Graduate Survey 2022)";
+      }
+
+      navButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          setActive(btn);
+          loadView(btn);
+        });
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const first = navButtons[0];
+        if (first) {
+          setActive(first);
+          loadView(first);
+        }
+      });
+    </script>
+  </body>
+</html>

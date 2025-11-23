@@ -1,0 +1,10 @@
+quadrant_label,supervisor_cat,institution_cat,high_stress_count,non_high_stress_count,total_count,high_stress_percent,non_high_stress_percent
+High supervisor / High institution,High,High,169,159,328,51.52439024390244,48.47560975609756
+High supervisor / Low institution,High,Low,152,224,376,40.42553191489361,59.57446808510638
+High supervisor / Medium institution,High,Medium,142,150,292,48.63013698630137,51.369863013698634
+Low supervisor / High institution,Low,High,111,291,402,27.611940298507463,72.38805970149254
+Low supervisor / Low institution,Low,Low,181,433,614,29.47882736156352,70.52117263843648
+Low supervisor / Medium institution,Low,Medium,128,296,424,30.18867924528302,69.81132075471697
+Medium supervisor / High institution,Medium,High,91,127,218,41.74311926605505,58.256880733944946
+Medium supervisor / Low institution,Medium,Low,112,232,344,32.55813953488372,67.44186046511628
+Medium supervisor / Medium institution,Medium,Medium,105,142,247,42.51012145748988,57.48987854251012

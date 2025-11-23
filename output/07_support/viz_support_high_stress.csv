@@ -1,0 +1,31 @@
+question,factor,level,high_stress_group,count,percent
+Q27.f – Overall relationship with supervisor,v079_num,High support (5–7),0,308,43.87464387464387
+Q27.f – Overall relationship with supervisor,v079_num,High support (5–7),1,394,56.12535612535613
+Q27.f – Overall relationship with supervisor,v079_num,Low support (1–3),0,1490,70.54924242424242
+Q27.f – Overall relationship with supervisor,v079_num,Low support (1–3),1,622,29.450757575757574
+Q27.f – Overall relationship with supervisor,v079_num,Neutral (4),0,206,54.93333333333334
+Q27.f – Overall relationship with supervisor,v079_num,Neutral (4),1,169,45.06666666666666
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,High support (5–7),0,427,69.54397394136808
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,High support (5–7),1,187,30.456026058631924
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,Low support (1–3),0,1419,65.12161541991739
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,Low support (1–3),1,760,34.8783845800826
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,Neutral (4),0,212,46.187363834422655
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,Neutral (4),1,247,53.812636165577345
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,High support (5–7),0,503,74.40828402366864
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,High support (5–7),1,173,25.591715976331358
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,Low support (1–3),0,1298,65.25892408245349
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,Low support (1–3),1,691,34.7410759175465
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,Neutral (4),0,250,43.40277777777778
+Q35.a – Mental health & wellbeing services tailored to graduate students,v097_num,Neutral (4),1,326,56.59722222222222
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,High support (5–7),0,389,57.62962962962963
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,High support (5–7),1,286,42.37037037037037
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,Low support (1–3),0,1393,67.13253012048193
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,Low support (1–3),1,682,32.867469879518076
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,Neutral (4),0,267,54.82546201232032
+Q35.d – Other types of mental health/wellbeing support beyond 1:1,v100_num,Neutral (4),1,220,45.17453798767967
+Q35.e – University supports good work–life balance,v101_num,High support (5–7),0,423,87.75933609958506
+Q35.e – University supports good work–life balance,v101_num,High support (5–7),1,59,12.240663900414937
+Q35.e – University supports good work–life balance,v101_num,Low support (1–3),0,1441,65.35147392290249
+Q35.e – University supports good work–life balance,v101_num,Low support (1–3),1,764,34.64852607709751
+Q35.e – University supports good work–life balance,v101_num,Neutral (4),0,185,33.820840950639855
+Q35.e – University supports good work–life balance,v101_num,Neutral (4),1,362,66.17915904936015

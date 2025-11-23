@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Degree vs High Stress</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f7;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+    p {
+      margin-top: 0;
+      color: #555;
+      font-size: 13px;
+    }
+    .panel {
+      width: 1000px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      padding: 16px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    .panel-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .panel-subtitle {
+      font-size: 12px;
+      color: #777;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    #chart_pie {
+      width: 100%;
+      height: 380px;
+    }
+    #chart_bar {
+      width: 100%;
+      height: 420px;
+    }
+  </style>
+  <!-- ECharts + PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <h1>High work hours + low work–life balance by degree</h1>
+  <p>Data source: viz_degree_high_stress.csv (Nature Graduate Survey 2022)</p>
+
+  <!-- 上：玫瑰图 / 饼图 -->
+  <div class="panel">
+    <div class="panel-title">High-stress share by degree (rose chart)</div>
+    <p class="panel-subtitle">
+      Each slice represents one degree type. Radius encodes the percentage of students in the high-stress group.
+    </p>
+    <div id="chart_pie"></div>
+  </div>
+
+  <!-- 下：堆叠柱状图，可切换 百分比/频数 + 堆叠/分组 -->
+  <div class="panel">
+    <div class="panel-title">High-stress vs not high-stress by degree (stacked / grouped bar)</div>
+    <p class="panel-subtitle">
+      Use the buttons in the toolbox to switch between percentage vs count, and stacked vs grouped bars.
+    </p>
+    <div id="chart_bar"></div>
+  </div>
+
+  <script>
+    // 假定目录结构：
+    // output/
+    //   ├─ 08_viz_data/viz_degree_high_stress.csv
+    //   └─ 09_js_demo/degree_high_stress.html
+    const csvPath = "../08_viz_data/viz_degree_high_stress.csv";
+
+    fetch(csvPath)
+      .then(resp => resp.text())
+      .then(text => {
+        const parsed = Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true,
+        });
+        const data = parsed.data;
+
+        // ---------- 通用数据整理 ----------
+        const fullLabels = data.map(d => d.degree_label || "");
+
+        // 短标签：用于 x 轴 / 饼图标签
+        const shortLabels = fullLabels.map(full => {
+          if (full.startsWith("Doctorate")) return "Doctorate";
+          if (full.startsWith("Master")) return "Master's";
+          if (full.startsWith("Dual doctorate")) return "Dual doctorate";
+          return full;
+        });
+
+        const highPercent = data.map(d => parseFloat(d.high_stress_percent));
+        const highCount   = data.map(d => parseInt(d.high_stress_count, 10));
+        const totalCount  = data.map(d => parseInt(d.total_count, 10));
+        const lowPercent  = highPercent.map(p => 100 - p);
+        const lowCount    = highCount.map((c, i) => totalCount[i] - c);
+
+        // ======================
+        //  1) 玫瑰图 / 饼图
+        // ======================
+        const pieDom = document.getElementById("chart_pie");
+        const pieChart = echarts.init(pieDom);
+
+        const pieData = data.map((d, i) => ({
+          name: shortLabels[i],
+          value: highPercent[i],
+          fullLabel: fullLabels[i],
+          highPercent: highPercent[i],
+          highCount: highCount[i],
+          totalCount: totalCount[i]
+        }));
+
+        const pieOption = {
+          toolbox: {
+            right: 20,
+            feature: {
+              saveAsImage: { show: true },
+              dataView: { show: true, readOnly: false },
+              restore: { show: true }
+            }
+          },
+          tooltip: {
+            trigger: "item",
+            formatter: p => {
+              const d = p.data;
+              const pct = d.highPercent;
+              const hc = d.highCount;
+              const tot = d.totalCount;
+              return [
+                `<strong>${d.fullLabel}</strong>`,
+                `High-stress share: ${pct.toFixed(1)}%`,
+                `High-stress count: ${hc}`,
+                `Total: ${tot}`
+              ].join("<br/>");
+            }
+          },
+          legend: {
+            bottom: 0,
+            type: "scroll",
+            data: shortLabels
+          },
+          series: [
+            {
+              name: "High-stress share",
+              type: "pie",
+              radius: ["25%", "70%"],
+              center: ["50%", "48%"],
+              roseType: "area",
+              label: {
+                formatter: p => `${p.name}\n${p.value.toFixed(1)}%`,
+                fontSize: 11
+              },
+              data: pieData
+            }
+          ]
+        };
+
+        pieChart.setOption(pieOption);
+
+        // ======================
+        //  2) 柱状图（百分比/频数 × 堆叠/分组）
+        // ======================
+        const barDom = document.getElementById("chart_bar");
+        const barChart = echarts.init(barDom);
+
+        // 当前状态：scale = 'percent' | 'count'; layout = 'stacked' | 'grouped'
+        let barScale = "percent";
+        let barLayout = "stacked";
+
+        function makeBarOption() {
+          const showPercent = barScale === "percent";
+          const stacked = barLayout === "stacked";
+
+          const yName = showPercent ? "Share (%)" : "Count";
+          const yMax = showPercent
+            ? 100
+            : Math.ceil(Math.max(...totalCount) / 100) * 100;
+
+          const seriesHighData = showPercent ? highPercent : highCount;
+          const seriesLowData  = showPercent ? lowPercent  : lowCount;
+
+          // 堆叠 vs 分组
+          const stackName = stacked ? "total" : undefined;
+          const barWidth  = stacked ? "45%" : "30%";
+          const barGap    = stacked ? "-100%" : "20%";
+
+          return {
+            toolbox: {
+              right: 20,
+              feature: {
+                saveAsImage: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: {
+                  show: true,
+                  onclick: () => {
+                    barScale = "percent";
+                    barLayout = "stacked";
+                    barChart.setOption(makeBarOption(), true);
+                  }
+                },
+                // 自定义 4 个按钮：百分比 / 频数 + 堆叠 / 分组
+                myPercent: {
+                  show: true,
+                  title: "Show percentage",
+                  icon: "path://M512 64L64 960h896L512 64z",
+                  onclick: () => {
+                    barScale = "percent";
+                    barChart.setOption(makeBarOption(), true);
+                  }
+                },
+                myCount: {
+                  show: true,
+                  title: "Show count",
+                  icon: "path://M128 832h768v-128H128v128zM128 576h768V448H128v128zM128 320h768V192H128v128z",
+                  onclick: () => {
+                    barScale = "count";
+                    barChart.setOption(makeBarOption(), true);
+                  }
+                },
+                myStack: {
+                  show: true,
+                  title: "Stacked bars",
+                  icon: "path://M128 832h256v-256H128v256zM384 832h256v-256H384v256zM640 832h256v-256H640v256zM128 576h256V320H128v256zM384 576h256V320H384v256zM640 576h256V320H640v256z",
+                  onclick: () => {
+                    barLayout = "stacked";
+                    barChart.setOption(makeBarOption(), true);
+                  }
+                },
+                myGrouped: {
+                  show: true,
+                  title: "Grouped bars",
+                  icon: "path://M192 832h160V320H192v512zM432 832h160V448H432v384zM672 832h160V192H672v640z",
+                  onclick: () => {
+                    barLayout = "grouped";
+                    barChart.setOption(makeBarOption(), true);
+                  }
+                },
+                dataZoom: { show: true }
+              }
+            },
+            legend: {
+              top: 6,
+              data: ["High-stress", "Not high-stress"]
+            },
+            grid: { left: 80, right: 40, top: 60, bottom: 80 },
+            tooltip: {
+              trigger: "axis",
+              axisPointer: { type: "shadow" },
+              formatter: params => {
+                const idx = params[0].dataIndex;
+                const hp = highPercent[idx];
+                const lp = lowPercent[idx];
+                const hc = highCount[idx];
+                const lc = lowCount[idx];
+                const tot = totalCount[idx];
+
+                return [
+                  `<strong>${fullLabels[idx]}</strong>`,
+                  `Total: ${tot}`,
+                  `<span style="color:#5470c6;">■</span> High-stress: ` +
+                    (showPercent ? `${hp.toFixed(1)}% (${hc})` : hc),
+                  `<span style="color:#91cc75;">■</span> Not high-stress: ` +
+                    (showPercent ? `${lp.toFixed(1)}% (${lc})` : lc)
+                ].join("<br/>");
+              }
+            },
+            xAxis: {
+              type: "category",
+              data: shortLabels,
+              axisLabel: {
+                interval: 0,
+                rotate: 15,
+                fontSize: 12
+              }
+            },
+            yAxis: {
+              type: "value",
+              name: yName,
+              min: 0,
+              max: yMax
+            },
+            dataZoom: [
+              { type: "slider", show: true, xAxisIndex: 0, bottom: 40 },
+              { type: "inside", xAxisIndex: 0 }
+            ],
+            series: [
+              {
+                name: "High-stress",
+                type: "bar",
+                stack: stackName,
+                data: seriesHighData,
+                barWidth: barWidth,
+                barGap: barGap,
+                itemStyle: {
+                  borderRadius: stacked ? [6, 6, 0, 0] : [4, 4, 4, 4]
+                },
+                label: {
+                  show: true,
+                  position: "inside",
+                  formatter: p => {
+                    const idx = p.dataIndex;
+                    if (showPercent) {
+                      const pct = highPercent[idx];
+                      if (!isFinite(pct) || pct < 5) return "";
+                      return `${pct.toFixed(1)}%\n(${highCount[idx]})`;
+                    } else {
+                      const val = highCount[idx];
+                      if (!isFinite(val) || val < totalCount[idx] * 0.05) return "";
+                      return val.toString();
+                    }
+                  }
+                }
+              },
+              {
+                name: "Not high-stress",
+                type: "bar",
+                stack: stackName,
+                data: seriesLowData,
+                barWidth: barWidth,
+                barGap: barGap,
+                itemStyle: {
+                  borderRadius: stacked ? [0, 0, 6, 6] : [4, 4, 4, 4]
+                },
+                label: {
+                  show: true,
+                  position: "inside",
+                  formatter: p => {
+                    const idx = p.dataIndex;
+                    if (showPercent) {
+                      const pct = lowPercent[idx];
+                      if (!isFinite(pct) || pct < 5) return "";
+                      return `${pct.toFixed(1)}%\n(${lowCount[idx]})`;
+                    } else {
+                      const val = lowCount[idx];
+                      if (!isFinite(val) || val < totalCount[idx] * 0.05) return "";
+                      return val.toString();
+                    }
+                  }
+                }
+              }
+            ]
+          };
+        }
+
+        // 初始：百分比 + 堆叠
+        barChart.setOption(makeBarOption());
+      })
+      .catch(err => {
+        console.error("Error loading CSV:", err);
+        document.getElementById("chart_pie").innerHTML =
+          "<p>Failed to load CSV. Please check the csvPath setting in the script.</p>";
+      });
+  </script>
+</body>
+</html>

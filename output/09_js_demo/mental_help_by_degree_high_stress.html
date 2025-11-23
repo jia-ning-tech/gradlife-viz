@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mental-health help × high stress by degree</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f7;
+      color: #111827;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+    p {
+      margin-top: 0;
+      color: #555;
+      font-size: 13px;
+    }
+    .panel {
+      width: 1000px;
+      max-width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      padding: 16px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    .panel-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .panel-subtitle {
+      font-size: 12px;
+      color: #777;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    #chart_bar {
+      width: 100%;
+      height: 420px;
+    }
+    #rose_container {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    #chart_rose_high,
+    #chart_rose_low {
+      flex: 1;
+      height: 360px;
+    }
+    .degree-selector {
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #444;
+    }
+    .degree-selector label {
+      margin-right: 12px;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- ECharts + PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <h1>Mental-health help × high stress by degree</h1>
+  <p>
+    Question (Q33): <em>Have you ever received help for anxiety or depression linked to/connected to your studies?</em><br/>
+    Data source: <code>viz_mental_help_by_degree_high_stress.csv</code> (Nature Graduate Survey 2022)<br/>
+    High-stress definition: ≥ 41 hours/week &amp; work–life balance satisfaction ≤ 3 (Q27.k)
+  </p>
+
+  <!-- Panel 1: 分组柱状图（跨学位比较） -->
+  <div class="panel">
+    <div class="panel-title">High-stress share by mental-health help status and degree</div>
+    <p class="panel-subtitle">
+      X-axis: mental-health help status (Q33). Each bar group summarizes one help-seeking pattern.<br/>
+      Colored bars: degree types (doctorate / master's / dual doctorate).<br/>
+      Bar height = share of respondents in the high-stress group within that help status × degree combination.
+    </p>
+    <div id="chart_bar"></div>
+  </div>
+
+  <!-- Panel 2: 学位选择 + 高压/非高压玫瑰图 -->
+  <div class="panel">
+    <div class="panel-title">Within each degree: mental-health help patterns in high-stress vs non-high-stress groups</div>
+    <p class="panel-subtitle">
+      Choose a degree below. Left rose chart shows the distribution of Q33 responses within the high-stress group for that degree.<br/>
+      Right rose chart shows the same distribution within the not high-stress group (non-high-stress). Labels include n and percentage.
+    </p>
+
+    <div class="degree-selector" id="degree-selector">
+      <!-- Radio buttons will be filled by JS based on degree_label -->
+    </div>
+
+    <div id="rose_container">
+      <div id="chart_rose_high"></div>
+      <div id="chart_rose_low"></div>
+    </div>
+  </div>
+
+  <script>
+    // CSV 路径（相对于 /workspace/output 为根）
+    const CSV_PATH = "../08_viz_data/viz_mental_help_by_degree_high_stress.csv";
+
+    // 读取 CSV
+    fetch(CSV_PATH)
+      .then(resp => resp.text())
+      .then(text => {
+        const parsed = Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true
+        });
+        const data = parsed.data;
+
+        // ---------------------------
+        // 数据整理
+        // ---------------------------
+
+        // help_label 原始顺序
+        const helpLabelsFull = Array.from(new Set(data.map(d => d.help_label)));
+
+        // 为了 X 轴更好看，做一个“短标签 + 换行”版本
+        const helpLabelShortMap = label => {
+          if (label === "No") return "No help";
+          if (label === "Yes") return "Yes (received)";
+          if (label === "Prefer not to say") return "Prefer not\nto say";
+          if (label === "I want help but have not yet sought it")
+            return "Want help\n(not yet sought)";
+          if (label === "I want help/have asked for help but have not yet received it")
+            return "Asked help\n(not yet received)";
+          return label;
+        };
+        const helpLabelsShort = helpLabelsFull.map(helpLabelShortMap);
+
+        // degree_label
+        const degreeLabels = Array.from(new Set(data.map(d => d.degree_label)));
+
+        // 建立 key → row 的 map，key = help + degree
+        const key = (help, degree) => `${help}|||${degree}`;
+        const rowMap = new Map();
+
+        data.forEach(d => {
+          const help = d.help_label;
+          const degree = d.degree_label;
+          const hsPercent = parseFloat(d.high_stress_percent);
+          const hsCount = parseInt(d.high_stress_count, 10);
+          const nonHsCount = parseInt(d.non_high_stress_count, 10);
+          const total = parseInt(d.total_count, 10);
+
+          rowMap.set(key(help, degree), {
+            help_label: help,
+            degree_label: degree,
+            high_stress_percent: hsPercent,
+            high_stress_count: hsCount,
+            non_high_stress_count: nonHsCount,
+            total_count: total
+          });
+        });
+
+        // 颜色（不同学位）
+        const palette = [
+          "#5470c6",
+          "#91cc75",
+          "#fac858",
+          "#ee6666",
+          "#73c0de"
+        ];
+
+        // ---------------------------
+        // Panel 1: 分组柱状图
+        // ---------------------------
+        const barDom = document.getElementById("chart_bar");
+        const barChart = echarts.init(barDom);
+
+        const seriesBar = degreeLabels.map((degLabel, idx) => ({
+          name: degLabel,
+          type: "bar",
+          barGap: 0,
+          data: helpLabelsFull.map(help => {
+            const row = rowMap.get(key(help, degLabel));
+            return row ? row.high_stress_percent : 0;
+          })
+        }));
+
+        const barOption = {
+          color: palette,
+          tooltip: {
+            trigger: "axis",
+            axisPointer: { type: "shadow" },
+            formatter: params => {
+              const idx = params[0].dataIndex;
+              const helpLabel = helpLabelsFull[idx];
+              const shortLabel = helpLabelsShort[idx];
+              let lines = [
+                `<strong>${helpLabel}</strong>`,
+                `<span style="color:#9ca3af;font-size:11px;">(${shortLabel.replace("\n", " / ")})</span>`
+              ];
+              params.forEach(p => {
+                const degree = p.seriesName;
+                const row = rowMap.get(key(helpLabel, degree));
+                if (!row) return;
+                const pct = row.high_stress_percent;
+                const hsN = row.high_stress_count;
+                const nonHsN = row.non_high_stress_count;
+                const totalN = row.total_count;
+                lines.push(
+                  `<span style="color:${p.color};">■</span> ` +
+                  `<strong>${degree}</strong>: ` +
+                  `${pct.toFixed(1)}% high-stress ` +
+                  `(high n=${hsN}, non-high n=${nonHsN}, total n=${totalN})`
+                );
+              });
+              return lines.join("<br/>");
+            }
+          },
+          legend: {
+            top: 8,
+            data: degreeLabels
+          },
+          toolbox: {
+            right: 20,
+            feature: {
+              saveAsImage: { show: true },
+              dataView: { show: true, readOnly: false },
+              restore: { show: true }
+            }
+          },
+          grid: {
+            left: 70,
+            right: 30,
+            top: 60,
+            bottom: 80
+          },
+          xAxis: {
+            type: "category",
+            data: helpLabelsShort,
+            axisLabel: {
+              interval: 0,
+              fontSize: 11,
+              lineHeight: 14
+            }
+          },
+          yAxis: {
+            type: "value",
+            name: "High-stress share (%)",
+            min: 0,
+            max: 100
+          },
+          dataZoom: [
+            { type: "slider", show: true, xAxisIndex: 0, bottom: 30 },
+            { type: "inside", xAxisIndex: 0 }
+          ],
+          series: seriesBar
+        };
+
+        barChart.setOption(barOption);
+
+        // ---------------------------
+        // Panel 2: 学位选择 + 玫瑰图
+        // ---------------------------
+        const selectorDiv = document.getElementById("degree-selector");
+        const roseHighDom = document.getElementById("chart_rose_high");
+        const roseLowDom  = document.getElementById("chart_rose_low");
+        const roseHighChart = echarts.init(roseHighDom);
+        const roseLowChart  = echarts.init(roseLowDom);
+
+        // 默认选第一个学位
+        let currentDegree = degreeLabels[0];
+
+        // 渲染学位 radio
+        selectorDiv.innerHTML = "Degree: ";
+        degreeLabels.forEach((degLabel, idx) => {
+          const id = "deg_" + idx;
+          const checked = idx === 0 ? "checked" : "";
+          selectorDiv.insertAdjacentHTML(
+            "beforeend",
+            `<label><input type="radio" name="degree" value="${degLabel}" id="${id}" ${checked}/> ${degLabel}</label>`
+          );
+        });
+
+        selectorDiv.addEventListener("change", e => {
+          if (e.target && e.target.name === "degree") {
+            currentDegree = e.target.value;
+            updateRoseCharts();
+          }
+        });
+
+        // 生成玫瑰图 option
+        function makeRoseOption(isHigh) {
+          const seriesName = isHigh ? "High-stress group" : "Not high-stress group";
+
+          // 取某个学位下，按 help_label 汇总 high/non-high 计数
+          let values = [];
+          let totalGroupCount = 0;
+
+          helpLabelsFull.forEach(help => {
+            const row = rowMap.get(key(help, currentDegree));
+            if (!row) {
+              values.push({ name: helpLabelShortMap(help), value: 0, fullLabel: help });
+            } else {
+              const v = isHigh ? row.high_stress_count : row.non_high_stress_count;
+              values.push({
+                name: helpLabelShortMap(help),
+                value: v,
+                fullLabel: help
+              });
+              totalGroupCount += v;
+            }
+          });
+
+          return {
+            title: {
+              text: `${seriesName} – ${currentDegree}`,
+              left: "center",
+              top: 6,
+              textStyle: { fontSize: 13 }
+            },
+            tooltip: {
+              trigger: "item",
+              formatter: params => {
+                const d = params.data;
+                const v = d.value;
+                const pct = totalGroupCount > 0 ? (v / totalGroupCount) * 100 : 0;
+                return [
+                  `<strong>${d.fullLabel}</strong>`,
+                  `${seriesName} (degree: ${currentDegree})`,
+                  `n = ${v}`,
+                  `Share in this group: ${pct.toFixed(1)}%`
+                ].join("<br/>");
+              }
+            },
+            legend: {
+              type: "scroll",
+              bottom: 0,
+              data: values.map(v => v.name)
+            },
+            toolbox: {
+              right: 10,
+              feature: {
+                saveAsImage: { show: true },
+                dataView: { show: true, readOnly: false },
+                restore: { show: true }
+              }
+            },
+            series: [
+              {
+                name: seriesName,
+                type: "pie",
+                roseType: "area",
+                radius: [20, 120],
+                center: ["50%", "55%"],
+                itemStyle: { borderRadius: 6 },
+                label: {
+                  show: true,
+                  formatter: p => {
+                    const v = p.data.value;
+                    if (!totalGroupCount || v === 0) return `${p.data.name}\n n=0`;
+                    const pct = (v / totalGroupCount) * 100;
+                    return `${p.data.name}\n n=${v} (${pct.toFixed(1)}%)`;
+                  }
+                },
+                emphasis: { label: { show: true } },
+                data: values
+              }
+            ]
+          };
+        }
+
+        function updateRoseCharts() {
+          roseHighChart.setOption(makeRoseOption(true), true);
+          roseLowChart.setOption(makeRoseOption(false), true);
+        }
+
+        updateRoseCharts();
+      })
+      .catch(err => {
+        console.error("Error loading CSV:", err);
+        document.body.insertAdjacentHTML(
+          "beforeend",
+          "<p style='color:red;'>Failed to load CSV. Please check the CSV_PATH in the script.</p>"
+        );
+      });
+  </script>
+</body>
+</html>

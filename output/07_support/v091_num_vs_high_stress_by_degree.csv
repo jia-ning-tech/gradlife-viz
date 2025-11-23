@@ -1,0 +1,19 @@
+question,factor,degree_code_int,degree_label,level,high_stress_group,count,percent
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),0,264,65.18518518518519
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),High support (5–7),1,141,34.81481481481482
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),0,158,79.39698492462311
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),High support (5–7),1,41,20.603015075376884
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),0,5,50.0
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",High support (5–7),1,5,50.0
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),0,1047,62.35854675402025
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),Low support (1–3),1,632,37.64145324597975
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),0,347,74.30406852248393
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Low support (1–3),1,120,25.69593147751606
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),0,25,75.75757575757575
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Low support (1–3),1,8,24.242424242424242
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),0,151,41.59779614325069
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,1,Doctorate degree (PhD/DPhil/MD),Neutral (4),1,212,58.40220385674931
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),0,59,65.55555555555556
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,2,Master's degree (MA/MS/MSc/PSM or other Master’s),Neutral (4),1,31,34.44444444444444
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),0,2,33.33333333333333
+Q32.a – Supervisor makes time for frank conversations about my career,v091_num,3,"Dual doctorate degree (MD-PhD, PhD-PhD or other combination)",Neutral (4),1,4,66.66666666666666

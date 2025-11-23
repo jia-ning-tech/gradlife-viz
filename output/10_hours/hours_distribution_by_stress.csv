@@ -1,0 +1,7 @@
+high_stress_group,hours_level,count,hours_order,percent_within_stress_group,high_stress_label
+0,high,853,0,41.44800777453839,Non-high-stress
+0,low,180,1,8.746355685131196,Non-high-stress
+0,medium,808,2,39.261418853255584,Non-high-stress
+0,very_high,217,3,10.54421768707483,Non-high-stress
+1,high,774,0,64.82412060301507,High-stress
+1,very_high,420,3,35.175879396984925,High-stress

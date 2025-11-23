@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support items × High-stress group (by degree & region)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <!-- d3 for CSV loading -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background: #f5f5f7;
+      color: #222;
+    }
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 16px 32px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 8px 0;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .description {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      padding: 8px 12px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .control-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+    }
+    select {
+      font-size: 13px;
+      padding: 4px 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+    input[type="range"] {
+      width: 140px;
+    }
+    #sampleInfo {
+      font-size: 12px;
+      color: #777;
+    }
+    #chart {
+      width: 100%;
+      height: 560px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+    .note {
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+    @media (max-width: 768px) {
+      #chart {
+        height: 500px;
+      }
+      .controls {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1>Supervisor & institutional support × High-stress group</h1>
+    <div class="subtitle">
+      High-stress group is defined as students who both work ≥ 41 hours per week
+      and rate their work–life balance at ≤ 3 on a 7-point scale.
+    </div>
+    <div class="description">
+      This chart compares average agreement with supervisor (Q32) and
+      institutional / mental-health support items (Q35) between the
+      high-stress and non-high-stress groups. Use the filters to view specific
+      degree types and world regions, or aggregate across all. The
+      <em>minimum N</em> control hides item–group combinations with very small
+      sample sizes.
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="scaleSelect"><strong>Item set:</strong></label>
+        <select id="scaleSelect">
+          <option value="All">All support items (Q32 + Q35)</option>
+          <option value="Q32">Supervisor support (Q32)</option>
+          <option value="Q35">Institution & mental-health support (Q35)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="degreeSelect"><strong>Degree:</strong></label>
+        <select id="degreeSelect">
+          <!-- 选项由 JS 动态填充 -->
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="regionSelect"><strong>Region:</strong></label>
+        <select id="regionSelect">
+          <!-- 选项由 JS 动态填充 -->
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="minNRange"><strong>Min N per group:</strong></label>
+        <input id="minNRange" type="range" min="0" max="200" step="5" value="20" />
+        <span id="minNLabel">≥ 20</span>
+      </div>
+
+      <div class="control-group">
+        <span id="sampleInfo">Loading data...</span>
+      </div>
+    </div>
+
+    <div id="chart"></div>
+    <div class="note">
+      Note: Scores are on a Likert agreement scale (higher = stronger agreement).
+      N in the tooltip is the (approximate) number of respondents for each
+      item–group combination after applying filters and the minimum N threshold.
+      When you select "All degrees" or "All regions", scores are weighted
+      averages by N across the included groups.
+    </div>
+  </div>
+
+  <script>
+    // 相对于 /workspace/output/09_js_demo/
+    const CSV_PATH =
+      "../08_viz_data/viz_support_by_stress_deg_region.csv";
+
+    let rawData = [];
+    let chart;
+
+    function initChart() {
+      const chartDom = document.getElementById("chart");
+      chart = echarts.init(chartDom, null, { renderer: "canvas" });
+    }
+
+    // 对 X 轴长标签进行自动换行
+    function wrapLabel(value, maxLen) {
+      const v = String(value || "");
+      const words = v.split(" ");
+      const lines = [];
+      let current = "";
+
+      for (let i = 0; i < words.length; i++) {
+        const w = words[i];
+        const next = current ? current + " " + w : w;
+        if (next.length > maxLen) {
+          if (current) lines.push(current);
+          current = w;
+        } else {
+          current = next;
+        }
+      }
+      if (current) lines.push(current);
+      return lines.join("\n");
+    }
+
+    function initFilters() {
+      const scaleSelect = document.getElementById("scaleSelect");
+      const degreeSelect = document.getElementById("degreeSelect");
+      const regionSelect = document.getElementById("regionSelect");
+      const minNRange = document.getElementById("minNRange");
+
+      // 动态填充 Degree / Region 选项
+      const degrees = Array.from(
+        new Set(rawData.map((d) => d.degree_label))
+      ).sort();
+      const regions = Array.from(
+        new Set(rawData.map((d) => d.region_continent))
+      ).sort();
+
+      degreeSelect.innerHTML =
+        '<option value="All">All degrees</option>' +
+        degrees
+          .map(
+            (deg) =>
+              `<option value="${deg.replace(/"/g, "&quot;")}">${deg}</option>`
+          )
+          .join("");
+
+      regionSelect.innerHTML =
+        '<option value="All">All regions</option>' +
+        regions
+          .map(
+            (r) =>
+              `<option value="${r.replace(/"/g, "&quot;")}">${r}</option>`
+          )
+          .join("");
+
+      // 根据数据范围调整 minN 滑块的最大值
+      const maxN = rawData.reduce((acc, d) => Math.max(acc, d.n || 0), 0);
+      const sliderMax = Math.max(20, Math.ceil(maxN / 10) * 10);
+      minNRange.max = sliderMax;
+      if (parseInt(minNRange.value, 10) > sliderMax) {
+        minNRange.value = 20;
+      }
+      document.getElementById("minNLabel").textContent =
+        "≥ " + minNRange.value;
+
+      scaleSelect.addEventListener("change", updateChart);
+      degreeSelect.addEventListener("change", updateChart);
+      regionSelect.addEventListener("change", updateChart);
+      minNRange.addEventListener("input", function () {
+        document.getElementById("minNLabel").textContent =
+          "≥ " + this.value;
+      });
+      minNRange.addEventListener("change", updateChart);
+    }
+
+    function updateChart() {
+      if (!chart || rawData.length === 0) return;
+
+      const scaleSelect = document.getElementById("scaleSelect");
+      const degreeSelect = document.getElementById("degreeSelect");
+      const regionSelect = document.getElementById("regionSelect");
+      const minNRange = document.getElementById("minNRange");
+      const sampleInfo = document.getElementById("sampleInfo");
+
+      const scaleVal = scaleSelect.value;
+      const degreeVal = degreeSelect.value;
+      const regionVal = regionSelect.value;
+      const minN = parseInt(minNRange.value, 10) || 0;
+
+      // 1) 按题组 / 学位 / 地区过滤
+      let filtered = rawData;
+
+      if (scaleVal === "Q32") {
+        filtered = filtered.filter((d) => d.scale_group === "Q32");
+      } else if (scaleVal === "Q35") {
+        filtered = filtered.filter((d) => d.scale_group === "Q35");
+      }
+
+      if (degreeVal !== "All") {
+        filtered = filtered.filter((d) => d.degree_label === degreeVal);
+      }
+
+      if (regionVal !== "All") {
+        filtered = filtered.filter((d) => d.region_continent === regionVal);
+      }
+
+      if (filtered.length === 0) {
+        sampleInfo.textContent = "No data for this selection.";
+        chart.clear();
+        return;
+      }
+
+      // 2) 先构建 (item_code, high_stress_group) 的加权汇总
+      //    每个组合按 n 做加权平均：mean = sum(mean_score * n) / sum(n)
+      const grouped = new Map(); // key: item_code|group
+      filtered.forEach((d) => {
+        const groupKey = d.item_code + "|" + d.high_stress_group;
+        let g = grouped.get(groupKey);
+        if (!g) {
+          g = {
+            item_code: d.item_code,
+            item_short: d.item_short || d.item_text || d.item_code,
+            item_order: d.item_order || 0,
+            scale_group: d.scale_group,
+            high_stress_group: d.high_stress_group,
+            sum_n: 0,
+            sum_score: 0,
+          };
+          grouped.set(groupKey, g);
+        }
+        const n = d.n || 0;
+        const m = d.mean_score || 0;
+        g.sum_n += n;
+        g.sum_score += m * n;
+      });
+
+      if (grouped.size === 0) {
+        sampleInfo.textContent = "No aggregated data for this selection.";
+        chart.clear();
+        return;
+      }
+
+      // 3) 提取 item 元数据（一个条目只看一次），按 item_order 排序
+      const itemMeta = new Map(); // key: item_code
+      grouped.forEach((g) => {
+        if (!itemMeta.has(g.item_code)) {
+          itemMeta.set(g.item_code, {
+            item_code: g.item_code,
+            item_order: g.item_order,
+            label: g.item_short || g.item_code,
+          });
+        }
+      });
+
+      const itemsSorted = Array.from(itemMeta.values()).sort(
+        (a, b) => a.item_order - b.item_order
+      );
+
+      // 4) 生成 X 轴标签 & series 数据
+      const xLabels = itemsSorted.map((a) => a.label);
+      const dataNonHigh = [];
+      const dataHigh = [];
+      const tooltipMap = {}; // key: item_code|group -> { n, mean }
+
+      let totalItemsShown = 0;
+
+      itemsSorted.forEach((item) => {
+        const code = item.item_code;
+        const key0 = code + "|0";
+        const key1 = code + "|1";
+
+        let mean0 = null,
+          mean1 = null,
+          n0 = 0,
+          n1 = 0;
+
+        const g0 = grouped.get(key0);
+        if (g0 && g0.sum_n >= minN) {
+          mean0 =
+            g0.sum_n > 0 ? g0.sum_score / g0.sum_n : null;
+          n0 = g0.sum_n;
+        }
+
+        const g1 = grouped.get(key1);
+        if (g1 && g1.sum_n >= minN) {
+          mean1 =
+            g1.sum_n > 0 ? g1.sum_score / g1.sum_n : null;
+          n1 = g1.sum_n;
+        }
+
+        // 若两组都为空且 N 太小，可以直接设为 null
+        if (mean0 === null && mean1 === null) {
+          dataNonHigh.push(null);
+          dataHigh.push(null);
+        } else {
+          dataNonHigh.push(mean0 != null ? mean0 : null);
+          dataHigh.push(mean1 != null ? mean1 : null);
+          totalItemsShown += 1;
+        }
+
+        tooltipMap[key0] = { n: n0, mean: mean0 };
+        tooltipMap[key1] = { n: n1, mean: mean1 };
+      });
+
+      sampleInfo.textContent =
+        `Items shown: ${totalItemsShown} ` +
+        `(degree: ${degreeVal}, region: ${regionVal}, min N per group: ${minN})`;
+
+      const option = {
+        backgroundColor: "#ffffff",
+        animationDuration: 600,
+        tooltip: {
+          trigger: "axis",
+          axisPointer: { type: "shadow" },
+          formatter: function (params) {
+            let lines = [];
+            if (params && params.length > 0) {
+              const name = params[0].axisValue;
+              lines.push(name.replace(/\n/g, " "));
+              params.forEach((p) => {
+                const itemCode = itemsSorted[p.dataIndex].item_code;
+                const groupVal =
+                  p.seriesName === "High-stress" ? 1 : 0;
+                const key = itemCode + "|" + groupVal;
+                const info = tooltipMap[key] || {};
+                const n =
+                  info.n != null && info.n > 0 ? info.n : "n/a";
+                const mean =
+                  info.mean != null
+                    ? info.mean.toFixed(2)
+                    : "n/a";
+                lines.push(
+                  `${p.marker} ${p.seriesName}: ${mean} (N = ${n})`
+                );
+              });
+            }
+            return lines.join("<br/>");
+          },
+        },
+        legend: {
+          data: ["Non-high-stress", "High-stress"],
+          top: 6,
+        },
+        grid: {
+          left: 70,
+          right: 20,
+          top: 60,
+          bottom: 150, // 留足空间给多行 X 轴标签
+        },
+        xAxis: {
+          type: "category",
+          data: xLabels,
+          axisLabel: {
+            interval: 0,
+            rotate: 0,
+            fontSize: 11,
+            margin: 18,
+            formatter: function (value) {
+              return wrapLabel(value, 22);
+            },
+          },
+        },
+        yAxis: {
+          type: "value",
+          name: "Mean support score",
+          min: 1,
+          max: 5,
+          splitNumber: 4,
+          nameLocation: "middle",
+          nameGap: 45,
+          nameTextStyle: {
+            fontSize: 12,
+          },
+        },
+        color: [
+          "#42a5f5", // Non-high-stress: 蓝
+          "#ff7043", // High-stress: 橙
+        ],
+        series: [
+          {
+            name: "Non-high-stress",
+            type: "bar",
+            barGap: "0%",
+            data: dataNonHigh,
+            emphasis: { focus: "series" },
+          },
+          {
+            name: "High-stress",
+            type: "bar",
+            data: dataHigh,
+            emphasis: { focus: "series" },
+          },
+        ],
+      };
+
+      chart.setOption(option);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      initChart();
+
+      d3.csv(CSV_PATH)
+        .then(function (data) {
+          data.forEach((d) => {
+            d.mean_score = +d.mean_score;
+            d.n = +d.n;
+            d.item_order = +d.item_order;
+            d.high_stress_group = +d.high_stress_group;
+            // 保留字符串：degree_label, region_continent, scale_group, item_short
+          });
+          rawData = data;
+          initFilters();
+          updateChart();
+        })
+        .catch(function (error) {
+          console.error("Error loading CSV:", error);
+          const sampleInfo =
+            document.getElementById("sampleInfo");
+          if (sampleInfo) {
+            sampleInfo.textContent = "Failed to load data.";
+          }
+        });
+
+      window.addEventListener("resize", () => {
+        if (chart) chart.resize();
+      });
+    });
+  </script>
+</body>
+</html>

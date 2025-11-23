@@ -1,0 +1,108 @@
+col_name,q_no,question_text,multi_group,code,label,count,percent,n_valid
+v060_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,2027,62.31171226560098,3253
+v061_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,1913,58.807254841684596,3253
+v062_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,239,7.347064248386105,3253
+v063_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,1180,36.27420842299416,3253
+v064_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,902,27.728250845373502,3253
+v065_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,464,14.263756532431602,3253
+v066_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,543,16.692284045496464,3253
+v067_bin,Q22,"Overall, what do you enjoy most about life as a graduate      student?  [binary]",Q22,1,selected,758,23.301567783584385,3253
+v068_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,928,28.527513064863204,3253
+v069_bin,Q22,"Overall, what do you enjoy most about life as a graduate student?  [binary]",Q22,1,selected,101,3.104826314171534,3253
+v104_bin,Q37,Who was the perpetrator(s)? Please select all that apply. [binary],Q37,1,selected,261,8.023363049492776,3253
+v105_bin,Q37,Who was the perpetrator(s)? Please select all that apply. [binary],Q37,1,selected,231,7.1011374116200425,3253
+v106_bin,Q37,Who was the perpetrator(s)? Please select all that apply. [binary],Q37,1,selected,108,3.3200122963418384,3253
+v107_bin,Q37,Who was the perpetrator(s)? Please select all that apply. [binary],Q37,1,selected,196,6.025207500768522,3253
+v108_bin,Q37,Who was the perpetrator(s)? Please select all that apply. [binary],Q37,1,selected,11,0.33814940055333537,3253
+v109_bin,Q37,Who was the perpetrator(s)? Please select all that apply. [binary],Q37,1,selected,28,0.8607439286812173,3253
+v110_bin,Q37,Who was the perpetrator(s)? Please select all that apply. [binary],Q37,1,selected,13,0.3996311097448509,3253
+v113_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,193,5.932984936981248,3253
+v114_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,111,3.4122348601291117,3253
+v115_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,94,2.8896403320012296,3253
+v116_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,283,8.699661850599446,3253
+v117_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,53,1.6292652935751613,3253
+v118_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,44,1.3525976022133415,3253
+v119_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,65,1.9981555487242546,3253
+v120_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,44,1.3525976022133415,3253
+v121_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,120,3.6889025514909317,3253
+v122_bin,Q40,Which of the following have you experienced?  [binary],Q40,1,selected,23,0.7070396557024285,3253
+v149_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,131,4.027051952044267,3253
+v150_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,295,9.06855210574854,3253
+v151_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,699,21.487857362434674,3253
+v152_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,402,12.35782354749462,3253
+v153_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,399,12.265600983707348,3253
+v154_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,612,18.81340301260375,3253
+v155_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,717,22.041192745158316,3253
+v156_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,438,13.464494312941898,3253
+v157_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,349,10.72855825391946,3253
+v158_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,444,13.648939440516447,3253
+v159_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,698,21.45711650783892,3253
+v160_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,154,4.734091607746695,3253
+v161_bin,Q43,"If youâre unlikely to pursue an academic research career, what are the main reasons?  [binary]",Q43,1,selected,50,1.537042729787888,3253
+v165_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,276,8.484475868429142,3253
+v166_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,1057,32.493083307715956,3253
+v167_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,752,23.117122656009837,3253
+v168_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,409,12.573009529664924,3253
+v169_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,1386,42.60682446972026,3253
+v170_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,719,22.10267445434983,3253
+v171_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,499,15.339686443283124,3253
+v172_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,889,27.32861973562865,3253
+v173_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,226,6.947433138641254,3253
+v174_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,1008,30.986781432523824,3253
+v175_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,1882,57.85428834921611,3253
+v176_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,1253,38.51829080848447,3253
+v177_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,1056,32.46234245312019,3253
+v178_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,1016,31.232708269289887,3253
+v179_bin,Q49,How do you learn about available career opportunities that are beyond academia?  [binary],Q49,1,selected,164,5.041500153704273,3253
+v007_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,1792,55.08761143559791,3253
+v008_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,545,16.75376575468798,3253
+v009_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,961,29.54196126652321,3253
+v010_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,2116,65.04764832462342,3253
+v011_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,1539,47.310175222871194,3253
+v012_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,306,9.406701506301875,3253
+v013_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,367,11.2818936366431,3253
+v014_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,16,0.49185367353212417,3253
+v015_bin,Q5,Which were the most important reasons you decided to enroll for a Masterâs/PhD degree? [binary],Q5,1,selected,122,3.7503842606824467,3253
+v180_bin,Q50,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50,1,selected,956,29.38825699354442,3253
+v181_bin,Q50,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50,1,selected,1806,55.51798339993852,3253
+v182_bin,Q50,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50,1,selected,1869,57.45465723947125,3253
+v183_bin,Q50,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50,1,selected,1396,42.91423301567784,3253
+v184_bin,Q50,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50,1,selected,1517,46.633876421764526,3253
+v185_bin,Q50,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50,1,selected,317,9.744850906855211,3253
+v186_bin,Q50,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50,1,selected,756,23.240086074392867,3253
+v187_bin,Q50,Which of the following would you say are the most difficult for graduate students in the country where you are studying?  [binary],Q50,1,selected,74,2.2748232400860746,3253
+v188_bin,Q51,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51,1,selected,1016,31.232708269289887,3253
+v189_bin,Q51,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51,1,selected,1313,40.36274208422994,3253
+v190_bin,Q51,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51,1,selected,293,9.007070396557024,3253
+v191_bin,Q51,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51,1,selected,1725,53.02797417768213,3253
+v192_bin,Q51,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51,1,selected,976,30.003074085459573,3253
+v193_bin,Q51,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51,1,selected,1763,54.19612665232093,3253
+v194_bin,Q51,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51,1,selected,1794,55.14909314478943,3253
+v195_bin,Q51,Which of the following resources do you think graduate students need the most in order to establish a satisfying career?  [binary],Q51,1,selected,88,2.705195204426683,3253
+v208_bin,Q54,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54,1,selected,2189,67.29173071011374,3253
+v209_bin,Q54,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54,1,selected,1585,48.72425453427605,3253
+v210_bin,Q54,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54,1,selected,1690,51.95204426683062,3253
+v211_bin,Q54,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54,1,selected,968,29.757147248693517,3253
+v212_bin,Q54,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54,1,selected,1613,49.584998462957266,3253
+v213_bin,Q54,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54,1,selected,1103,33.90716261912081,3253
+v214_bin,Q54,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54,1,selected,351,10.790039963110974,3253
+v215_bin,Q54,"Which, if any, of the following activities have you done to advance your career?  [binary]",Q54,1,selected,153,4.7033507531509375,3253
+v216_bin,Q55,What would you do differently right now if you were starting your graduate degree?  [binary],Q55,1,selected,597,18.352290193667383,3253
+v217_bin,Q55,What would you do differently right now if you were starting your graduate degree?  [binary],Q55,1,selected,712,21.887488472179527,3253
+v218_bin,Q55,What would you do differently right now if you were starting your graduate degree?  [binary],Q55,1,selected,835,25.668613587457735,3253
+v219_bin,Q55,What would you do differently right now if you were starting your graduate degree?  [binary],Q55,1,selected,228,7.00891484783277,3253
+v220_bin,Q55,What would you do differently right now if you were starting your graduate degree?  [binary],Q55,1,selected,1358,41.74608054103904,3253
+v221_bin,Q55,What would you do differently right now if you were starting your graduate degree?  [binary],Q55,1,selected,252,7.746695358130956,3253
+v017_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,201,6.17891177374731,3253
+v018_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,347,10.667076544727944,3253
+v019_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,420,12.911158930218262,3253
+v020_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,221,6.793728865662466,3253
+v021_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,309,9.49892407008915,3253
+v022_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,274,8.422994159237627,3253
+v023_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,411,12.634491238856441,3253
+v024_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,80,2.459268367660621,3253
+v025_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,36,1.1066707654472794,3253
+v026_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,80,2.459268367660621,3253
+v027_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,454,13.956347986474023,3253
+v028_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,89,2.735936059022441,3253
+v029_bin,Q7,What prompted you to study outside your country of upbringing? [binary],Q7,1,selected,61,1.8751921303412233,3253

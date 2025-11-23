@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weekly work hours × high-stress group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg-page: #f3f4f6;
+      --bg-card: #ffffff;
+      --border-subtle: #e5e7eb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --shadow-soft: 0 4px 10px rgba(15, 23, 42, 0.08);
+      --radius-lg: 12px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 10px auto 18px;
+      padding: 0 12px 16px;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin: 4px 0;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 4px 0 6px;
+    }
+
+    .bands {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .meta span + span::before {
+      content: "•";
+      margin: 0 6px;
+      color: #9ca3af;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-subtle);
+      padding: 10px 12px 12px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .filters-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .filters-row label {
+      font-weight: 500;
+      color: #4b5563;
+      margin-right: 4px;
+    }
+    .filters-row select {
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background-color: #f9fafb;
+      color: #111827;
+      outline: none;
+    }
+    .filters-row select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
+    }
+    .filter-summary {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .layout {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .panel {
+      flex: 1;
+      min-width: 0;
+      min-height: 320px;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      background-color: #f9fafb;
+      padding: 6px 8px 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel-header {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .panel-subheader {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .chart {
+      flex: 1;
+      width: 100%;
+      min-height: 260px;
+    }
+
+    .panel-note {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-top: 3px;
+    }
+
+    @media (max-width: 900px) {
+      .layout { flex-direction: column; }
+    }
+  </style>
+
+  <!-- ECharts & PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <h1>Weekly work hours × high-stress group</h1>
+    <p class="subtitle">
+      The high-stress group is defined as students who both work ≥ 41 hours per week and rate their work–life balance
+      at ≤ 3 on a 7-point scale. This page decomposes how weekly work hours distribute within the high-stress and
+      non-high-stress groups, and how the probability of being high-stress rises with longer hours, with filters for
+      degree and region.
+    </p>
+    <p class="bands">
+      Weekly hour bands (from Q29): <strong>Low</strong> = “Less than 11 hours” or “11–20 hours” per week;
+      <strong>Medium</strong> = “21–30” or “31–40 hours”; <strong>High</strong> = “41–50” or “51–60 hours”;
+      <strong>Very high</strong> = “61–70”, “71–80” or “More than 80 hours” per week.
+    </p>
+    <div class="meta">
+      <span>Data: viz_hours_person_level.csv</span>
+      <span>Population: valid respondents with non-missing weekly hours</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">How weekly hours and high-stress status relate</div>
+      <p class="card-subtitle">
+        Left: within each stress group (high / non-high), how respondents are distributed across weekly hour bands
+        (shares sum to 100% per group). Right: within each hour band, the share of respondents who belong to the
+        high-stress vs non-high-stress groups (two lines adding up to 100% per band). Use the filters to look at
+        specific degree types or regions.
+      </p>
+
+      <div class="filters-row">
+        <div>
+          <label for="degreeSelect">Degree:</label>
+          <select id="degreeSelect">
+            <option value="ALL">All degrees</option>
+          </select>
+        </div>
+        <div>
+          <label for="regionSelect">Region:</label>
+          <select id="regionSelect">
+            <option value="ALL">All regions</option>
+          </select>
+        </div>
+      </div>
+      <div id="filterSummary" class="filter-summary"></div>
+
+      <div class="layout">
+        <div class="panel">
+          <div class="panel-header">Weekly hours distribution within each stress group</div>
+          <div class="panel-subheader">
+            Each bar sums to 100% and shows how the selected group is split across weekly hour bands.
+          </div>
+          <div id="chartDist" class="chart"></div>
+          <div class="panel-note">
+            Computed on the fly from person-level data; shares are conditional on stress group.
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">High vs non-high-stress share by weekly hour band</div>
+          <div class="panel-subheader">
+            For each hour band, the lines show the percentage of respondents in that band who belong to the high-stress
+            vs non-high-stress groups.
+          </div>
+          <div id="chartRisk" class="chart"></div>
+          <div class="panel-note">
+            High-stress and non-high-stress shares sum to 100% within each selected hour band.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CSV_PERSON = "../08_viz_data/viz_hours_person_level.csv";
+
+    // prettier labels for hours_level
+    const HOURS_PRETTY = {
+      low: "Low (≤20h/wk)",
+      medium: "Medium (21–40h/wk)",
+      high: "High (41–60h/wk)",
+      very_high: "Very high (≥61h/wk)"
+    };
+
+    function prettyHours(raw) {
+      return HOURS_PRETTY[raw] || raw;
+    }
+
+    function toNumber(x) {
+      const v = Number(x);
+      return Number.isFinite(v) ? v : 0;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch(CSV_PERSON)
+        .then((r) => r.text())
+        .then((text) => {
+          const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+          const rowsRaw = parsed.data;
+
+          const rows = rowsRaw.map((d) => ({
+            degree: (d.degree_label || d.degree || "").trim() || "Unknown degree",
+            region: (d.region_continent || d.region || "").trim() || "Unknown region",
+            hours: (d.hours_level || "").trim(),
+            hoursOrder: toNumber(d.hours_order),
+            stress: Number(d.high_stress_group),
+            stressLabel:
+              (d.high_stress_label || "").trim() ||
+              (String(d.high_stress_group) === "1" ? "High-stress" : "Non-high-stress")
+          }));
+
+          const degreeSelect = document.getElementById("degreeSelect");
+          const regionSelect = document.getElementById("regionSelect");
+          const summaryEl = document.getElementById("filterSummary");
+
+          // 填充 degree / region 选项
+          const degrees = Array.from(new Set(rows.map((r) => r.degree))).sort();
+          degrees.forEach((deg) => {
+            const opt = document.createElement("option");
+            opt.value = deg;
+            opt.textContent = deg;
+            degreeSelect.appendChild(opt);
+          });
+
+          const regions = Array.from(new Set(rows.map((r) => r.region))).sort();
+          regions.forEach((reg) => {
+            const opt = document.createElement("option");
+            opt.value = reg;
+            opt.textContent = reg;
+            regionSelect.appendChild(opt);
+          });
+
+          function getFilteredRows() {
+            const deg = degreeSelect.value;
+            const reg = regionSelect.value;
+            let filtered = rows;
+            if (deg !== "ALL") filtered = filtered.filter((r) => r.degree === deg);
+            if (reg !== "ALL") filtered = filtered.filter((r) => r.region === reg);
+            return filtered;
+          }
+
+          const distChart = echarts.init(document.getElementById("chartDist"));
+          const riskChart = echarts.init(document.getElementById("chartRisk"));
+
+          function render() {
+            const deg = degreeSelect.value;
+            const reg = regionSelect.value;
+            const filtered = getFilteredRows();
+
+            const totalN = filtered.length;
+            const highN = filtered.filter((r) => r.stress === 1).length;
+            const highPct = totalN > 0 ? (highN / totalN) * 100 : 0;
+
+            const degLabel = deg === "ALL" ? "All degrees" : deg;
+            const regLabel = reg === "ALL" ? "All regions" : reg;
+
+            summaryEl.textContent =
+              `${degLabel} • ${regLabel} — n = ${totalN}, high-stress ≈ ${highPct.toFixed(1)}%`;
+
+            if (totalN === 0) {
+              distChart.clear();
+              riskChart.clear();
+              distChart.setOption({
+                title: { text: "No data for selected filters", left: "center", top: "middle" }
+              });
+              riskChart.setOption({});
+              return;
+            }
+
+            // ---- 1) 分布图：每个 stress group 内部的工时构成 ----
+            const stressGroups = [
+              { value: 0, label: "Non-high-stress" },
+              { value: 1, label: "High-stress" }
+            ];
+
+            const hoursSorted = Array.from(
+              new Set(
+                filtered
+                  .slice()
+                  .sort((a, b) => a.hoursOrder - b.hoursOrder)
+                  .map((d) => d.hours)
+              )
+            );
+
+            const distTable = [];
+            stressGroups.forEach((g) => {
+              const groupRows = filtered.filter((r) => r.stress === g.value);
+              const groupN = groupRows.length || 1;
+              hoursSorted.forEach((h) => {
+                const n = groupRows.filter((r) => r.hours === h).length;
+                const pct = (n / groupN) * 100;
+                distTable.push({
+                  stressValue: g.value,
+                  stressLabel: g.label,
+                  hours: h,
+                  n,
+                  pct
+                });
+              });
+            });
+
+            const distSeries = hoursSorted.map((h) => {
+              const data = stressGroups.map((g) => {
+                const row = distTable.find((x) => x.stressValue === g.value && x.hours === h);
+                return row ? row.pct : 0;
+              });
+              return {
+                name: prettyHours(h),
+                type: "bar",
+                stack: "total",
+                emphasis: { focus: "series" },
+                data
+              };
+            });
+
+            const distOption = {
+              backgroundColor: "#f9fafb",
+              tooltip: {
+                trigger: "axis",
+                axisPointer: { type: "shadow" },
+                formatter: (params) => {
+                  if (!params || !params.length) return "";
+                  const stressLabel = stressGroups[params[0].dataIndex].label;
+                  const lines = [`<strong>${stressLabel}</strong>`];
+                  let totalNGroup = 0;
+                  params.forEach((p) => {
+                    const pretty = p.seriesName;
+                    const rawHours = hoursSorted[p.seriesIndex];
+                    const row = distTable.find(
+                      (x) => x.stressLabel === stressLabel && x.hours === rawHours
+                    );
+                    if (!row || row.n === 0) return;
+                    totalNGroup += row.n;
+                    lines.push(
+                      `${pretty}: ${row.pct.toFixed(1)}% (n=${row.n})`
+                    );
+                  });
+                  if (totalNGroup > 0) {
+                    lines.push(`Total n in ${stressLabel.toLowerCase()} group ≈ ${totalNGroup}`);
+                  }
+                  return lines.join("<br/>");
+                }
+              },
+              legend: {
+                type: "scroll",
+                top: 6,
+                left: "center",
+                itemWidth: 10,
+                itemHeight: 10,
+                textStyle: { fontSize: 11 }
+              },
+              toolbox: {
+                right: 8,
+                top: 8,
+                feature: {
+                  saveAsImage: { show: true },
+                  dataView: { show: true, readOnly: true },
+                  restore: { show: true }
+                }
+              },
+              grid: { left: 95, right: 20, top: 40, bottom: 40 },
+              xAxis: {
+                type: "value",
+                name: "Share within stress group (%)",
+                min: 0,
+                max: 100,
+                nameLocation: "middle",
+                nameGap: 30,
+                axisLabel: { fontSize: 11 }
+              },
+              yAxis: {
+                type: "category",
+                data: stressGroups.map((g) => g.label),
+                axisLabel: { fontSize: 12 }
+              },
+              series: distSeries
+            };
+
+            // ---- 2) 风险图：每个工时档内，高压 vs 非高压的占比 ----
+            const riskTable = [];
+            hoursSorted.forEach((h) => {
+              const rowsBand = filtered.filter((r) => r.hours === h);
+              const bandN = rowsBand.length || 1;
+              const highNBand = rowsBand.filter((r) => r.stress === 1).length;
+              const nonHighNBand = bandN - highNBand;
+              const highPctBand = (highNBand / bandN) * 100;
+              const nonHighPctBand = (nonHighNBand / bandN) * 100;
+              riskTable.push({
+                hours: h,
+                n: bandN,
+                highPct: highPctBand,
+                nonHighPct: nonHighPctBand
+              });
+            });
+
+            const xLabels = riskTable.map((r) => prettyHours(r.hours));
+            const highSeriesData = riskTable.map((r) => r.highPct);
+            const nonHighSeriesData = riskTable.map((r) => r.nonHighPct);
+
+            const riskOption = {
+              backgroundColor: "#f9fafb",
+              tooltip: {
+                trigger: "axis",
+                formatter: (params) => {
+                  if (!params || !params.length) return "";
+                  const idx = params[0].dataIndex;
+                  const row = riskTable[idx];
+                  if (!row) return "";
+                  const lines = [
+                    `<strong>${prettyHours(row.hours)}</strong>`,
+                    `High-stress: ${row.highPct.toFixed(1)}%`,
+                    `Non-high-stress: ${row.nonHighPct.toFixed(1)}%`,
+                    `Sample size: n = ${row.n}`
+                  ];
+                  return lines.join("<br/>");
+                }
+              },
+              toolbox: {
+                right: 8,
+                top: 8,
+                feature: {
+                  saveAsImage: { show: true },
+                  dataView: { show: true, readOnly: true },
+                  restore: { show: true }
+                }
+              },
+              grid: { left: 60, right: 16, top: 30, bottom: 60 },
+              xAxis: {
+                type: "category",
+                data: xLabels,
+                axisLabel: {
+                  fontSize: 11,
+                  rotate: 20
+                }
+              },
+              yAxis: {
+                type: "value",
+                name: "Share within hour band (%)",
+                min: 0,
+                max: 100,
+                nameLocation: "middle",
+                nameGap: 40,
+                axisLabel: { fontSize: 11 }
+              },
+              legend: {
+                top: 6,
+                left: "center",
+                itemWidth: 10,
+                itemHeight: 10,
+                textStyle: { fontSize: 11 }
+              },
+              series: [
+                {
+                  name: "High-stress",
+                  type: "line",
+                  smooth: true,
+                  symbol: "circle",
+                  symbolSize: 6,
+                  lineStyle: { width: 2 },
+                  data: highSeriesData
+                },
+                {
+                  name: "Non-high-stress",
+                  type: "line",
+                  smooth: true,
+                  symbol: "circle",
+                  symbolSize: 6,
+                  lineStyle: { width: 2, type: "dashed" },
+                  data: nonHighSeriesData
+                }
+              ]
+            };
+
+            distChart.setOption(distOption);
+            riskChart.setOption(riskOption);
+          }
+
+          degreeSelect.addEventListener("change", render);
+          regionSelect.addEventListener("change", render);
+          window.addEventListener("resize", () => {
+            distChart.resize();
+            riskChart.resize();
+          });
+
+          // 初次渲染
+          render();
+        })
+        .catch((err) => {
+          console.error("Error loading viz_hours_person_level.csv:", err);
+          document.body.insertAdjacentHTML(
+            "beforeend",
+            "<p style='color:red;margin-top:8px;font-size:12px;'>Failed to load viz_hours_person_level.csv. Please check that the file exists under output/08_viz_data.</p>"
+          );
+        });
+    });
+  </script>
+</body>
+</html>
